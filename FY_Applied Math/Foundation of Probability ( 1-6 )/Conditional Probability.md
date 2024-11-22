@@ -1,4 +1,4 @@
-Tags: [[Lecture 3.pdf]], 
+Tags: [[Lecture 3.pdf]], [[Intersection]]
 # The fomula is:
 # $P(A|B) = \frac{P(A \cap B)}{P(B)} \text{ for } P(B) > 0$
 ## This measure the probability that A occurs when it is already known that B has happened before
@@ -11,6 +11,4 @@ Tags: [[Lecture 3.pdf]],
 
 # Note that: P(A|B) + P(A'|B) = 1 
 ## ( similar to P(A) + P(A') = 1)
-
-
 
