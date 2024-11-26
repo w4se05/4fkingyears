@@ -1,5 +1,5 @@
 Tags: [[Lecture 3.pdf]], [[Intersection]]
-# The fomula is:
+# The formula is:
 # $P(A|B) = \frac{P(A \cap B)}{P(B)} \text{ for } P(B) > 0$
 ## This measure the probability that A occurs when it is already known that B has happened before
 
