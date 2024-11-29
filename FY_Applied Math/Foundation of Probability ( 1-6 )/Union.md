@@ -8,7 +8,7 @@ Tags: [[Lecture 2.pdf]]
 # $A \cup A' = S$
 # $A \cup (B \cup C) = (A \cup B) \cup C$
 
-# How to calculate union: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+## How to calculate union: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 
 
 
