@@ -27,3 +27,10 @@ Since $F(x)$ is a continuous and increasing function:
 - $F(X\geq state\;space)=1$
 
 ![[Screenshot 2024-11-28 214604.png]]
+
+## 3. The link between pdf and cdf
+
+Given the $f(x)$, we have:
+$$F(x)=\int_{-\infty}^x  f(x)\,dx$$
+Given the $cdf$, we have:
+$$f(x)=F'(x)$$
