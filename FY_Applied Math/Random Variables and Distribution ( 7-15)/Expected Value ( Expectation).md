@@ -1,7 +1,7 @@
 Tags: [[Lecture 9.pdf]], [[Discrete Random Variables]],[[Continuous Random Variables]]
 
 > [!Definition]
-> Expected value can be understood as the mean of the function 
+> Expected value can be understood as the average value of the function 
 >
 ## 1. Of Discrete Random Variables
 

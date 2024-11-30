@@ -5,5 +5,4 @@ Tags: [[Lecture 9.pdf]], [[Variance]]
 > 
 
 It is calculated by take the square root of the Variance
-
 $$\sigma=\sqrt{ Var(X) }$$
