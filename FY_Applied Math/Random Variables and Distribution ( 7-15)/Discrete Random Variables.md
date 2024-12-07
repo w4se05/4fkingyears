@@ -8,6 +8,7 @@ Tags: [[Lecture 7.pdf]]
 
 ![[Screenshot 2024-11-27 183857.png]]
 ## 1. Probability Mass Function
+
  It is a set of all probability values of each discrete random variable. Those value is said to be $p_{i}$
 $$P(X=x_{i})=p_{i}$$
  With:
