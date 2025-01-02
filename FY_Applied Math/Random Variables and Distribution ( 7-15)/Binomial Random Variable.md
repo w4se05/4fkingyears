@@ -1,4 +1,4 @@
-Tags: [[Lecture 12.pdf]], [[Bernoulli Random Variables]],[[Linear Function Of The Random Variable X]], [[Sum of Random Variables]]
+Tags: [[Lecture 12.pdf]], [[Bernoulli Random Variables]],[[Linear Function Of The Random Variable X]], [[Sum of Random Variables]], [[Discrete Random Variables]]
 
 > [!Definition]
 > Given ==discrete and independent== Bernoulli random variables $X_{1},X_{2},X_{3},\dots,X_{n}$ whose $p$ are the same.

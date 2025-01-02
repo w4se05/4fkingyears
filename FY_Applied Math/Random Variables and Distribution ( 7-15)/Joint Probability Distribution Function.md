@@ -1,4 +1,4 @@
-Tags: [[Lecture 10.pdf]],, [[Discrete Random Variables]]
+Tags: [[Lecture 10.pdf]],, [[Discrete Random Variables]], [[Intersection]]
 
 > [!Definition]
 > We have two random variable X and Y, which illustrate the outcome of two random events A and B, and the joint probability distribution of X and Y illustrates $A\cap B$

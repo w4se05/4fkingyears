@@ -1,8 +1,10 @@
-Tags: [[Lecture 12.pdf]], [[Bernoulli Random Variables]]
+Tags: [[Lecture 12.pdf]], [[Bernoulli Random Variables]], [[Discrete Random Variables]]
 
 >[!Definition]
 >This random variable is used to count the number of trials conducted until achieving ==the first success==
-
+>
+>**REMEMBER THAT THIS IS A DISCRETE RANDOM VARIABLE**
+>
 ### PMF of Geometric Random Variable
 $$P(X=x)=(1-p)^{x-1}p$$
 ==> $x-1$ trials has been conducted before the first success
