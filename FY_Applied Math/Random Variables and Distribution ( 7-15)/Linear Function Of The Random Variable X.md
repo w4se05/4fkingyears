@@ -15,6 +15,6 @@ Furthermore, we can obtain the cumulative distribution function of $Y$:
 $$F_{Y}(y)=P(Y\leq y)=P(aX+b\leq y)=P(aX\leq y-b)$$
 If $a>0$:
 $$F_{Y}(y)=P\left( X\leq \frac{y-b}{a} \right)=F_{X}\left( X\leq\frac{ y-b}{a} \right)$$
-If $b<0$:
+If $a<0$:
 $$F_{Y}(y)=P\left( X\geq \frac{y-b}{a} \right)=1-F_{X}\left( X\leq\frac{ y-b}{a} \right)$$
 

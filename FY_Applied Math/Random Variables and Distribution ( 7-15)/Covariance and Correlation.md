@@ -13,9 +13,8 @@ The correlation takes values between $1$ and $-1$:
 - If $Corr(X,Y)<0$, there is a tendency that low values of one random variable are associated with low values of the other.
 - If $X$ and $Y$ are independent, $Corr(X,y)=0$ (since $Cov(X,Y)=0$)
 
-
-
-
+Beispiel:
+![[Screenshot 2025-01-10 225527.png]]
 
 
 
