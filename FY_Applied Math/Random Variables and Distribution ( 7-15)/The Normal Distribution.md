@@ -13,3 +13,7 @@ $X\sim N(0,1)$ is called the standard normal distribution. Respectively, we have
 $$\phi(x)=\frac{1}{ \sqrt{ 2\pi }}~e^{\frac{-x^2}{2}}~~~~~,x\in R$$
 and its c.d.f:
 $$\Phi(x)=\displaystyle\int^x_{-\infty}\phi(y)\,dy~~~~~,x\in R$$
+### From $N(\mu,\sigma^2)$ to $N(0,1)$
+
+$$P(X\leq x)=\Phi\left( \frac{x-\mu}{\sigma} \right)$$
+This make calculate cdf easier
