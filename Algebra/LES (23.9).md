@@ -1,7 +1,9 @@
 >[!Definition] Linear Equation
 >A **linear equation in n variables** $x_{1},x_{2},\dots, x_{n}$ in an equation satisfying $a_{1}x_{1}+a_{2}x_{2}+\dots +a_{n}x_{n}=b$ (1)
->We have:   $a_{1},a_{2},\dots ,a_{n} \in R$ called coefficient of (1)
->		$b\in R$ is called the right hand side of (1)
+>
+>We have:   $\begin{split}
+&a_{1},a_{2},\dots ,a_{n} \in R \text{ called } \textbf{coefficient} \text{ of (1)}\\&b\in R \text{ is called }\textbf{the right hand side} \text{ of (1)}
+\end{split}$
 
 >[!Definition] Linear Equation System
 >A system of $m$ linear equations in $n$ variables is called **a linear equation
@@ -71,18 +73,50 @@ a_{21} & a_{22} & \dots & a_{2n} \\
 . \\
 . \\
 a_{m_{1}} & a_{m_{2}}& \dots &a_{m_{n}} 
-\end{pmatrix}$$
-is called the coefficient matrix for (2)
-And the matrix (A|B)
+\end{pmatrix}\text{is called the coefficient matrix for (2)}$$
+And the matrix (A|b)
 >$$A=\begin{pmatrix}
 a_{11} & a_{12} & \dots & a_{1n} &|&b_{1} \\
 a_{21} & a_{22} & \dots & a_{2n} &|&b_{2}\\
 . \\
 . \\
 a_{m_{1}} & a_{m_{2}}& \dots &a_{m_{n}} &|&b_{m}
-\end{pmatrix}$$
-is called the augmented matrix for (2)
+\end{pmatrix}\text{is called the augmented 
+matrix for (2)}$$
 
+
+
+>[!Definition] Row Echelon Form And Gaussian Elimination
+>The REF (A$^*$|b$^*$) of a LES should look like this
+>$$A=\begin{pmatrix}
+a_{11} & a_{12}&a_{13} & \dots & a_{1n} &|&b_{1} \\
+0 & a_{22} &a_{23}& \dots & a_{2n} &|&b_{2}\\
+0 & 0& a_{33} & \dots & a_{3n} &|&b_{3}\\
+. \\
+. \\ 
+0 & 0&0& \dots &a_{m_{n}} &|&b_{m}
+\end{pmatrix}$$
+and all the coefficient $a_{ij}, i=j$, sequentially become the leading entry (pivot) as we transforming the LES in order to make all the coefficient of the variables below the pivot in the same column become 0. At the final equation, all the variables whose the coefficient is not the pivot are called free variable, meaning that it can take any values and the pivot's value must be dependent on them.
+>
+**TL;DR**
+The matrix is a row echelon form if satisfies:
+> 1. All zero rows are at the bottom of the matrix
+> 2. For each non-zero row, we call the left most non-zero the pivot. All entries below the pivot of a column are zero
+> 3. All pivots are ordered from the top to the bottom & from the left to the right, i.e the pivot of a row is in a col. to the right of the pivot of the row above it
+> 4. All variables which are not the pivot at the final equations are regarded free variables. The pivot variable must be dependent on them
+> 
+> After transforming the LES to the row echelon form, we use back substitution to solve dependent variables in terms of free variables form bottom to the top. This method is called **Gaussian Elimination**. 
+> 
+> **Note:** 
+> - (A|b) is inconsistent if A* has a zero but the corresponding right hand side is non-zero
+> - The number of free variables is the level of dimension of the solution set
+
+>[!Definition] Gaussian - Jordan Elimination Method
+>$$(A|b)\xrightarrow{\text{GE}}(A^*|b^*)\xrightarrow[\text{from the bottom to the top}]{\text{E}}(\text{A**|b**})$$
+>
+>$A^\text{**}$ row echelon form so that all entries below and above the pivot are 0s and all pivot are 1s. This is called **Reduced Echelon Form**
+>
+>This method help us to simplify (idk) the procedure of calculating the solution set
 
 
 
