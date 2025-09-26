@@ -119,7 +119,3 @@ The matrix is a row echelon form if satisfies:
 >This method help us to simplify (idk) the procedure of calculating the solution set
 
 
-
-
-
-
