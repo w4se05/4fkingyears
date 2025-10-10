@@ -85,7 +85,6 @@ a_{m_{1}} & a_{m_{2}}& \dots &a_{m_{n}} &|&b_{m}
 matrix for (2)}$$
 
 
-
 >[!Definition] Row Echelon Form And Gaussian Elimination
 >The REF (A$^*$|b$^*$) of a LES should look like this
 >$$A=\begin{pmatrix}
@@ -108,7 +107,7 @@ The matrix is a row echelon form if satisfies:
 > After transforming the LES to the row echelon form, we use back substitution to solve dependent variables in terms of free variables form bottom to the top. This method is called **Gaussian Elimination**. 
 > 
 > **Note:** 
-> - (A|b) is inconsistent if A* has a zero but the corresponding right hand side is non-zero
+> - (A|b) is inconsistent if A*(row echelon form) has a zero but the corresponding right hand side is non-zero
 > - The number of free variables is the level of dimension of the solution set
 
 >[!Definition] Gaussian - Jordan Elimination Method
@@ -118,4 +117,6 @@ The matrix is a row echelon form if satisfies:
 >
 >This method help us to simplify (idk) the procedure of calculating the solution set
 
-
+>[! Definition] Rank of Maxtrices
+>Given a matrix A supposing that A$^\text{**}$ in a row echelon form of A. Then we define rank of A, denoted $r(A)$, by $r(A)$ = number of non-zero rows of A$^\text{*}$
+>**Note:** The system is consistent if $r(A)=r(A|B)$

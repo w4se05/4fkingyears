@@ -1,4 +1,4 @@
->[!Definition] Sequence
+>	[!Definition] Sequence
 >A **sequence** is a list of numbers written in a definite order:
 >$$a_{1},a_{2},a_{3},\dots,a_{n},\dots \equiv \{a_{n}\}$$
 >$a_{1}$: first term, $a_{2}$: second term, in general $a_{n}$: n-th term
@@ -10,14 +10,25 @@
 >
 >Sequences can be plotted on number lines or on the coordination plane 
 >
->IT IS ALL ABOUT RECOGNIZING THE PATTERN
+>**IT IS ALL ABOUT RECOGNIZING THE PATTERN**
 >
 >**Note**: Signs alternate: $(-1)^n$ or $(-1)^{n-1}$ depending on where n starts
+
+>[! Geometric Sequence]
+>$$a, ar, ar^{2},ar^3,\dots$$
+>where $a\neq 0$ is the first term and $r \neq{0}$ is the common ratio. The general term is
+>$$a_{n}=ar^{n-1}$$ 
+
+>[!Arithmetic Sequence]
+>$$a,a+d,a+2d,a+3d,\dots$$
+>where $a$ is the first term and $d$ is the common difference. The general term is $$a_{n}=a+(n-1)d$$
 
 >[!Definition] Limit
 > A sequence $\{a_{n}\}$ has the limit L if
 > $$\forall \epsilon > 0, \exists N \in \mathbb{N}: |a_{n}-L|<\epsilon, \forall_{n}>N $$
 > We write $\lim_{ n \to \infty }a_{n}=L$ or $a_{n}\to L$
+> 
+> **$\lim_{ n \to \infty }a_{n+1}=\lim_{ n \to \infty }a_{n}=L$**
 > 
 > For any given constant sequence $a_{n}=C$ (for all $n \in \mathbb{N}$)
 > We have: $\lim_{a_{n}}=C$
@@ -27,16 +38,16 @@
 >   e.g $\lceil 0.2 \rceil=1$
 > - $\lfloor a \rfloor$ is the biggest integer that is smaller than or equal a 
 >   e.g $\lfloor 0.2 \rfloor=0$
-> - If |r|<1, then $\lim_{ n \to \infty }r^n=0$, ask for proof? Go fk urself.
+> - If |r|<1, then $\lim_{ n \to \infty }r^n=0$. Ask for proof? **Go fk urself.**
 > 
->  **Limit Laws for $\textbf{Sequences}$**
->  Given lim $a_{n}=A$ and lim $b_{n}=B$, bear in mind that $a_{n}$ and $b_{n}$ are independent and both of them are convergent
-> 	1. $\lim{ a_{n}\pm b_{n}}=A\pm B$
-> 	2. $lim(ca_{n})=cA,\; c \in \mathbb{R}$
-> 	3. lim$(a_{n}b_{n})=AB$
-> 	4. lim$\left( \frac{a_{n}}{b_{n}} \right)=\frac{A}{B},\;B\neq_{0}$
-> 	5. If $a_{n}<b_{n}, \forall n\geq N$, then $\lim_{ n \to \infty}a_{n}\leq \lim_{ n \to \infty }b_{n}$
-> 	6. $\lim_{ n \to \infty }a_{n}^p=A^p$,  if $p>0$ and $a_{n}>0$
+>**Limit Laws for $\textbf{Sequences}$**
+>Given lim $a_{n}=A$ and lim $b_{n}=B$, bear in mind that $a_{n}$ and $b_{n}$ are independent and both of them are convergent
+> 1. $\lim{ a_{n}\pm b_{n}}=A\pm B$
+> 2. $lim(ca_{n})=cA,\; c \in \mathbb{R}$
+> 3. lim$(a_{n}b_{n})=AB$
+> 4. lim$\left( \frac{a_{n}}{b_{n}} \right)=\frac{A}{B},\;B\neq_{0}$
+> 5. If $a_{n}<b_{n}, \forall n\geq N$, then $\lim_{ n \to \infty}a_{n}\leq \lim_{ n \to \infty }b_{n}$
+> 6. $\lim_{ n \to \infty }a_{n}^p=A^p$,  if $p>0$ and $a_{n}>0$
 
 >[!Definition] Convergence and Divergence
 >- If $\lim_{ n \to \infty }a_{n}=L \in \mathbb{R}$, then the limit exists, is **unique**, and the sequence is called **convergent**. Notation: $a_{n}\to L$ as $n\to \infty$
@@ -118,13 +129,24 @@
 >  
  $\implies$**This theorem is used to define both convergent and divergent**
 >
->2. Absolute Value Theorem (idk)
+>
+>1. Absolute Value Theorem (idk)
 >Let {$a_{n}$} be a real sequence. If
 >$$\lim_{ n \to \infty } |a_{n}|=0,$$
 >then
 >$$\lim_{ n \to \infty } a_{n}=0$$ 
 >
-
+>
+>2. Ratio Test
+>First we compute $r=\frac{a_{n+1}}{a_{n}}$
+> - If $\lim_{ n \to \infty }r>1$,$\lim_{ n \to \infty }|a_{n}|=\infty$, however, we cannot $\implies$ $a_{n} \to \infty$ as the actual sequence could:
+>	+ go to $+\infty$ (e.g $a_{n}=n$)
+>	+ go to $-\infty$ (e.g $a_{n}=-n$)
+>	+ or oscillates with growing magnitude (e.g $a_{n}=(-1)^nn$)
+> - If $\lim_{ n \to \infty }r<1$, $a_{_{n}} \to 0$. 
+> - If $\lim_{ n \to \infty }r=1$, we cannot conclude anything, switch to another method pls
+>   
+>**Note: It is important that we need to take $\lim_{ n \to \infty }r$ to conclude**
 
 
 
