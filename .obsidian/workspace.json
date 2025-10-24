@@ -1,0 +1,228 @@
+{
+  "main": {
+    "id": "3e6e539bef56d6f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "94e6c5b8d3ea3e28",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "727045270620003e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8fe935ddb1d2ac4",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f04be23c1b6718b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a717b27330c7720",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0d104b1c3eac81fb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "12ac28d42b849acc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b252b19a04633e87",
+    "type": "split",
+    "children": [
+      {
+        "id": "91096b221a6be345",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "980731a448e4d10b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CA/Assembla Kedavara.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Assembla Kedavara"
+            }
+          },
+          {
+            "id": "249544ee556a792b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CA/Assembla Kedavara.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Assembla Kedavara"
+            }
+          },
+          {
+            "id": "6fe2aa1306da79f8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a8a7252d0f246f83",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CA/Assembla Kedavara.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Assembla Kedavara"
+            }
+          },
+          {
+            "id": "59fe5222b327e276",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "727045270620003e",
+  "lastOpenFiles": [
+    "SOPHOMORE/CA/Assembla Kedavara .md",
+    "FY_Applied Math/Foundation of Probability ( 1-6 )/Counting Techniques/Permutation.md",
+    "FY_Applied Math/Foundation of Probability ( 1-6 )/Counting Techniques/Combination.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Variance.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Uniform Distribution.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/The Properties of Two Independent Random Variables.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Sum of Random Variables.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/The Normal Distribution.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Standard Deviation.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Non-linear Function of the Random Variables.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Negative Binomial Random Variable.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Median.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Marginal Probability Mass Function.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Linear Function Of The Random Variable X.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Joint Probability Distribution Function.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Geometric Random Variable.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Exponential Distribution.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Expected Value ( Expectation).md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Discrete Random Variables.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Covariance and Correlation.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Continuous Random Variables.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Conditional Probability Distribution.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Binomial Random Variable.md",
+    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Bernoulli Random Variables.md",
+    "FY_Applied Math/PDF source/Lecture 9.pdf",
+    "FY_Applied Math/PDF source/Lecture 8.pdf",
+    "FY_Applied Math/PDF source/Lecture 14.pdf",
+    "FY_Applied Math/PDF source/Lecture 7.pdf",
+    "FY_Applied Math/PDF source/Lecture 6.pdf",
+    "FY_Applied Math/PDF source/Lecture 5.pdf",
+    "FY_Applied Math/PDF source/Lecture 4.pdf",
+    "FY_Applied Math/PDF source/Lecture 3.pdf",
+    "FY_Applied Math/PDF source/Lecture 2.pdf",
+    "FY_Applied Math/PDF source/Lecture 15.pdf",
+    "FY_Applied Math/Images/Screenshot 2025-01-10 225527.png",
+    "FY_Applied Math/Images/Screenshot 2024-12-19 002129.png",
+    "FY_Applied Math/Images/Screenshot 2025-01-09 214350.png",
+    "FY_Applied Math/Images/Screenshot 2025-01-02 211130.png",
+    "FY_Applied Math/Images/Screenshot 2025-01-02 204904.png",
+    "FY_Applied Math/Images/Screenshot 2025-01-02 202924.png",
+    "FY_Applied Math/Images/Screenshot 2024-12-22 225606.png",
+    "FY_Applied Math/Images/Screenshot 2024-12-07 125530.png",
+    "FY_Applied Math/Images/Screenshot 2024-12-07 125501.png",
+    "FY_Applied Math/Images/Screenshot 2024-12-07 125441.png",
+    "FY_Applied Math/Foundation of Probability ( 1-6 )/Union.md",
+    "FY_Applied Math/Foundation of Probability ( 1-6 )/Mutually Exclusive.md"
+  ]
+}
