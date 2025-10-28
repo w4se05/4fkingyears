@@ -1,156 +1,166 @@
->	[!Definition] Sequence
->A **sequence** is a list of numbers written in a definite order:
->$$a_{1},a_{2},a_{3},\dots,a_{n},\dots \equiv \{a_{n}\}$$
->$a_{1}$: first term, $a_{2}$: second term, in general $a_{n}$: n-th term
->
->Finite Sequence: has finite number of terms
->Infinite Sequence: $\{a_{n}\text{ or more complex general rule of the sequence}\}^{\infty}_{n=1}$
->
->Sequences $\neq$ Sets. Sequences take into account the order of the terms while Sets do not.
->
->Sequences can be plotted on number lines or on the coordination plane 
->
->**IT IS ALL ABOUT RECOGNIZING THE PATTERN**
->
->**Note**: Signs alternate: $(-1)^n$ or $(-1)^{n-1}$ depending on where n starts
+# 📘 Sequences and Limits
 
->[! Geometric Sequence]
->$$a, ar, ar^{2},ar^3,\dots$$
->where $a\neq 0$ is the first term and $r \neq{0}$ is the common ratio. The general term is
->$$a_{n}=ar^{n-1}$$ 
+---
 
->[!Arithmetic Sequence]
->$$a,a+d,a+2d,a+3d,\dots$$
->where $a$ is the first term and $d$ is the common difference. The general term is $$a_{n}=a+(n-1)d$$
+## 🧩 Definition — Sequence
+A **sequence** is a list of numbers written in a definite order:
 
->[!Definition] Limit
-> A sequence $\{a_{n}\}$ has the limit L if
-> $$\forall \epsilon > 0, \exists N \in \mathbb{N}: |a_{n}-L|<\epsilon, \forall_{n}>N $$
-> We write $\lim_{ n \to \infty }a_{n}=L$ or $a_{n}\to L$
-> 
-> **$\lim_{ n \to \infty }a_{n+1}=\lim_{ n \to \infty }a_{n}=L$**
-> 
-> For any given constant sequence $a_{n}=C$ (for all $n \in \mathbb{N}$)
-> We have: $\lim_{a_{n}}=C$
-> 
-> **Notation:**
-> - $\lceil a \rceil$: is the smallest integer that is bigger than or equal a 
->   e.g $\lceil 0.2 \rceil=1$
-> - $\lfloor a \rfloor$ is the biggest integer that is smaller than or equal a 
->   e.g $\lfloor 0.2 \rfloor=0$
-> - If |r|<1, then $\lim_{ n \to \infty }r^n=0$. Ask for proof? **Go fk urself.**
-> 
->**Limit Laws for $\textbf{Sequences}$**
->Given lim $a_{n}=A$ and lim $b_{n}=B$, bear in mind that $a_{n}$ and $b_{n}$ are independent and both of them are convergent
-> 1. $\lim{ a_{n}\pm b_{n}}=A\pm B$
-> 2. $lim(ca_{n})=cA,\; c \in \mathbb{R}$
-> 3. lim$(a_{n}b_{n})=AB$
-> 4. lim$\left( \frac{a_{n}}{b_{n}} \right)=\frac{A}{B},\;B\neq_{0}$
-> 5. If $a_{n}<b_{n}, \forall n\geq N$, then $\lim_{ n \to \infty}a_{n}\leq \lim_{ n \to \infty }b_{n}$
-> 6. $\lim_{ n \to \infty }a_{n}^p=A^p$,  if $p>0$ and $a_{n}>0$
+$$a_{1}, a_{2}, a_{3}, \dots, a_{n}, \dots \equiv \{a_{n}\}$$
 
->[!Definition] Convergence and Divergence
->- If $\lim_{ n \to \infty }a_{n}=L \in \mathbb{R}$, then the limit exists, is **unique**, and the sequence is called **convergent**. Notation: $a_{n}\to L$ as $n\to \infty$
->- If $\lim_{ n \to \infty }a_{n}=\pm \infty$, the sequence **diverges to infinity**
->- Otherwise, {$a_{n}$} is simply called **divergent**
->
->**Example:**
-> - $a_{n}=\frac{1}{n}\quad\implies a_{n}\to{0}$ (convergent)
-> - $a_{n}=n\quad\implies a_{n}\to +\infty$ (diverges to infinity)
-> - $a_{n}=(-1)^n\quad\implies$ oscillates, no limit (divergent)
-> 
-> If $a_{n}\to L$ then also $a_{n+1}\to L$ by the definition of limit
+| Symbol | Meaning |
+|:--|:--|
+| $a_1$ | first term |
+| $a_2$ | second term |
+| $a_n$ | $n$-th term (general term) |
 
->[!Definition] Boundedness
->A sequence {$a_{n}$} is **bounded** if there exists $M>0$ such that
->$$|a_{n}|\leq M, \; \forall n\in \mathbb{N}$$
->
->**Example:**
->- $a_{n}=\frac{n}{n+1}$ is bounded because $0<a_{n}<1$ for all $n$, so we can choose $M=1$
->- $a_{n}=(-1)^{n}$ is bounded because $|a_{n}|=1$ for all $n$, so we can choose $M=1$, BUT this sequence is not converge because it oscillates, not increasing nor decreasing.
->- $a_{n}=n$ is unbounded because $|a_{n}|=n\to \infty$ as $n\to \infty$, so no finite M can satisfy $|a_{n}|\leq M$
+**Types:**
+- **Finite Sequence** → has a finite number of terms  
+- **Infinite Sequence** → $\{a_n\}_{n=1}^{\infty}$
 
->[!Definition] Monotonicity 
->A sequence {$a_{n}$} is 
-> - **increasing** if $a_{n+1}\geq a_{n}$ for all n
-> - **decreasing** if $a_{n+1}\leq a_{n}$ for all n
-> - **monotone** if it is increasing or decreasing
->   
+**Note:**  
+Sequences ≠ Sets → *Order matters in sequences, not in sets.*
+
+**Visualization:**  
+Can be plotted on a **number line** or **coordinate plane**.  
+
+> 💡 Recognizing the **pattern** is the essence of working with sequences.  
+> Signs alternate when you see terms like $(-1)^n$ or $(-1)^{n-1}$.
+
+---
+
+## 📐 Geometric Sequence
+$$a, ar, ar^{2}, ar^{3}, \dots$$
+
+Where  
+- $a \neq 0$: first term  
+- $r \neq 0$: common ratio  
+
+General term:  
+$$a_n = ar^{n-1}$$
+
+---
+
+## ➕ Arithmetic Sequence
+$$a, a+d, a+2d, a+3d, \dots$$
+
+Where  
+- $a$: first term  
+- $d$: common difference  
+
+General term:  
+$$a_n = a + (n-1)d$$
+
+---
+
+## 📉 Limit of a Sequence
+A sequence $\{a_n\}$ has a limit $L$ if:
+
+$$\forall \epsilon > 0, \exists N \in \mathbb{N} : |a_n - L| < \epsilon \text{ for all } n > N$$
+
+Notation:
+$$\lim_{n \to \infty} a_n = L \quad \text{or} \quad a_n \to L$$
+
+Special cases:
+- $\lim_{n \to \infty} a_{n+1} = \lim_{n \to \infty} a_n = L$
+- If $a_n = C$ (constant), then $\lim a_n = C$
+
+**Useful facts:**
+- $\lceil a \rceil$: smallest integer ≥ $a$  
+- $\lfloor a \rfloor$: largest integer ≤ $a$  
+- If $|r| < 1$, then $\lim_{n \to \infty} r^n = 0$
+
+---
+
+## ⚙️ Limit Laws for Sequences
+Given $\lim a_n = A$ and $\lim b_n = B$, both convergent:
+
+1. $\lim (a_n \pm b_n) = A \pm B$  
+2. $\lim (c a_n) = cA,\; c \in \mathbb{R}$  
+3. $\lim (a_n b_n) = AB$  
+4. $\lim \left( \dfrac{a_n}{b_n} \right) = \dfrac{A}{B},\; B \neq 0$  
+5. If $a_n < b_n$ for all $n \ge N$, then $\lim a_n \le \lim b_n$  
+6. $\lim a_n^p = A^p$, if $p > 0$ and $a_n > 0$
+
+---
+
+## 🔄 Convergence & Divergence
+
+| Type | Condition | Example | Result |
+|:--|:--|:--|:--|
+| **Convergent** | $\lim a_n = L \in \mathbb{R}$ | $a_n = \frac{1}{n}$ | $\to 0$ |
+| **Divergent to $\infty$** | $\lim a_n = \pm \infty$ | $a_n = n$ | $\to +\infty$ |
+| **Oscillatory** | limit does not exist | $a_n = (-1)^n$ | Divergent |
+
+If $a_n \to L$, then also $a_{n+1} \to L$.
+
+---
+
+## 📏 Boundedness
+A sequence $\{a_n\}$ is **bounded** if  
+$$|a_n| \le M, \; \forall n \in \mathbb{N}$$
+
+**Examples:**
+- $a_n = \frac{n}{n+1}$ → bounded ($M=1$)  
+- $a_n = (-1)^n$ → bounded but not convergent  
+- $a_n = n$ → unbounded  
+
+---
+
+## 📈 Monotonicity
+A sequence $\{a_n\}$ is:
+- **Increasing** if $a_{n+1} \ge a_n$  
+- **Decreasing** if $a_{n+1} \le a_n$  
+- **Monotone** if either increasing or decreasing  
+
+**Examples:**
+- $a_n = \frac{n}{n+1}$ → increasing  
+- $a_n = \frac{1}{n}$ → decreasing  
+
+**Weierstrass Theorem:**  
+Every **bounded monotone sequence** is **convergent**.
+
+---
+
+## ⚡ Squeeze Theorem
+Let $\{a_n\}, \{b_n\}, \{c_n\}$ be sequences such that  
+$$a_n \le b_n \le c_n \; \forall n \ge N$$  
+If  
+$$\lim a_n = \lim c_n = L,$$  
+then  
+$$\lim b_n = L.$$
+
 **Example:**
->- $a_{n}=\frac{n}{n+1}$ is increasing because
->$$a_{n+1}-a_{n}=\frac{n+1}{n+2}-\frac{n}{n+1}=\frac{1}{(n+1)(n+2)}>0$$
->- $a_{n}=\frac{1}{n}$ is decreasing because
->$$a_{n+1}-a_{n}=\frac{1}{n+1}-\frac{1}{n}=-\frac{1}{n(n+1)}<0$$
->
->**Weirestrass Theorem**:
->$\quad$Every **bounded monotone sequence** is convergent
->
->**Example:**
-> - $a_{n}=1-\frac{1}{n}$ is increasing, bounded above by 1. Thus $\lim_{ n \to \infty }a_{n}=1$
-> - $a_{n}=n$ is monotone but unbounded above and thus diverges to infinity
-> - $a_{n}=\sin(n)$ is bounded (between -1 and 1), but not monotone and does not converge (it oscillates irregularly)
-> - $a_{n}=(-1)^n$ is bounded but divergent, because it is not monotone
->   
->**By the Monotone Convergence Theorem:**
-> $$\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)^n=e $$
+$$a_n = \frac{(-1)^n}{2\sqrt{n}}$$  
+$$-\frac{1}{2\sqrt{n}} \le a_n \le \frac{1}{2\sqrt{n}}$$  
+Thus, $\lim a_n = 0$.
 
->[!Definition] Squeeze Theorem
->Let {$a_{n}$}, {$b_{n}$},{$c_{n}$} be sequences such that
->$$a_{n}\leq b_{n}\leq c_{n}\; \forall n\geq N$$
->*If*
->$$\lim_{ n \to \infty } a_{n}=\lim_{ n \to \infty } c_{n}=L$$
->*then*
->$$\lim_{ n \to \infty } b_{n}=L$$
->
->**Example:**
->Consider the sequence
->$$a_{n}=\frac{(-1)^n}{2\sqrt{ n }}$$
->We have
->$$-\frac{1}{2\sqrt{ n }}\leq a_{n}\leq{\frac{1}{2\sqrt{ n }}},\; \forall n\geq{1}$$
->Since
->$$\lim_{ n \to \infty } -\frac{1}{2\sqrt{ n }}=\lim_{ n \to \infty } \frac{1}{2\sqrt{ n }}=0$$
->by the **Squeeze Theorem**, we conclude that
->$$\mathbf{\lim_{ n \to \infty }a_{n}=0 }$$
->$\implies$This theorem can **ONLY** be used to define the convergent
->
->Here is why:
-![[Screenshot 2025-09-25 095429.png]]
->
->Imagine {$a_{n}$} and {$c_{n}$} have different limits, then the limit of $b_{n}$ can be anywhere between them. Only when both lim($a_{n}$) and lim($b_{n}$) approach the same $L$ as the n goes to infinity can we apply this theory
+---
 
->[!Definition] Another Stupid Theorems that don't even have a fking NAME
->1. Odd Even Theorem (seriously?)
-> *Let {$a_{n}$} be a sequence*
-> - If both the subsequences of even and odd indices converge to the same limit L, i.e
-> $$\lim_{ n \to \infty } a_{2k}=L\quad and\quad \lim_{ n \to \infty } a_{2k-1}=L$$
-> then the whole sequence **converges** and
-> $$\lim_{ n \to \infty } a_{n}=L$$
-> - If $\lim_{ k \to \infty }a_{2k} \neq \lim_{ k \to \infty }a_{2k-1}$, then the sequence {$a_{n}$} **does not converge**
->  
- $\implies$**This theorem is used to define both convergent and divergent**
->
->
->1. Absolute Value Theorem (idk)
->Let {$a_{n}$} be a real sequence. If
->$$\lim_{ n \to \infty } |a_{n}|=0,$$
->then
->$$\lim_{ n \to \infty } a_{n}=0$$ 
->
->
->2. Ratio Test
->First we compute $r=\frac{a_{n+1}}{a_{n}}$
-> - If $\lim_{ n \to \infty }r>1$,$\lim_{ n \to \infty }|a_{n}|=\infty$, however, we cannot $\implies$ $a_{n} \to \infty$ as the actual sequence could:
->	+ go to $+\infty$ (e.g $a_{n}=n$)
->	+ go to $-\infty$ (e.g $a_{n}=-n$)
->	+ or oscillates with growing magnitude (e.g $a_{n}=(-1)^nn$)
-> - If $\lim_{ n \to \infty }r<1$, $a_{_{n}} \to 0$. 
-> - If $\lim_{ n \to \infty }r=1$, we cannot conclude anything, switch to another method pls
->   
->**Note: It is important that we need to take $\lim_{ n \to \infty }r$ to conclude**
+## 🧮 Miscellaneous Theorems
 
+### Odd–Even Theorem
+If  
+$$\lim a_{2k} = \lim a_{2k-1} = L,$$  
+then $\lim a_n = L$.  
+Otherwise, the sequence diverges.
 
+---
 
+### Absolute Value Theorem
+If $\lim |a_n| = 0$, then $\lim a_n = 0$.
 
+---
 
+### Ratio Test
+Let $r = \frac{a_{n+1}}{a_n}$.
 
+| Condition | Result |
+|:--|:--|
+| $\lim r > 1$ | $|a_n| \to \infty$ |
+| $\lim r < 1$ | $a_n \to 0$ |
+| $\lim r = 1$ | Inconclusive |
 
+---
+
+## ✅ Monotone Convergence Example
+$$\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$$

@@ -1,60 +1,86 @@
-# I. Def:
+## 🧩 Definition — Vector
+Given two vectors $\vec{u}$ and $\vec{v}$ (in $\mathbb{R}^2$ or $\mathbb{R}^3$) and a scalar $\alpha \in \mathbb{R}$:
 
-Given 2 vector $\vec{u}$ and $\vec{v}$ (in $R^{2}, R^3$)
-Given $\alpha\in R$
-1. We define $\alpha.\vec{u}$ in a vector sit in its direction that is the SAME  if $\alpha\geq_{}0$ or OPPOSITE if $\alpha<0$ as $\vec{ u}$
-2. Parallelogram rule
-3. Props of Vectors:
-- $\vec{u}+\vec{v}=\vec{v}+\vec{u}$ (commutative)
-- $\vec{u}+(\vec{v}+\vec{w})=(\vec{u}+\vec{v})+\vec{w}$ (associative)
-- $\alpha.(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v}$ (distributive)
-- $(\alpha+\beta).\vec{u}=\alpha.\vec{u}+\beta.\vec{u}$
-- If A $\equiv$ B, $\vec{AB}=0$ (vector zero)
-- $\vec{AB}=-\vec{BA}$
-4. In $\mathbb{R}^2$, $e_{1}=(1,0),e_{2}=(0,1)$, then any $\vec{u}=x.e_{1}+y.e_{2}$, x and y are called the coordinates of $\vec{u}$
+1. $\alpha \vec{u}$ is a vector in the **same direction** as $\vec{u}$ if $\alpha \ge 0$, or in the **opposite direction** if $\alpha < 0$.
+2. **Parallelogram Rule** — The sum of $\vec{u}$ and $\vec{v}$ is represented by the diagonal of the parallelogram formed by them.
+3. **Properties of Vectors:**
+   - $\vec{u}+\vec{v}=\vec{v}+\vec{u}$  (Commutative)
+   - $\vec{u}+(\vec{v}+\vec{w})=(\vec{u}+\vec{v})+\vec{w}$  (Associative)
+   - $\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v}$  (Distributive)
+   - $(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u}$
+   - If $A \equiv B$, then $\vec{AB}=0$  (Zero vector)
+   - $\vec{AB}=-\vec{BA}$
 
-# II. Construct a Vector out of 2 points
+In $\mathbb{R}^2$:  
+$e_{1}=(1,0)$, $e_{2}=(0,1)$, then any $\vec{u}=x e_{1}+y e_{2}$.  
+Here, $x$ and $y$ are called the **coordinates** of $\vec{u}$.
 
-Given $A(x_{a},y_a)$ and $B(x_{b},y_{b})$
-Then$$\vec{ AB } =(x_{b}-x_{a},y_{b}-y_{a}) $$
-# III. Dot Product
-Given $\vec{ u}, \vec{v} \in \mathbb{R}^2$ ($\mathbb{R}^n$). If $\vec{u}=(x_{u},y_{u})$ and $\vec{v}=(x_{v},y_{v})$ , then the dot product of $\vec{u}$ and $\vec{v}$, denoted $\vec{u}. \vec{v}$ is defined:$$\vec u. \vec v=x_u.x_{v}+y_{u}.y_{v}$$
-The 2 vectors $\vec{ u}, \vec{v}$ are orthogonal when the angle of them is 90 degree, meaning that their dot product = 0
-Besides, there is another way to calculate dot product$$\vec{u}.\vec{v}=|\vec{u}|.|\vec{v}|.\cos(\vec{u},\vec{v})$$
-From that we have:$$\cos(\vec{u},\vec{v})=\frac{\vec{u}.\vec{v}}{|\vec{u}|.|\vec{v}|}$$
-With $|\vec{u}|=\sqrt{ x_{u}^2+y_{u}^2 }$ 
-In general, $\vec{u}=(x_{1},x_{2},\dots,x_{n})$, $\vec{v}=(y_{1},y_{2},\dots,y_{n})$ 
-$$|\vec{u}|=\sqrt{ x_{1}^2+x_{2}^2+\dots+x_{n}^2 }$$ and
-$$\vec{u}.\vec{v}=x_{1}y_{1}+x_{2}y_{2}+\dots+x_{n}y_{n}$$
-## Props of Dot Product:
+---
 
-- $\vec{u}.\vec{v}=\vec{v}.\vec{u}$
-- $\vec{u}.(\vec{v}+\vec{w})=\vec{u}.\vec{v}+\vec{u}.\vec{w}$
-- $(\alpha.\vec{u}).\vec{v}=\alpha.(\vec{u}.\vec{v})$
+## 🧮 Constructing a Vector from Two Points
+Given points $A(x_{a},y_{a})$ and $B(x_{b},y_{b})$,  
 
-According to Pythagoras Theorem, given $\vec{u},\vec{v} \in R$
+$$\vec{AB} = (x_{b}-x_{a},\, y_{b}-y_{a})$$
 
-$$|\vec{u}+\vec{v}|=|\vec{u}-\vec{v}|\implies \vec u.\vec{v}=0$$
+---
 
-Consequently, if $\vec{u}.\vec{v}=0$, then $|\vec{u}+\vec{v}|^2=|\vec{u}|^2+|\vec{v}|^2$
+## ⚫ Dot Product
+Given $\vec{u}, \vec{v} \in \mathbb{R}^2$ (or $\mathbb{R}^n$), where  
+$\vec{u}=(x_{u},y_{u})$, $\vec{v}=(x_{v},y_{v})$,
 
-# IV. Area of the Parallelogram in $R^2$ (Determinant)
+then the **dot product** is defined as:  
+$$\vec{u}\cdot\vec{v} = x_{u}x_{v} + y_{u}y_{v}$$
 
-Given $\vec{u}$ and $\vec{v}$ $\in R^2$ and $ABCD$ is the parallelogram spanned by those 2 vectors
-$S_{ABCD}=2.S_{ABC}=2.\frac{1}{2}\vec{|AB|}.\vec{|AC|}.\sin(\vec{AB},\vec{AC})$
-Supposing that:
-- $\vec{AB}=(x_{1},y_{1})$
-- $\vec{AC}=(x_{2},y_{2})$
-and $\sin(\vec{AB},\vec{AC})=\sqrt{ 1-\cos^2(\vec{AB},\vec{AC}) }$
-$\implies \sqrt{ (x_{1}^2+y_{1}^2).(x_{2}^2+y_{2}^{2})-\frac{(x_{1}^2+y_{1}^2).(x_{2}^2+y_{2}^{2}).(x_{1}x_{2}+y_{1}y_{2})^2}{(x_{1}^2+y_{1}^2).(x_{2}^2+y_{2}^{2})}}$
+Two vectors $\vec{u}$ and $\vec{v}$ are **orthogonal** if the angle between them is $90^\circ$,  
+that is, if $\vec{u}\cdot\vec{v} = 0$.
 
-=$\sqrt{ (x_{1}^2+y_{1}^2).(x_{2}^2+y_{2}^{2})-(x_{1}x_{2}+y_{1}y_{2})^2}$
+Alternatively:  
+$$\vec{u}\cdot\vec{v} = |\vec{u}|\,|\vec{v}|\,\cos(\theta)$$  
 
-After reducing blah blah blah we have:
+Thus,  
+$$\cos(\theta) = \frac{\vec{u}\cdot\vec{v}}{|\vec{u}|\,|\vec{v}|}$$  
 
-$\implies \sqrt{  x_{1}^2y_{2}^2+x_{2}^2y_{1}^2-2x_{1}x_{2}y_{1}y_{2}}=\sqrt{(x_{1}y_{2}-x_{2}y_{1})^2 }$$\implies|x_{1}y_{2}-x_{2}y_{1}|$
+where $|\vec{u}| = \sqrt{x_{u}^2 + y_{u}^2}$.
 
-This is the DETERMINANT
+In general, if  
+$\vec{u} = (x_{1},x_{2},\dots,x_{n})$ and $\vec{v} = (y_{1},y_{2},\dots,y_{n})$,  
 
-[HOP IN YOUTUBE AND WATCH THIS SHIT ](https://www.youtube.com/watch?v=Ip3X9LOh2dk)
+then:  
+$$|\vec{u}| = \sqrt{x_{1}^2 + x_{2}^2 + \dots + x_{n}^2}$$  
+$$\vec{u}\cdot\vec{v} = x_{1}y_{1} + x_{2}y_{2} + \dots + x_{n}y_{n}$$
 
+---
+
+## ⚙️ Properties of the Dot Product
+- $\vec{u}\cdot\vec{v} = \vec{v}\cdot\vec{u}$
+- $\vec{u}\cdot(\vec{v}+\vec{w}) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}$
+- $(\alpha\vec{u})\cdot\vec{v} = \alpha(\vec{u}\cdot\vec{v})$
+
+According to the **Pythagorean Theorem**, for $\vec{u},\vec{v} \in \mathbb{R}^n$:
+
+$$|\vec{u}+\vec{v}|=|\vec{u}-\vec{v}|\implies \vec{u}\cdot\vec{v}=0$$
+
+Consequently, if $\vec{u}\cdot\vec{v}=0$, then:  
+$$|\vec{u}+\vec{v}|^2 = |\vec{u}|^2 + |\vec{v}|^2$$
+
+---
+
+## 🧱 Area of a Parallelogram in $\mathbb{R}^2$ (Determinant)
+Given $\vec{u}$ and $\vec{v}$ in $\mathbb{R}^2$, and a parallelogram $ABCD$ spanned by them:  
+
+$$S_{ABCD} = 2S_{ABC} = 2\cdot\frac{1}{2}|\vec{AB}||\vec{AC}|\sin(\theta)$$  
+
+Let:
+- $\vec{AB} = (x_{1},y_{1})$
+- $\vec{AC} = (x_{2},y_{2})$
+- $\sin(\theta) = \sqrt{1 - \cos^2(\theta)}$
+
+Then:  
+$$S = \sqrt{(x_{1}^2+y_{1}^2)(x_{2}^2+y_{2}^2) - (x_{1}x_{2}+y_{1}y_{2})^2}$$  
+
+Simplifying:  
+$$S = \sqrt{(x_{1}y_{2} - x_{2}y_{1})^2} = |x_{1}y_{2} - x_{2}y_{1}|$$  
+
+This expression represents the **determinant**, i.e., the **area** of the parallelogram.
+
+🎥 [Watch this concept explained visually](https://www.youtube.com/watch?v=Ip3X9LOh2dk)

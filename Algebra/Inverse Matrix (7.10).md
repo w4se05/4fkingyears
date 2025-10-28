@@ -1,33 +1,60 @@
->[!Definition]
->Given a Square Matrix $A \in M_{n\times n}$. A is invertible if $\exists \; B\in M_{n\times n}$ so that $AB=BA=I_{n}$. We call B an invert matrix of 
-**For God's sake pls remember ONLY SQUARE MATRIX can be INVERTIBLE**
+## [[Inverse Matrix]] 🧮
+Given a **square matrix** $A \in M_{n\times n}$, we say $A$ is **invertible** if there exists $B \in M_{n\times n}$ such that:
+$$AB = BA = I_{n}$$  
+We call $B$ the **inverse matrix** of $A$ and denote it by $A^{-1}$.
 
->[!Definition] Also Definition But a Lil More Formal
->Given $A\in M_{n\times n}$
->1. A is invertible if A can be reduced to $I_{n}$ using Gaussian-Jordan Elimination
->2. If $(A|I_{n})\xrightarrow{\text{G.J.E}}(I_{n}|B)$, then $A^{-1}=B$
->3. Given $Ax=b$, $A\in M_{n\times n}$
->   If A is invertible, then $Ax=b$ has one unique solution & precisely, $x=A^{-1}b$
+👉 **Only square matrices** can be invertible.
 
->[!Theorem 1]
->The inverse matrix, if it exists, is unique. That means, given $A \in M_{n\times n}$ if $B_{1},B_{2}$ are inverses of A, then $B_{1}=B_{2}$. Then we denote $A^{-1}$ the inverse matrix of A
->
->**Proof:**
->Assuming $B_{1}$ and $B_{2}$ is the inverse matrix of A, we have:
->$$\left\{ 
->\begin{array}{l} 
-AB_{1}=B_{1}A=I_{n} \\
-AB_{2}=B_{2}A=I_{n}
-\end{array}
-\right.$$
-Hence, with $AB_{1}=I_{n}$
-$\Leftrightarrow B_{2}AB_{1}=B_{2}B_{1}A\Leftrightarrow B_{2}I_{n}=B_{2}$
+---
 
->[!Theorem 2]
->1. If A is invertible then $A^T$ is invertible. More precisely:
->   $$(A^T)^{-1}=(A^{-1})^T$$
->2. If $A$ is invertible, then $A^{-1}$ is invertible. Moreover, we have $(A^{-1})^{-1}=A$
->3. If A, B are invertible, then $A.B$ is invertible. Moreover, we have $(AB)^{-1}=B^{-1}A^{-1}$
->4.  If A is invertible & $\lambda \neq{0},\,\lambda \in \mathbb{R}$ then, $\lambda A$ is invertible & $(\lambda A)^{-1}=\frac{1}{\lambda}A^{-1}$
+## [[Definition via Gaussian–Jordan Elimination]] ⚙️
+Given $A \in M_{n\times n}$:
 
-.87
+1. $A$ is invertible **iff** it can be reduced to $I_{n}$ using Gaussian–Jordan Elimination.  
+2. If  
+   $$(A|I_{n}) \xrightarrow{\text{G.J.E.}} (I_{n}|B)$$  
+   then  
+   $$A^{-1} = B$$  
+3. For $Ax = b$, where $A \in M_{n\times n}$:  
+   If $A$ is invertible, then the system has **one unique solution**  
+   $$x = A^{-1}b$$
+
+---
+
+## [[Theorem 1 — Uniqueness of the Inverse]] 🔒
+If the inverse matrix exists, it is **unique**.
+
+**Proof:**  
+Suppose $A \in M_{n\times n}$, and both $B_{1}$ and $B_{2}$ are inverses of $A$. Then:
+$$
+\begin{cases}
+AB_{1} = B_{1}A = I_{n} \\
+AB_{2} = B_{2}A = I_{n}
+\end{cases}
+$$
+From $AB_{1} = I_{n}$:
+$$B_{2}AB_{1} = B_{2}I_{n} \Rightarrow (B_{2}A)B_{1} = B_{2} \Rightarrow I_{n}B_{1} = B_{2} \Rightarrow B_{1}=B_{2}$$
+
+Hence, the inverse is **unique**. ✅
+
+---
+
+## [[Theorem 2 — Properties of Inverse Matrices]] 🧠
+Let $A, B \in M_{n\times n}$ be invertible matrices, and let $\lambda \in \mathbb{R}$, $\lambda \neq 0$.
+
+1. If $A$ is invertible, then $A^{T}$ is invertible and  
+   $$(A^{T})^{-1} = (A^{-1})^{T}$$  
+2. If $A$ is invertible, then $A^{-1}$ is invertible and  
+   $$(A^{-1})^{-1} = A$$  
+3. If $A, B$ are invertible, then $AB$ is invertible and  
+   $$(AB)^{-1} = B^{-1}A^{-1}$$  
+4. If $A$ is invertible and $\lambda \neq 0$, then $\lambda A$ is invertible and  
+   $$(\lambda A)^{-1} = \frac{1}{\lambda}A^{-1}$$  
+
+---
+
+🧩 **Summary Insight:**  
+Invertibility links algebraic structure to geometric intuition — every invertible matrix corresponds to a **reversible linear transformation** (no information loss).
+
+---
+

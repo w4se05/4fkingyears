@@ -11,10 +11,14 @@
             "id": "727045270620003e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Algebra/EXAM PREPARATION.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "EXAM PREPARATION"
             }
           }
         ]
@@ -162,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,6 +183,27 @@
   },
   "active": "727045270620003e",
   "lastOpenFiles": [
+    "Algebra/Vector Space ( 21.10).md",
+    "Algebra/EXAM PREPARATION.md",
+    "1. Determinants & Invertibility.md",
+    "Algebra/LES (23.9).md",
+    "Algebra/Determinant (14.10).md",
+    "Algebra/Inverse Matrix (7.10).md",
+    "Algebra/Vector (16.9).md",
+    "Algebra/Operations on Matrices (30.9).md",
+    "Calculus/Series (1.10).md",
+    "Calculus/Sequences (24.9).md",
+    "CA/Assembla Kedavara .md",
+    "CA/Performance Measurement (22.9).md",
+    "E.png",
+    "D.png",
+    "C.png",
+    "Assignment.md",
+    "Assignment.zip",
+    "Principles of MIPS Design.md",
+    "Area of the Parallelogram in $R^2$ (Determinant).md",
+    "Construct a Vector out of 2 points.md",
+    "Linear Equation System.md",
     "SOPHOMORE/CA/Assembla Kedavara .md",
     "FY_Applied Math/Foundation of Probability ( 1-6 )/Counting Techniques/Permutation.md",
     "FY_Applied Math/Foundation of Probability ( 1-6 )/Counting Techniques/Combination.md",
@@ -187,21 +213,6 @@
     "FY_Applied Math/Random Variables and Distribution ( 7-15)/Sum of Random Variables.md",
     "FY_Applied Math/Random Variables and Distribution ( 7-15)/The Normal Distribution.md",
     "FY_Applied Math/Random Variables and Distribution ( 7-15)/Standard Deviation.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Non-linear Function of the Random Variables.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Negative Binomial Random Variable.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Median.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Marginal Probability Mass Function.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Linear Function Of The Random Variable X.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Joint Probability Distribution Function.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Geometric Random Variable.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Exponential Distribution.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Expected Value ( Expectation).md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Discrete Random Variables.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Covariance and Correlation.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Continuous Random Variables.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Conditional Probability Distribution.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Binomial Random Variable.md",
-    "FY_Applied Math/Random Variables and Distribution ( 7-15)/Bernoulli Random Variables.md",
     "FY_Applied Math/PDF source/Lecture 9.pdf",
     "FY_Applied Math/PDF source/Lecture 8.pdf",
     "FY_Applied Math/PDF source/Lecture 14.pdf",
@@ -211,18 +222,12 @@
     "FY_Applied Math/PDF source/Lecture 4.pdf",
     "FY_Applied Math/PDF source/Lecture 3.pdf",
     "FY_Applied Math/PDF source/Lecture 2.pdf",
-    "FY_Applied Math/PDF source/Lecture 15.pdf",
     "FY_Applied Math/Images/Screenshot 2025-01-10 225527.png",
     "FY_Applied Math/Images/Screenshot 2024-12-19 002129.png",
     "FY_Applied Math/Images/Screenshot 2025-01-09 214350.png",
     "FY_Applied Math/Images/Screenshot 2025-01-02 211130.png",
     "FY_Applied Math/Images/Screenshot 2025-01-02 204904.png",
     "FY_Applied Math/Images/Screenshot 2025-01-02 202924.png",
-    "FY_Applied Math/Images/Screenshot 2024-12-22 225606.png",
-    "FY_Applied Math/Images/Screenshot 2024-12-07 125530.png",
-    "FY_Applied Math/Images/Screenshot 2024-12-07 125501.png",
-    "FY_Applied Math/Images/Screenshot 2024-12-07 125441.png",
-    "FY_Applied Math/Foundation of Probability ( 1-6 )/Union.md",
-    "FY_Applied Math/Foundation of Probability ( 1-6 )/Mutually Exclusive.md"
+    "FY_Applied Math/Images/Screenshot 2024-12-22 225606.png"
   ]
 }

@@ -4,7 +4,6 @@ In MIPS, every instruction performs one simple operation on registers or memory.
 This chapter defines the **Instruction Set Architecture (ISA)** — the contract between hardware and software.
 
 ---
-
 ## [[Principles of MIPS Design]]
 
 | Principle | Explanation |
