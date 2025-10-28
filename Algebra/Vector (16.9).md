@@ -1,86 +1,271 @@
-## 🧩 Definition — Vector
-Given two vectors $\vec{u}$ and $\vec{v}$ (in $\mathbb{R}^2$ or $\mathbb{R}^3$) and a scalar $\alpha \in \mathbb{R}$:
+# 🧮 Vector  
 
-1. $\alpha \vec{u}$ is a vector in the **same direction** as $\vec{u}$ if $\alpha \ge 0$, or in the **opposite direction** if $\alpha < 0$.
-2. **Parallelogram Rule** — The sum of $\vec{u}$ and $\vec{v}$ is represented by the diagonal of the parallelogram formed by them.
-3. **Properties of Vectors:**
-   - $\vec{u}+\vec{v}=\vec{v}+\vec{u}$  (Commutative)
-   - $\vec{u}+(\vec{v}+\vec{w})=(\vec{u}+\vec{v})+\vec{w}$  (Associative)
-   - $\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v}$  (Distributive)
-   - $(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u}$
-   - If $A \equiv B$, then $\vec{AB}=0$  (Zero vector)
-   - $\vec{AB}=-\vec{BA}$
+## [[Definition: Vector]] in $\mathbb{R}^n$  
+
+A **vector** is an ordered list of numbers (called *components*) that represents a **magnitude** and **direction** in space.  
+For $\vec{u} \in \mathbb{R}^n$:  
+$$
+\vec{u} = (u_1, u_2, \dots, u_n)
+$$
+
+Two vectors are **equal** if their corresponding components are equal.  
+$$
+\vec{u} = \vec{v} \iff u_i = v_i, \forall i
+$$
+
+---
+
+## [[Basic Operations]] ⚙️  
+
+Given $\vec{u}, \vec{v} \in \mathbb{R}^n$, and $\alpha \in \mathbb{R}$  
+
+1️⃣ **Addition**  
+$$
+\vec{u} + \vec{v} = (u_1 + v_1, u_2 + v_2, \dots, u_n + v_n)
+$$  
+
+2️⃣ **Scalar Multiplication**  
+$$
+\alpha \vec{u} = (\alpha u_1, \alpha u_2, \dots, \alpha u_n)
+$$  
+
+3️⃣ **Zero Vector**  
+$$
+\vec{0} = (0, 0, \dots, 0)
+$$  
+
+---
+
+## [[Properties of Vector Operations]] 📏  
+
+- **Commutative:** $\vec{u} + \vec{v} = \vec{v} + \vec{u}$  
+- **Associative:** $\vec{u} + (\vec{v} + \vec{w}) = (\vec{u} + \vec{v}) + \vec{w}$  
+- **Distributive:** $\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$  
+- **Identity:** $\vec{u} + \vec{0} = \vec{u}$  
+- **Inverse:** $\vec{u} + (-\vec{u}) = \vec{0}$  
+
+---
+
+## [[Coordinates and Unit Vectors]] 📍  
 
 In $\mathbb{R}^2$:  
-$e_{1}=(1,0)$, $e_{2}=(0,1)$, then any $\vec{u}=x e_{1}+y e_{2}$.  
-Here, $x$ and $y$ are called the **coordinates** of $\vec{u}$.
+$$
+\vec{u} = x e_1 + y e_2, \quad e_1 = (1,0), e_2 = (0,1)
+$$  
+In $\mathbb{R}^3$:  
+$$
+\vec{u} = x e_1 + y e_2 + z e_3, \quad e_3 = (0,0,1)
+$$
+
+$\{e_1, e_2, e_3\}$ forms the **standard basis**.
 
 ---
 
-## 🧮 Constructing a Vector from Two Points
-Given points $A(x_{a},y_{a})$ and $B(x_{b},y_{b})$,  
+## [[Vector from Two Points]] 📐  
 
-$$\vec{AB} = (x_{b}-x_{a},\, y_{b}-y_{a})$$
+Given $A(x_a, y_a)$ and $B(x_b, y_b)$, the vector from A to B is:  
+$$
+\vec{AB} = (x_b - x_a, y_b - y_a)
+$$  
 
----
-
-## ⚫ Dot Product
-Given $\vec{u}, \vec{v} \in \mathbb{R}^2$ (or $\mathbb{R}^n$), where  
-$\vec{u}=(x_{u},y_{u})$, $\vec{v}=(x_{v},y_{v})$,
-
-then the **dot product** is defined as:  
-$$\vec{u}\cdot\vec{v} = x_{u}x_{v} + y_{u}y_{v}$$
-
-Two vectors $\vec{u}$ and $\vec{v}$ are **orthogonal** if the angle between them is $90^\circ$,  
-that is, if $\vec{u}\cdot\vec{v} = 0$.
-
-Alternatively:  
-$$\vec{u}\cdot\vec{v} = |\vec{u}|\,|\vec{v}|\,\cos(\theta)$$  
-
-Thus,  
-$$\cos(\theta) = \frac{\vec{u}\cdot\vec{v}}{|\vec{u}|\,|\vec{v}|}$$  
-
-where $|\vec{u}| = \sqrt{x_{u}^2 + y_{u}^2}$.
-
-In general, if  
-$\vec{u} = (x_{1},x_{2},\dots,x_{n})$ and $\vec{v} = (y_{1},y_{2},\dots,y_{n})$,  
-
-then:  
-$$|\vec{u}| = \sqrt{x_{1}^2 + x_{2}^2 + \dots + x_{n}^2}$$  
-$$\vec{u}\cdot\vec{v} = x_{1}y_{1} + x_{2}y_{2} + \dots + x_{n}y_{n}$$
+> 💡 Direction → from A to B  
+> Magnitude → distance between A and B
 
 ---
 
-## ⚙️ Properties of the Dot Product
-- $\vec{u}\cdot\vec{v} = \vec{v}\cdot\vec{u}$
-- $\vec{u}\cdot(\vec{v}+\vec{w}) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}$
-- $(\alpha\vec{u})\cdot\vec{v} = \alpha(\vec{u}\cdot\vec{v})$
+## [[Magnitude (Norm)]] 🧭  
 
-According to the **Pythagorean Theorem**, for $\vec{u},\vec{v} \in \mathbb{R}^n$:
+The **length** or **magnitude** of a vector $\vec{u} = (x_1, x_2, \dots, x_n)$ is:
+$$
+|\vec{u}| = \sqrt{x_1^2 + x_2^2 + \dots + x_n^2}
+$$  
 
-$$|\vec{u}+\vec{v}|=|\vec{u}-\vec{v}|\implies \vec{u}\cdot\vec{v}=0$$
-
-Consequently, if $\vec{u}\cdot\vec{v}=0$, then:  
-$$|\vec{u}+\vec{v}|^2 = |\vec{u}|^2 + |\vec{v}|^2$$
+If $|\vec{u}| = 1$, then $\vec{u}$ is a **unit vector**.
 
 ---
 
-## 🧱 Area of a Parallelogram in $\mathbb{R}^2$ (Determinant)
-Given $\vec{u}$ and $\vec{v}$ in $\mathbb{R}^2$, and a parallelogram $ABCD$ spanned by them:  
+## [[Dot Product (Scalar Product)]] ⚔️  
 
-$$S_{ABCD} = 2S_{ABC} = 2\cdot\frac{1}{2}|\vec{AB}||\vec{AC}|\sin(\theta)$$  
+Given $\vec{u}=(u_1,u_2,\dots,u_n)$ and $\vec{v}=(v_1,v_2,\dots,v_n)$:
+$$
+\vec{u}\cdot\vec{v} = u_1v_1 + u_2v_2 + \dots + u_nv_n
+$$
 
-Let:
-- $\vec{AB} = (x_{1},y_{1})$
-- $\vec{AC} = (x_{2},y_{2})$
-- $\sin(\theta) = \sqrt{1 - \cos^2(\theta)}$
+### Geometric Interpretation:
+$$
+\vec{u}\cdot\vec{v} = |\vec{u}|\,|\vec{v}|\cos\theta
+$$
+where $\theta$ is the angle between $\vec{u}$ and $\vec{v}$.
 
-Then:  
-$$S = \sqrt{(x_{1}^2+y_{1}^2)(x_{2}^2+y_{2}^2) - (x_{1}x_{2}+y_{1}y_{2})^2}$$  
+### Orthogonality:
+$$
+\vec{u}\cdot\vec{v}=0 \iff \vec{u} \perp \vec{v}
+$$
 
-Simplifying:  
-$$S = \sqrt{(x_{1}y_{2} - x_{2}y_{1})^2} = |x_{1}y_{2} - x_{2}y_{1}|$$  
+---
 
-This expression represents the **determinant**, i.e., the **area** of the parallelogram.
+### 🧩 Example 1 — Orthogonality and Angle
 
-🎥 [Watch this concept explained visually](https://www.youtube.com/watch?v=Ip3X9LOh2dk)
+Given:
+$$
+\vec{u}=(2,1,-1), \quad \vec{v}=(1,-3,2)
+$$
+
+Compute the dot product and the angle between them.
+
+**Solution:**
+$$
+\vec{u}\cdot\vec{v} = 2(1) + 1(-3) + (-1)(2) = -3
+$$
+$$
+|\vec{u}| = \sqrt{2^2 + 1^2 + (-1)^2} = \sqrt{6}, \quad |\vec{v}| = \sqrt{1^2 + (-3)^2 + 2^2} = \sqrt{14}
+$$
+$$
+\cos\theta = \frac{-3}{\sqrt{6}\sqrt{14}} \Rightarrow \boxed{\theta \approx 112.9^\circ}
+$$
+
+✅ Since $\vec{u}\cdot\vec{v}<0$, the angle is **obtuse**.
+
+---
+
+## [[Cross Product]] (for $\mathbb{R}^3$) 🔁  
+
+Given $\vec{u}=(u_1,u_2,u_3)$ and $\vec{v}=(v_1,v_2,v_3)$:
+$$
+\vec{u}\times\vec{v}=
+\begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+u_1 & u_2 & u_3\\
+v_1 & v_2 & v_3
+\end{vmatrix}
+=(u_2v_3-u_3v_2)\hat{i}-(u_1v_3-u_3v_1)\hat{j}+(u_1v_2-u_2v_1)\hat{k}
+$$
+
+The result is a **vector perpendicular** to both $\vec{u}$ and $\vec{v}$.
+
+---
+
+### 🧩 Example 2 — Area of Parallelogram  
+
+Let $\vec{u}=(1,2,3)$ and $\vec{v}=(2,0,1)$.  
+
+Compute the **area of the parallelogram** spanned by them.
+
+$$
+\vec{u}\times\vec{v} =
+\begin{vmatrix}
+\hat{i}&\hat{j}&\hat{k}\\
+1&2&3\\
+2&0&1
+\end{vmatrix}
+= (2\cdot1-3\cdot0)\hat{i} - (1\cdot1-3\cdot2)\hat{j} + (1\cdot0-2\cdot2)\hat{k}
+= (2, 5, -4)
+$$
+$$
+|\vec{u}\times\vec{v}| = \sqrt{2^2 + 5^2 + (-4)^2} = \sqrt{45} = 3\sqrt{5}
+$$
+✅ **Area:** $\boxed{3\sqrt{5}}$
+
+---
+
+## [[Projection of a Vector]] 🎯  
+
+Projection of $\vec{u}$ onto $\vec{v}$:
+$$
+\text{proj}_{\vec{v}}(\vec{u}) = \frac{\vec{u}\cdot\vec{v}}{|\vec{v}|^2}\vec{v}
+$$
+
+---
+
+### 🧩 Example 3 — Projection and Decomposition
+
+Let $\vec{u} = (3,4)$ and $\vec{v}=(1,2)$.
+
+Compute $\text{proj}_{\vec{v}}(\vec{u})$ and the component of $\vec{u}$ orthogonal to $\vec{v}$.
+
+$$
+\vec{u}\cdot\vec{v}=3(1)+4(2)=11, \quad |\vec{v}|^2=1^2+2^2=5
+$$
+$$
+\text{proj}_{\vec{v}}(\vec{u})=\frac{11}{5}(1,2)=\left(\frac{11}{5},\frac{22}{5}\right)
+$$
+$$
+\text{Orthogonal Component: } \vec{u}_\perp = \vec{u} - \text{proj}_{\vec{v}}(\vec{u}) = (3,4) - \left(\frac{11}{5},\frac{22}{5}\right) = \left(\frac{4}{5},-\frac{2}{5}\right)
+$$
+
+✅ Check: $\vec{v}\cdot\vec{u}_\perp = 1\cdot\frac{4}{5} + 2\cdot(-\frac{2}{5}) = 0$  
+→ Confirmed orthogonal.
+
+---
+
+## [[Linear Dependence & Independence]] 🧠  
+
+Vectors $\vec{v}_1,\dots,\vec{v}_k$ are **linearly independent** if
+$$
+\alpha_1\vec{v}_1 + \dots + \alpha_k\vec{v}_k = \vec{0} \Rightarrow \alpha_1=\dots=\alpha_k=0
+$$
+
+Otherwise, they are **dependent**.
+
+---
+
+### 🧩 Example 4 — Linear Independence Check  
+
+Let $\vec{v}_1=(1,2,3)$, $\vec{v}_2=(2,4,6)$, $\vec{v}_3=(1,0,1)$.  
+Check if $\{\vec{v}_1,\vec{v}_2,\vec{v}_3\}$ is linearly independent.
+
+Form the equation:
+$$
+\alpha_1\vec{v}_1+\alpha_2\vec{v}_2+\alpha_3\vec{v}_3=\vec{0}
+$$
+$$
+\Rightarrow
+\begin{bmatrix}
+1&2&1\\
+2&4&0\\
+3&6&1
+\end{bmatrix}
+\begin{bmatrix}\alpha_1\\\alpha_2\\\alpha_3\end{bmatrix} = \vec{0}
+$$
+
+Row-reduce:
+$$
+R_2-2R_1, \; R_3-3R_1 \Rightarrow
+\begin{bmatrix}
+1&2&1\\
+0&0&-2\\
+0&0&-2
+\end{bmatrix}
+\Rightarrow
+\alpha_3 \text{ is free } \Rightarrow \text{Dependent set.}
+$$
+
+✅ **Conclusion:** $\boxed{\vec{v}_2 = 2\vec{v}_1}$ → linearly dependent.
+
+---
+
+## [[Geometric Insight]] 🌌  
+
+Vectors represent **directions** and **magnitudes**.  
+- **Span** of a set of vectors = all possible linear combinations.  
+- If two vectors in $\mathbb{R}^3$ are not multiples, they span a **plane**.  
+- If three vectors in $\mathbb{R}^3$ are linearly independent, they span all of $\mathbb{R}^3$.
+
+---
+
+| Concept             | Symbolic Form                                                                         | Interpretation                                       |
+| ------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Magnitude           | $\| \vec{u} \| = \sqrt{u_1^2 + \dots + u_n^2}$                                        | Length of the vector                                 |
+| Dot Product         | $\vec{u} \cdot \vec{v} = \| \vec{u} \| \| \vec{v} \| \cos\theta$                      | Measures angle similarity                            |
+| Cross Product       | $$\vec{u} \times \vec{v}$$                                                            | Vector perpendicular to both $\vec{u}$ and $\vec{v}$ |
+| Projection          | $\text{proj}_{\vec{v}}(\vec{u}) = \frac{\vec{u}\cdot\vec{v}}{\| \vec{v} \|^2}\vec{v}$ | Component of $\vec{u}$ along $\vec{v}$               |
+| Linear Independence | $\alpha_1 v_1 + \dots + \alpha_k v_k = 0$                                             | No vector can be written as a combination of others  |
+
+---
+
+✨ **Exam Tip:**  
+In vector questions, always:  
+1. Start by stating the **dimension and space** ($\mathbb{R}^2, \mathbb{R}^3$, etc.)  
+2. Write all intermediate steps (especially in dot/cross product)  
+3. Conclude with **geometric meaning** (angle, plane, orthogonality)  
+→ It demonstrates conceptual mastery, not just computation.

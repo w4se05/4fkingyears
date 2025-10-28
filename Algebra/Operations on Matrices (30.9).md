@@ -1,194 +1,285 @@
-## 🧩 Definition — Matrix
-Given two numbers $m$ and $n$,  
-a **matrix** $A$ of size $m \times n$ consists of $m \cdot n$ entries such that:
+# 🧮 Matrix  
 
-- Each **row** has exactly $n$ entries  
-- Each **column** has exactly $m$ entries  
+## [[Definition]] 📏
+A **matrix** is a rectangular array of numbers arranged in rows and columns.
 
-**Denote:** $M_{m \times n}$ — the set of all matrices of size $m \times n$.
-
-**Example:**  
-A matrix of size $2 \times 3$  
+A matrix of size $m \times n$ (m rows, n columns) is written as:
 $$
-A = \begin{pmatrix}
-1 & 2 & 3 \\
-4 & 4 & 6
-\end{pmatrix}
-$$
-
----
-
-## ⚙️ Scalar Multiplication
-Let $\lambda \in \mathbb{R}$ and  
-$$
-A = 
-\begin{pmatrix}
-a_{11} & a_{12} & \dots & a_{1n} \\
-a_{21} & a_{22} & \dots & a_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
+A =
+\begin{bmatrix}
+a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
 a_{m1} & a_{m2} & \dots & a_{mn}
-\end{pmatrix}
-= (a_{ij})_{m \times n}
+\end{bmatrix}
 $$
 
-where $a_{ij}$ is the entry at **row i** and **column j** of $A$.
+Each entry $a_{ij}$ is the element in the *i*-th row and *j*-th column.  
+We denote the set of all $m \times n$ matrices by $M_{m\times n}$.
 
-Then,  
-$$
-\lambda A = (\lambda a_{ij})_{m \times n}
-$$
+> 💡 When $m=n$, the matrix is **square**.  
 
-which defines the map:  
+---
+
+## [[Matrix Equality]] 🟰
+Two matrices $A=(a_{ij})$ and $B=(b_{ij})$ are **equal** if:
+- They have the same size, and  
+- $a_{ij}=b_{ij}$ for all $i,j$.
+
+---
+
+## [[Matrix Operations]] ⚙️
+
+### 1️⃣ Scalar Multiplication  
+If $\lambda \in \mathbb{R}$ and $A=(a_{ij})$,  
 $$
-\mathbb{R} \times M_{m \times n} \to M_{m \times n}, \quad (\lambda, A) \mapsto \lambda A
+\lambda A = (\lambda a_{ij})
+$$  
+
+**Example:**
+$$
+A=\begin{bmatrix}1&2\\3&4\end{bmatrix}, \; \lambda=2 \Rightarrow
+2A=\begin{bmatrix}2&4\\6&8\end{bmatrix}
 $$
 
 ---
 
-## ➕ Matrix Addition
+### 2️⃣ Matrix Addition  
+Possible only when $A,B$ have the same dimensions.  
 $$
-M_{m \times n} + M_{m \times n} \to M_{m \times n}
-$$
-
-$$(A, B) \mapsto A + B = (a_{ij} + b_{ij})_{m \times n}$$
-
-Where:  
-- $A = (a_{ij})_{m \times n}$  
-- $B = (b_{ij})_{m \times n}$  
-
----
-
-## 🔁 Transposed Matrix
-The **transpose** of $A \in M_{m \times n}$ is defined as:  
-$$
-A^T = (b_{ij})_{n \times m}, \quad \text{where } b_{ij} = a_{ji}
+A+B=(a_{ij}+b_{ij})
 $$
 
-for all  
+**Example:**
 $$
-i = 1, 2, \dots, n \\
-j = 1, 2, \dots, m
-$$
-
-Thus,  
-$$
-A \in M_{m \times n} \implies A^T \in M_{n \times m}
+A=\begin{bmatrix}2&3\\4&5\end{bmatrix},\;
+B=\begin{bmatrix}1&2\\-1&0\end{bmatrix}
+\Rightarrow
+A+B=\begin{bmatrix}3&5\\3&5\end{bmatrix}
 $$
 
 ---
 
-## 🧠 Properties of Matrices
-Given $A, B, C \in M_{m \times n}$ and $\alpha, \beta \in \mathbb{R}$:
+### 3️⃣ Matrix Multiplication 🔁  
+Defined if the **number of columns** of $A$ equals the **number of rows** of $B$.
 
-1. $A + B = B + A$ (Commutative)  
-2. $A + (B + C) = (A + B) + C$ (Associative)  
-3. $\alpha(A + B) = \alpha A + \alpha B$ (Distributive)  
-4. $(\alpha + \beta)A = \alpha A + \beta A$  
-5. $A + 0 = 0 + A = A$, where $0 = (0)_{m \times n}$  
-6. $(A^T)^T = A$  
-7. $(\alpha A)^T = \alpha A^T$  
-8. $(A + B)^T = A^T + B^T$ (Homework)
+If $A=(a_{ij})_{m\times n}$ and $B=(b_{ij})_{n\times p}$,  
+then $C=AB=(c_{ij})_{m\times p}$ where  
+$$
+c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}
+$$
+
+> ⚠️ Not commutative: $AB \neq BA$ (in general)
 
 ---
 
-## ✖️ Matrix Multiplication
-Matrix multiplication is defined by  
+### 🧩 Example 1 — Matrix Multiplication (Exam-Level)
+Let  
 $$
-M_{m \times \mathbf{n}} \times M_{\mathbf{n} \times p} \to M_{m \times p}
+A=\begin{bmatrix}2&1&0\\-1&3&2\\4&0&5\end{bmatrix}, \;
+B=\begin{bmatrix}1&2&3\\0&-1&4\\2&1&0\end{bmatrix}
+$$
+Compute $AB$.
+
+**Solution:**
+$$
+AB=\begin{bmatrix}
+2(1)+1(0)+0(2)&2(2)+1(-1)+0(1)&2(3)+1(4)+0(0)\\
+(-1)(1)+3(0)+2(2)&(-1)(2)+3(-1)+2(1)&(-1)(3)+3(4)+2(0)\\
+4(1)+0(0)+5(2)&4(2)+0(-1)+5(1)&4(3)+0(4)+5(0)
+\end{bmatrix}
+$$
+$$
+=\boxed{
+\begin{bmatrix}
+2&3&10\\
+3&-1&9\\
+14&13&12
+\end{bmatrix}}
 $$
 
-$$(A, B) \mapsto AB = (c_{ij})_{m \times p}$$  
-
-Where:
-- $A = (a_{ij})_{m \times n}$  
-- $B = (b_{ij})_{n \times p}$  
-
-Each element $c_{ij}$ is the **inner product** of the *i-th row* of $A$ and the *j-th column* of $B$.
+✅ Check: $(3\times3)(3\times3)\Rightarrow(3\times3)$ ✔️
 
 ---
 
-### 🧮 Example
+## [[Transpose of a Matrix]] 🔄
+For $A=(a_{ij})_{m\times n}$, its **transpose** $A^T$ is obtained by swapping rows and columns:
 $$
-A = 
-\begin{pmatrix}
-2 & 0 & -1 \\
-4 & -5 & 2
-\end{pmatrix} \in M_{2 \times 3}, \quad
-B = 
-\begin{pmatrix}
-1 & 2 & 3 & 4 \\
-5 & 6 & 7 & 8 \\
-9 & 10 & 11 & 12
-\end{pmatrix} \in M_{3 \times 4}
+A^T=(a_{ji})_{n\times m}
 $$
 
-Then:  
+**Example:**
 $$
-\begin{aligned}
-AB &= 
-\begin{pmatrix}
-2 & 0 & -1 \\
-4 & -5 & 2
-\end{pmatrix}
-\begin{pmatrix}
-1 & 2 & 3 & 4 \\
-5 & 6 & 7 & 8 \\
-9 & 10 & 11 & 12
-\end{pmatrix} \\
-\\
-&=
-\begin{pmatrix}
--7 & -6 & -5 & -4 \\
--3 & -2 & -1 & 0
-\end{pmatrix} \in M_{2 \times 4}
-\end{aligned}
+A=\begin{bmatrix}1&2&3\\4&5&6\end{bmatrix}
+\Rightarrow
+A^T=\begin{bmatrix}1&4\\2&5\\3&6\end{bmatrix}
 $$
 
 ---
 
-### ⚙️ Properties of Matrix Multiplication
-- In general, $AB \neq BA$  
-- $A(B + C) = AB + AC$ (Homework)  
-- $(AB)^T = B^T A^T$ (Homework)
+## [[Properties of Matrix Operations]] 🧠
+
+For $A,B,C \in M_{m\times n}$ and $\alpha,\beta \in \mathbb{R}$:
+
+| Property | Formula |
+|-----------|----------|
+| Commutativity (Add.) | $A+B=B+A$ |
+| Associativity (Add.) | $A+(B+C)=(A+B)+C$ |
+| Associativity (Mult.) | $(AB)C=A(BC)$ |
+| Distributivity | $A(B+C)=AB+AC$ |
+| Scalar Multiplication | $(\alpha+\beta)A=\alpha A+\beta A$ |
+| Transpose | $(A^T)^T=A$ |
+| Transpose of sum | $(A+B)^T=A^T+B^T$ |
+| Transpose of product | $(AB)^T=B^T A^T$ |
 
 ---
 
-## 🧩 Application — Linear Equation Systems
-A system of $m$ linear equations in $n$ unknowns:
+## [[Special Matrices]] 🔹
+
+1️⃣ **Zero Matrix** — all entries = 0  
+2️⃣ **Identity Matrix** $I_n$:  
+$$
+I_n = 
+\begin{bmatrix}
+1 & 0 & \dots & 0\\
+0 & 1 & \dots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \dots & 1
+\end{bmatrix}
+$$  
+3️⃣ **Diagonal Matrix:** only diagonal entries may be nonzero.  
+4️⃣ **Symmetric Matrix:** $A=A^T$.  
+5️⃣ **Upper/Lower Triangular:** all entries below/above diagonal are zero.
+
+---
+
+## [[Matrix Representation of Linear Systems]] 📊
+
+A **system of linear equations** can be written as:
+$$
+A\vec{x} = \vec{b}
+$$
+where
+$$
+A=\begin{bmatrix}
+a_{11}&a_{12}&\dots&a_{1n}\\
+a_{21}&a_{22}&\dots&a_{2n}\\
+\vdots&\vdots&\ddots&\vdots\\
+a_{m1}&a_{m2}&\dots&a_{mn}
+\end{bmatrix},
+\quad
+\vec{x}=\begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix},
+\quad
+\vec{b}=\begin{bmatrix}b_1\\b_2\\\vdots\\b_m\end{bmatrix}
+$$
+
+Augmented matrix representation:
+$$
+(A|\vec{b}) =
+\begin{bmatrix}
+a_{11}&a_{12}&\dots&a_{1n}&|&b_1\\
+a_{21}&a_{22}&\dots&a_{2n}&|&b_2\\
+\vdots&\vdots&\ddots&\vdots&|&\vdots\\
+a_{m1}&a_{m2}&\dots&a_{mn}&|&b_m
+\end{bmatrix}
+$$
+
+---
+
+### 🧩 Example 2 — System Representation
+Given:
 $$
 \begin{cases}
-a_{11}x_{1} + a_{12}x_{2} + \dots + a_{1n}x_{n} = b_{1} \\
-\vdots \\
-a_{m1}x_{1} + a_{m2}x_{2} + \dots + a_{mn}x_{n} = b_{m}
+x+2y+z=2\\
+2x+3y+z=4\\
+x+y+2z=3
 \end{cases}
 $$
-
-can be represented as the **augmented matrix** $(A | B)$ or equivalently as:  
+Then:
 $$
-A
-\begin{pmatrix}
-x_{1} \\
-x_{2} \\
-\vdots \\
-x_{n}
-\end{pmatrix}
-=
-\begin{pmatrix}
-b_{1} \\
-b_{2} \\
-\vdots \\
-b_{m}
-\end{pmatrix}
-\quad \Leftrightarrow \quad
-Ax = b
+A=\begin{bmatrix}1&2&1\\2&3&1\\1&1&2\end{bmatrix}, \quad
+\vec{x}=\begin{bmatrix}x\\y\\z\end{bmatrix}, \quad
+\vec{b}=\begin{bmatrix}2\\4\\3\end{bmatrix}
+$$
+$$
+\Rightarrow A\vec{x}=\vec{b}, \quad
+(A|\vec{b})=\begin{bmatrix}1&2&1&|&2\\2&3&1&|&4\\1&1&2&|&3\end{bmatrix}
 $$
 
 ---
 
-## 🏷️ Common Types of Matrices
-1. **Square Matrix:** $A \in M_{n \times n}$  
-2. **Symmetric Matrix:** $A \in M_{n \times n}$ such that $A = A^T$  
-3. **Identity Matrix:** Square matrix with diagonal entries = 1, others = 0  
-   - Denoted $I_n$ for an identity matrix of size $n \times n$
+## [[Row Operations and Equivalence]] 🔁
+
+**Elementary Row Operations:**
+1. Swap two rows: $R_i \leftrightarrow R_j$
+2. Multiply a row by a nonzero constant: $kR_i$
+3. Add a multiple of one row to another: $R_i + kR_j$
+
+Two matrices are **row equivalent** if one can be obtained from the other using a sequence of such operations.
+
+> 💡 Row operations preserve the *solution set* of the associated linear system.
 
 ---
+
+### 🧩 Example 3 — Row Reduction
+
+$$
+A=\begin{bmatrix}
+1&2&1\\
+2&3&1\\
+1&1&2
+\end{bmatrix}
+$$
+Perform $R_2-2R_1$, $R_3-R_1$:
+$$
+\Rightarrow
+\begin{bmatrix}
+1&2&1\\
+0&-1&-1\\
+0&-1&1
+\end{bmatrix}
+$$
+Then $R_3-R_2$:
+$$
+\Rightarrow
+\begin{bmatrix}
+1&2&1\\
+0&-1&-1\\
+0&0&2
+\end{bmatrix}
+$$
+
+✅ Triangular → ready for back substitution.
+
+---
+
+## [[Matrix Rank (Preview)]] 🎯
+The **rank** of a matrix is the number of **nonzero rows** in its row echelon form.  
+It indicates the **dimension of the image** of the corresponding linear transformation.
+
+> Rank links directly to **consistency** and **invertibility** — see `[[Linear_Equation_System]]` and `[[Inverse_Matrix]]`.
+
+---
+
+## [[Summary Table]] 📚
+
+| Concept | Symbol | Key Insight |
+|----------|--------|-------------|
+| Transpose | $A^T$ | Swaps rows & columns |
+| Identity | $I_n$ | Neutral in multiplication |
+| Symmetric | $A=A^T$ | Mirror along diagonal |
+| Rank | $r(A)$ | # of independent rows/cols |
+| Inverse | $A^{-1}$ | Exists iff $\det(A)\neq0$ |
+| LES Form | $A\vec{x}=\vec{b}$ | Matrix form of equations |
+
+---
+
+## [[Exam Tips]] 🧠  
+
+✅ Label your operations (e.g. $R_2-3R_1$).  
+✅ Verify multiplication dimensions before computing.  
+✅ For proofs, always name the property you use.  
+✅ Cleanly box your final matrix or reduced form.  
+✅ Relate results: *“Since $\det(A)\neq0$, $A$ is invertible.”*  
+
+> 🧩 Matrix algebra = structure + clarity. Don’t skip intermediate logic — every step can earn credit.

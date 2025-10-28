@@ -1,69 +1,141 @@
-## [[Vector Space]] 🧭
-Let $\mathbb{K}$ be a field (in our case $\mathbb{R}$).  
-A **vector space** over $\mathbb{K}$ is a non-empty set $V$ equipped with:
+## [[Definition]] 🧮
+A **vector space** (or **linear space**) over $\mathbb{R}$ is a non-empty set $V$ equipped with two operations:
 
-- an operation of **addition** $+:V\times V\to V$
-- an operation of **scalar multiplication** $\cdot:\mathbb{K}\times V\to V$
+1️⃣ **Vector Addition**:  
+$\forall \vec{u}, \vec{v} \in V,\; \vec{u} + \vec{v} \in V$
 
-satisfying the following **axioms**.
+2️⃣ **Scalar Multiplication**:  
+$\forall \alpha \in \mathbb{R},\; \vec{u} \in V \Rightarrow \alpha \vec{u} \in V$
 
----
+such that the following **8 axioms** hold for all $\vec{u}, \vec{v}, \vec{w} \in V$ and $\alpha,\beta \in \mathbb{R}$:
 
-## [[Axioms of Vector Spaces]] ⚙️
-For all $u,v,w\in V$ and all $\alpha,\beta\in\mathbb{K}$:
-
-1. **Commutativity:** $u+v=v+u$
-2. **Associativity:** $(u+v)+w=u+(v+w)$
-3. **Additive Identity:** $\exists\,0\in V$ s.t. $u+0=u$
-4. **Additive Inverse:** $\forall\,u\in V,\,\exists\,(-u)\in V$ s.t. $u+(-u)=0$
-5. **Distributivity (Vector):** $\alpha(u+v)=\alpha u+\alpha v$
-6. **Distributivity (Scalar):** $(\alpha+\beta)u=\alpha u+\beta u$
-7. **Compatibility:** $(\alpha\beta)u=\alpha(\beta u)$
-8. **Identity:** $1\cdot u=u$
-
----
-
-## [[Examples of Vector Spaces]] 📚
-1. $\mathbb{R}^n$: all $n$-tuples of real numbers  
-2. $M_{m\times n}(\mathbb{R})$: set of real $m\times n$ matrices  
-3. $P_n$: set of all real polynomials of degree ≤ n  
-4. $\mathbb{R}^m$: column vectors with $m$ components  
-
-Each of these satisfies the above axioms under natural addition and scalar multiplication.
+| # | Property | Expression |
+|---|-----------|-------------|
+| 1 | Commutativity | $\vec{u}+\vec{v} = \vec{v}+\vec{u}$ |
+| 2 | Associativity (add.) | $(\vec{u}+\vec{v})+\vec{w} = \vec{u}+(\vec{v}+\vec{w})$ |
+| 3 | Additive identity | $\exists \vec{0}\in V: \vec{u}+\vec{0}=\vec{u}$ |
+| 4 | Additive inverse | $\forall \vec{u}\in V,\; \exists (-\vec{u})\in V$ |
+| 5 | Distributivity (scalar over vectors) | $\alpha(\vec{u}+\vec{v})=\alpha\vec{u}+\alpha\vec{v}$ |
+| 6 | Distributivity (scalars) | $(\alpha+\beta)\vec{u}=\alpha\vec{u}+\beta\vec{u}$ |
+| 7 | Associativity (scalar mult.) | $\alpha(\beta\vec{u})=(\alpha\beta)\vec{u}$ |
+| 8 | Scalar identity | $1\cdot\vec{u}=\vec{u}$ |
 
 ---
 
-## [[Subspace]] 🔹
-A non-empty subset $W\subseteq V$ is a **subspace** if:
+## [[Examples of Vector Spaces]] 🧩
 
-1. $0\in W$  
-2. If $u,v\in W$, then $u+v\in W$  
-3. If $\alpha\in\mathbb{R}$ and $u\in W$, then $\alpha u\in W$
-
----
-
-## [[Linear Combination and Span]] ➕
-Given $v_1,\dots,v_k\in V$ and scalars $\alpha_1,\dots,\alpha_k\in\mathbb{R}$,  
-a vector $v$ is a **linear combination** if:
-$$v=\alpha_1v_1+\alpha_2v_2+\dots+\alpha_kv_k$$
-
-The set of all such combinations is the **span**:
-$$\text{Span}\{v_1,\dots,v_k\}=\{\alpha_1v_1+\dots+\alpha_kv_k\mid \alpha_i\in\mathbb{R}\}$$
+| Name | Description | Typical Element |
+|------|--------------|------------------|
+| $\mathbb{R}^n$ | n-tuples of real numbers | $(x_1, x_2, ..., x_n)$ |
+| $M_{m\times n}$ | all $m\times n$ matrices | $(a_{ij})_{m\times n}$ |
+| $\mathbb{P}_n$ | polynomials of degree ≤ n | $a_0 + a_1x + \dots + a_nx^n$ |
+| $C[a,b]$ | continuous real functions on [a,b] | $f(x)$ |
 
 ---
 
-## [[Linear Independence]] ⚖️
-The set $\{v_1,\dots,v_k\}$ is **linearly independent** if:
-$$\alpha_1v_1+\alpha_2v_2+\dots+\alpha_kv_k=0 \implies \alpha_1=\dots=\alpha_k=0$$
+## [[Subspace]] 🧭
+A subset $U\subseteq V$ is a **subspace** of $V$ if:
 
-Otherwise, it is **linearly dependent**.
+1. $\vec{0}\in U$  
+2. $\forall \vec{u},\vec{v}\in U,\; \vec{u}+\vec{v}\in U$  
+3. $\forall \alpha\in\mathbb{R},\;\vec{u}\in U\Rightarrow \alpha\vec{u}\in U$
+
+> 💡 Subspaces themselves are vector spaces (under the same operations).
 
 ---
 
-## [[Basis and Dimension]] 🧩
-A **basis** of $V$ is a linearly independent set that spans $V$.
+### 🧩 Example 1 — Checking Subspace  
 
-The **dimension** of $V$ is the number of elements in any of its bases.
+Let $V=\mathbb{R}^3$,  
+and $U=\{(x,y,z)\in\mathbb{R}^3\;|\;x+y+z=0\}$.
+
+✅ Check:
+- $(0,0,0)\in U$  
+- Closed under addition:  
+  $(x_1+y_1+z_1=0,\;x_2+y_2+z_2=0)\Rightarrow (x_1+x_2)+(y_1+y_2)+(z_1+z_2)=0$  
+- Closed under scalar multiplication:  
+  $\alpha(x+y+z)=\alpha0=0$
+
+✅ Hence $U$ is a **subspace of $\mathbb{R}^3$**.
+
+---
+
+## [[Linear Combination, Span, and Independence]] 🧩
+
+### Linear Combination  
+A vector $\vec{v}$ is a **linear combination** of $\vec{v}_1,\dots,\vec{v}_k$ if  
+$$
+\vec{v} = c_1\vec{v}_1 + c_2\vec{v}_2 + \dots + c_k\vec{v}_k
+$$
+for some scalars $c_1,\dots,c_k\in\mathbb{R}$.
+
+---
+
+### Span  
+The **span** of $\{\vec{v}_1,\dots,\vec{v}_k\}$ is the set of *all* linear combinations of those vectors:
+$$
+\text{span}\{\vec{v}_1,\dots,\vec{v}_k\} = \{c_1\vec{v}_1 + \dots + c_k\vec{v}_k \mid c_i\in\mathbb{R}\}
+$$
+
+> 💡 The span is always a **subspace** of $V$.
+
+---
+
+### Linear Independence  
+$\{\vec{v}_1,\dots,\vec{v}_k\}$ is **linearly independent** if  
+$$
+c_1\vec{v}_1 + c_2\vec{v}_2 + \dots + c_k\vec{v}_k = \vec{0}
+$$
+⟹ $c_1=c_2=\dots=c_k=0$
+
+Otherwise, the set is **linearly dependent**.
+
+---
+
+### 🧩 Example 2 — Checking Independence  
+
+Are $\vec{v}_1=(1,2,3)$, $\vec{v}_2=(2,4,6)$, and $\vec{v}_3=(1,0,1)$ independent in $\mathbb{R}^3$?
+
+Set up:
+$$
+c_1\vec{v}_1 + c_2\vec{v}_2 + c_3\vec{v}_3 = \vec{0}
+$$
+⟹  
+$$
+c_1(1,2,3) + c_2(2,4,6) + c_3(1,0,1) = (0,0,0)
+$$
+⟹$$\begin{cases}
+c_1 + 2c_2 + c_3 = 0\\
+2c_1 + 4c_2 + 0c_3 = 0\\
+3c_1 + 6c_2 + c_3 = 0
+\end{cases}
+$$
+Row-reduce:
+$$
+\begin{bmatrix}
+1 & 2 & 1\\
+2 & 4 & 0\\
+3 & 6 & 1
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1 & 2 & 1\\
+0 & 0 & -2\\
+0 & 0 & -2
+\end{bmatrix}
+$$
+⟹ $c_3=0,\;c_1=-2c_2$ ⟹ **dependent** (since $c_2$ free).  
+✅ $\boxed{\text{Vectors are linearly dependent.}}$
+
+---
+
+## [[Basis and Dimension]] 🧠
+
+A **basis** of a vector space $V$ is a linearly independent set that **spans** $V$.
+
+The **dimension** of $V$, denoted $\dim(V)$, is the number of vectors in any basis.
+
+> 💡 Every basis of a finite-dimensional vector space has the same number of vectors.
 
 Examples:
 - $\dim(\mathbb{R}^n)=n$
@@ -73,40 +145,131 @@ Examples:
 
 ---
 
-## [[Sum and Intersection of Subspaces]] 🔀
-Given subspaces $U,W\subseteq V$:
-- **Sum:** $U+W=\{u+w\mid u\in U,w\in W\}$
-- **Intersection:** $U\cap W=\{v\mid v\in U\text{ and }v\in W\}$
+### 🧩 Example 3 — Finding a Basis  
 
-If $U\cap W=\{0\}$, we say the sum is **direct** and write $V=U\oplus W$.
+Let $V=\text{span}\{(1,1,0),(2,0,1),(3,1,1)\} \subseteq \mathbb{R}^3$.  
+Find a basis.
 
----
+Build matrix with these as rows:
+$$
+\begin{bmatrix}
+1&1&0\\
+2&0&1\\
+3&1&1
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+1&1&0\\
+0&-2&1\\
+0&0&1
+\end{bmatrix}
+$$
+→ Rank = 3 → all independent.
 
-## [[Linear Mapping]] 🔁
-A mapping $T:V\to W$ is **linear** if:
-$$T(u+v)=T(u)+T(v),\quad T(\alpha u)=\alpha T(u)$$
-for all $u,v\in V$ and $\alpha\in\mathbb{R}$.
-
-Every linear mapping can be represented by a **matrix** relative to a chosen basis.
-
----
-
-## [[Connection with Matrices and LES]] 🔗
-Let $A\in M_{m\times n}$.  
-Then the associated linear map $T_A:\mathbb{R}^n\to\mathbb{R}^m$ is given by:
-$$T_A(x)=Ax$$
-
-- **Image of $T_A$** = **Column space** of $A$
-- **Kernel of $T_A$** = **Null space** of $A$
-- $\operatorname{rank}(A)=\dim(\text{Im}(A))$
-- $\operatorname{nullity}(A)=\dim(\text{Ker}(A))$
-
-By **Rank–Nullity Theorem:**
-$$\operatorname{rank}(A)+\operatorname{nullity}(A)=n$$
+✅ Basis = $\{(1,1,0),(2,0,1),(3,1,1)\}$  
+✅ $\dim(V)=3$
 
 ---
 
-**Summary Insight:**  
-A vector space abstracts all linear behavior in algebraic form —  
-its elements are vectors, its operations are linear,  
-and its substructures (span, basis, rank) form the core of linear algebra itself. 🧭
+## [[Row, Column, and Null Spaces]] 🧾
+
+For $A\in M_{m\times n}$:
+
+| Space | Definition | Dimension |
+|--------|-------------|------------|
+| Row Space | span of rows of $A$ | = rank(A) |
+| Column Space | span of columns of $A$ | = rank(A) |
+| Null Space | $\{\vec{x}\mid A\vec{x}=\vec{0}\}$ | = $n-\text{rank}(A)$ |
+
+---
+
+### 🧩 Example 4 — Null Space  
+
+$$
+A=\begin{bmatrix}
+1&2&1\\
+2&4&2
+\end{bmatrix}
+$$
+$\text{Row 2}=2\times\text{Row 1}$ ⟹ rank = 1.
+
+Solve $A\vec{x}=\vec{0}$:
+$$
+x_1 + 2x_2 + x_3 = 0 \Rightarrow x_1 = -2x_2 - x_3
+$$
+Let $x_2=s,\;x_3=t$:
+$$
+\vec{x} = s(-2,1,0) + t(-1,0,1)
+$$
+✅ Null space basis = $\{(-2,1,0),(-1,0,1)\}$  
+✅ $\dim(\text{Nul}(A)) = 2$
+
+---
+
+## [[Linear Transformation]] 🔄
+
+A mapping $T:V\to W$ between vector spaces is **linear** if:
+1. $T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})$
+2. $T(c\vec{u})=cT(\vec{u})$
+
+### Matrix Representation  
+If $T:\mathbb{R}^n\to\mathbb{R}^m$, then  
+$\exists A\in M_{m\times n}$ such that  
+$$
+T(\vec{x}) = A\vec{x}
+$$
+
+> 💡 Every linear transformation corresponds to a matrix, and vice versa.
+
+---
+
+### 🧩 Example 5 — Transformation and Kernel  
+
+Let $T:\mathbb{R}^3\to\mathbb{R}^2$ given by  
+$T(x,y,z)=(x+y,2y+z)$.
+
+Matrix form:
+$$
+A=
+\begin{bmatrix}
+1&1&0\\
+0&2&1
+\end{bmatrix}
+$$
+
+Find $\ker(T)$ (null space):
+
+Solve $A\vec{x}=\vec{0}$:
+$$
+\begin{cases}
+x+y=0\\
+2y+z=0
+\end{cases}
+\Rightarrow x=-y,\;z=-2y
+$$
+$$\implies\vec{x}=y(-1,1,-2)$$ 
+✅ $\ker(T)=\text{span}\{(-1,1,-2)\}$  
+✅ $\dim(\ker T)=1$
+
+---
+
+## [[Rank–Nullity Theorem]] 🧮
+For any linear transformation $T:V\to W$:
+$$
+\dim(V) = \text{rank}(T) + \text{nullity}(T)
+$$
+
+> Rank = $\dim(\text{Im }T)$,  
+> Nullity = $\dim(\ker T)$.
+
+---
+
+## [[Exam-Style Tip Sheet]] 🎓  
+
+✅ When asked “Is it a subspace?”, always check **three closure rules**.  
+✅ Use **row reduction** to test independence or find a basis.  
+✅ Keep **null space basis** vectors **parametric** (free-variable = 1).  
+✅ Always mention **dimension** in your final answer.  
+✅ If $A\in M_{n\times n}$ and $\det(A)\neq0$, its columns form a **basis of $\mathbb{R}^n$**.  
+✅ Relate transformations to their matrix representation explicitly.  
+
