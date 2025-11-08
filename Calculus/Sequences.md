@@ -1,7 +1,3 @@
-# 📗 Calculus 1 — Chapter 1: Sequences and Series
-
----
-
 ## 🧭 Conceptual Section (Teach Mode)
 
 ### 1. Sequences

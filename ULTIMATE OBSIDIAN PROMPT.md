@@ -20,6 +20,8 @@ Follow this exact structure and style:
     - Definitions, formulas, theorems, and properties written concisely.
         
     - Logical progression: Definition → Concept → Property → Implication.
+	    
+    - If there are any new terminologies or abbreviations that you haven't mentioned please clarify right away.
         
     - Short notes using callouts like “> [!Note]” or “> [!Property]”.
         
@@ -34,8 +36,6 @@ Follow this exact structure and style:
 3. **Summary Section**
     
     - Concise recap of the key results and facts for exam revision.
-        
-    - End with a ✅ “End of File — [Topic]” line.
         
 
 **Pedagogical Tone:**

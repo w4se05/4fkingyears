@@ -58,7 +58,7 @@
 
 > [!Property] 🧮 **Chain Rule**  
 > $$
-> \frac{d}{dx}f(g(x)) = f'(g(x)) \cdot g'(x).
+> \frac{d}{dx}f(g(x)) = f'(g(x)) \cdot g'(x)
 > $$
 
 ---
@@ -69,7 +69,7 @@
 > $$
 > \begin{aligned}
 > \frac{d}{dx}(\sin x) &= \cos x, & \frac{d}{dx}(\cos x) &= -\sin x,\\
-> \frac{d}{dx}(\tan x) &= \sec^2 x, & \frac{d}{dx}(\cot x) &= -\csc^2 x,\\
+> \frac{d}{dx}(\tan x) &= \sec^2 x=\frac{1}{\cos^2x}, & \frac{d}{dx}(\cot x) &= -\csc^2 x=\frac{-1}{\sin^2x},\\
 > \frac{d}{dx}(\sec x) &= \sec x \tan x, & \frac{d}{dx}(\csc x) &= -\csc x \cot x.
 > \end{aligned}
 > $$

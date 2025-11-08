@@ -63,6 +63,7 @@
 >- **converges** if $p>1$ 
 >- **diverges** if $p\leq{1}$
 
+---
 
 > [!Theorem] 📘 **(Test for Divergence)**  
 > If $\lim_{n \to \infty} a_n \ne 0$ or the limit does not exist,  

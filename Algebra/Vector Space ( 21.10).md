@@ -1,7 +1,3 @@
-# 🌌 Vector Space — Advanced Notes (Full Inline Notation)
-
----
-
 ## [[1. Definition and Structure]] 🧭  
 
 A **vector space** (also called *linear space*) $V$ over the real numbers $\mathbb{R}$ is a non-empty set whose elements are called **vectors** (denoted $\vec{u}, \vec{v}, \vec{w}, \dots$).  
@@ -199,7 +195,7 @@ $U=\{(x,y,z)\in\mathbb{R}^3\mid x+2y+z=0\}$
 $\vec{v}_1=(1,2,3),\;\vec{v}_2=(2,4,6),\;\vec{v}_3=(1,0,1)$
 
 Form matrix of column vectors:
-\[
+$$
 A=
 \begin{bmatrix}
 1&2&1\\
@@ -212,7 +208,7 @@ A=
 0&0&-2\\
 0&0&-2
 \end{bmatrix}
-\]
+$$
 ⟹ rank$(A)=2<3\Rightarrow$ **dependent set**.
 
 ---
@@ -233,11 +229,11 @@ $\dim(V)=3$.
 $A=\begin{bmatrix}1&2&1\\2&4&2\end{bmatrix}$  
 rank$(A)=1$  
 Solve $A\vec{x}=\vec{0}$:
-\[
+$$
 x_1=-2x_2-x_3
 \Rightarrow
 \vec{x}=s(-2,1,0)+t(-1,0,1)
-\]
+$$
 ✅ Basis for $\ker(A)$: $\{(-2,1,0),(-1,0,1)\}$  
 ✅ dim$(\ker A)=2=n-\text{rank}(A)$.
 
@@ -262,7 +258,7 @@ $x=-y,\;z=-2y$
 
 $\mathcal{B}=\{(1,0),(0,1)\}$, $\mathcal{B}'=\{(1,1),(1,-1)\}$  
 Let $\vec{x}=(a,b)$  
-\[
+$$
 P_{\mathcal{B}\to\mathcal{B}'}=
 \begin{bmatrix}
 1&1\\
@@ -274,14 +270,14 @@ P^{-1}=\frac{1}{2}
 1&1\\
 1&-1
 \end{bmatrix}
-\]
-\[
+$$
+$$
 [\vec{x}]_{\mathcal{B}'}=P^{-1}[\vec{x}]_\mathcal{B}=\frac{1}{2}
 \begin{bmatrix}
 a+b\\
 a-b
 \end{bmatrix}
-\]
+$$
 ✅ Coordinates in new basis: $(\frac{a+b}{2},\frac{a-b}{2})$
 
 ---

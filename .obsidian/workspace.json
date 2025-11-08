@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calculus/Series.md",
+                "file": "CA/Arithmetic for Computers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Series"
+              "title": "Arithmetic for Computers"
             }
           }
         ],
@@ -198,25 +198,29 @@
   },
   "active": "5d7554fb0ebb32db",
   "lastOpenFiles": [
-    "Calculus/Sequences.md",
-    "Calculus/Differentiation.md",
-    "Calculus/Series.md",
-    "Calculus/Limits and Continuity.md",
-    "CA/Performance Measurement (22.9).md",
-    "Calculus/Functions and Transformations.md",
+    "CA/Language of the Computer.md",
+    "CA/Arithmetic for Computers.md",
     "ULTIMATE OBSIDIAN PROMPT.md",
+    "CA/Computer Abstractions and Technology (22.9).md",
+    "CA/Assembla Kedavara .md",
+    "Calculus/Sequences.md",
+    "Calculus/Limits and Continuity.md",
+    "Calculus/Differentiation.md",
+    "Calculus/Functions and Transformations.md",
+    "Calculus/Series.md",
+    "Calculus/Images/Screenshot 2025-09-25 095429.png",
     "Algebra/Vector Space ( 21.10).md",
-    "Untitled",
-    "Algebra/Inverse Matrix (7.10).md",
     "Algebra/Determinant (14.10).md",
+    "Algebra/Inverse Matrix (7.10).md",
+    "Algebra/Vector (16.9).md",
+    "Law (30.10).md",
+    "Untitled",
     "Algebra/EXAM PREPARATION.md",
     "Algebra/Operations on Matrices (30.9).md",
-    "Algebra/Vector (16.9).md",
     "Algebra/LES (23.9).md",
     "Determinant.md",
     "Cross Product (for $/mathbb{R}^3$).md",
     "Cross Product (for $",
-    "CA/Assembla Kedavara .md",
     "1. Determinants & Invertibility.md",
     "E.png",
     "D.png",
@@ -227,9 +231,6 @@
     "Area of the Parallelogram in $R^2$ (Determinant).md",
     "Construct a Vector out of 2 points.md",
     "Linear Equation System.md",
-    "SOPHOMORE/CA/Assembla Kedavara .md",
-    "FY_Applied Math/Foundation of Probability ( 1-6 )/Counting Techniques/Permutation.md",
-    "FY_Applied Math/Foundation of Probability ( 1-6 )/Counting Techniques/Combination.md",
     "FY_Applied Math/PDF source/Lecture 9.pdf",
     "FY_Applied Math/PDF source/Lecture 8.pdf",
     "FY_Applied Math/PDF source/Lecture 14.pdf",
@@ -242,7 +243,6 @@
     "FY_Applied Math/Images/Screenshot 2025-01-09 214350.png",
     "FY_Applied Math/Images/Screenshot 2025-01-02 211130.png",
     "FY_Applied Math/Images/Screenshot 2025-01-02 204904.png",
-    "FY_Applied Math/Images/Screenshot 2025-01-02 202924.png",
-    "FY_Applied Math/Images/Screenshot 2024-12-22 225606.png"
+    "FY_Applied Math/Images/Screenshot 2025-01-02 202924.png"
   ]
 }
