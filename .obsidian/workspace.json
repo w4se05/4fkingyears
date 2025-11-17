@@ -13,30 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/Vector Space ( 21.10).md",
+                "file": "Algebra/Linear Algebra/EXAM PREPARATION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vector Space ( 21.10)"
+              "title": "EXAM PREPARATION"
             }
           },
           {
-            "id": "5d7554fb0ebb32db",
+            "id": "613ccfeec5f37eee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CA/Arithmetic for Computers.md",
+                "file": "Algebra/Linear Algebra/EXAM PREPARATION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arithmetic for Computers"
+              "title": "EXAM PREPARATION"
+            }
+          },
+          {
+            "id": "45935bb1627ee467",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algebra/Linear Algebra/EXAM PREPARATION.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EXAM PREPARATION"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -55,7 +69,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTimeReverse",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -93,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "b252b19a04633e87",
@@ -181,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,53 +209,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d7554fb0ebb32db",
+  "active": "45935bb1627ee467",
   "lastOpenFiles": [
-    "CA/Language of the Computer.md",
-    "CA/Arithmetic for Computers.md",
+    "Algebra/Linear Algebra/Inverse Matrix (7.10).md",
+    "Algebra/Linear Algebra/EXAM PREPARATION.md",
     "ULTIMATE OBSIDIAN PROMPT.md",
-    "CA/Computer Abstractions and Technology (22.9).md",
-    "CA/Assembla Kedavara .md",
+    "Algebra/Linear Algebra/Determinant (14.10).md",
+    "Algebra/Linear Algebra/Vector (16.9).md",
+    "Algebra/Linear Algebra/Operations on Matrices (30.9).md",
+    "Algebra/Linear Algebra/Vector Space ( 21.10).md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "Algebra/Linear Algebra/Unit_circle_angles.svg.png",
+    "Hong Nguyen Phuc 104240581.md",
+    "Algebra/Linear Algebra/LES (23.9).md",
+    "Calculus/Series.md",
     "Calculus/Sequences.md",
-    "Calculus/Limits and Continuity.md",
     "Calculus/Differentiation.md",
     "Calculus/Functions and Transformations.md",
-    "Calculus/Series.md",
+    "Algebra/General Algebra/Logic and Propositional Algebra.md",
+    "CA/Computer Abstractions and Technology (22.9).md",
+    "CA/Assembla Kedavara .md",
+    "CA/Arithmetic for Computers.md",
+    "Algebra/Linear Algebra",
+    "Algebra/General Algebra",
+    "CA/Language of the Computer.md",
+    "Law (30.10).md",
+    "Algebra/EXAM PREPARATION.md",
+    "Calculus/Limits and Continuity.md",
     "Calculus/Images/Screenshot 2025-09-25 095429.png",
     "Algebra/Vector Space ( 21.10).md",
     "Algebra/Determinant (14.10).md",
     "Algebra/Inverse Matrix (7.10).md",
-    "Algebra/Vector (16.9).md",
-    "Law (30.10).md",
     "Untitled",
-    "Algebra/EXAM PREPARATION.md",
-    "Algebra/Operations on Matrices (30.9).md",
-    "Algebra/LES (23.9).md",
-    "Determinant.md",
-    "Cross Product (for $/mathbb{R}^3$).md",
     "Cross Product (for $",
-    "1. Determinants & Invertibility.md",
     "E.png",
     "D.png",
     "C.png",
-    "Assignment.md",
     "Assignment.zip",
-    "Principles of MIPS Design.md",
-    "Area of the Parallelogram in $R^2$ (Determinant).md",
-    "Construct a Vector out of 2 points.md",
-    "Linear Equation System.md",
     "FY_Applied Math/PDF source/Lecture 9.pdf",
     "FY_Applied Math/PDF source/Lecture 8.pdf",
     "FY_Applied Math/PDF source/Lecture 14.pdf",
     "FY_Applied Math/PDF source/Lecture 7.pdf",
     "FY_Applied Math/PDF source/Lecture 6.pdf",
-    "FY_Applied Math/PDF source/Lecture 5.pdf",
-    "FY_Applied Math/PDF source/Lecture 4.pdf",
     "FY_Applied Math/Images/Screenshot 2025-01-10 225527.png",
     "FY_Applied Math/Images/Screenshot 2024-12-19 002129.png",
     "FY_Applied Math/Images/Screenshot 2025-01-09 214350.png",
     "FY_Applied Math/Images/Screenshot 2025-01-02 211130.png",
-    "FY_Applied Math/Images/Screenshot 2025-01-02 204904.png",
-    "FY_Applied Math/Images/Screenshot 2025-01-02 202924.png"
+    "FY_Applied Math/Images/Screenshot 2025-01-02 204904.png"
   ]
 }

@@ -194,7 +194,7 @@ addi $sp,$sp,-8
 sw   $ra,4($sp)
 sw   $a0,0($sp)
 jal  square
-lw   $ra,4($sp)
+	lw   $ra,4($sp)
 addi $sp,$sp,8
 ```
 

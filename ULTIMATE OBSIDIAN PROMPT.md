@@ -4,7 +4,7 @@ Follow this exact structure and style:
 
 **Formatting Requirements:**
 
-- Write in clean Markdown (`.md`) with full LaTeX math support (`$$...$$`).
+- Write in clean Markdown (`.md`) with full LaTeX math support `$$..$$` or `$...$`, not `\(...\)`
     
 - Use Obsidian callouts (`> [!Definition]`, `> [!Theorem]`, `> [!Example]`, etc.) with emojis for visual separation.
     

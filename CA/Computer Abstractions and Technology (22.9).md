@@ -1,4 +1,4 @@
-## 🧠 Conceptual Section (Teach Mode)
+	## 🧠 Conceptual Section (Teach Mode)
 
 ### 1. Introduction
 

@@ -94,11 +94,12 @@ Positive → fill with 0s | Negative → fill with 1s.
 
 ### 7. MIPS Instruction Formats
 
-| Type | Fields | Purpose |
-|------|---------|----------|
-| **R-type** | `op | rs | rt | rd | shamt | funct` | Register operations |
-| **I-type** | `op | rs | rt | immediate` | Immediate or memory operations |
-| **J-type** | `op | address` | Jump instructions |
+| Type       | Fields |          |     |           |       |        | Purpose<br>                    |
+| ---------- | :----: | :------: | :-: | :-------: | :---: | :----: | ------------------------------ |
+| **R-type** |  `op   |    rs    | rt  |    rd     | shamt | funct` | Register operations            |
+| **I-type** |  `op   |    rs    | rt  | immediate |       |        | Immediate or memory operations |
+| **J-type** |  `op   | address` |     |           |       |        | Jump instructions              |
+
 
 > [!Note] 🧩  
 > Fixed 32-bit instruction length simplifies decoding and pipelining.
