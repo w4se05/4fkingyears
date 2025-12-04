@@ -1,4 +1,4 @@
-## 🧭 Conceptual Section (Teach Mode)
+	## 🧭 Conceptual Section (Teach Mode)
 
 ### 1. Sequences
 
@@ -188,3 +188,8 @@ $$\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e.$$
 - Definition of \( e \): $\displaystyle e = \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n.$
 
 ---
+$$-1 \le \sin n \le 1$$
+$$-1 \le \cos n \le 1$$
+$$\lim_{n \to \infty} \cot^{-1} n = 0$$
+$$\lim_{x \to \infty} \arctan x = \frac{\pi}{2}$$$$\lim_{x \to -\infty} \arctan x = -\frac{\pi}{2}$$
+$$\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$$(Common variation: $(1 + \frac{a}{n})^n \to e^a$)

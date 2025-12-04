@@ -1,4 +1,4 @@
-## 🧭 Conceptual Section (Teach Mode)
+f## 🧭 Conceptual Section (Teach Mode)
 
 ### 1. Definition of Derivative
 

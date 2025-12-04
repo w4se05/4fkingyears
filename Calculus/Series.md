@@ -54,8 +54,7 @@
 
 ---
 
-### 3. Convergence Tests
-
+### 3. Convergence Test
 
 >[!Theorem] **p-Series Test**
 >*The series*
@@ -134,10 +133,7 @@
 > \sum_{n=1}^{\infty} (-1)^{n-1} b_n, \quad b_n > 0.
 > $$
 
-> [!Theorem] 📘 **(Leibniz Test)**  
-> If $b_n$ decreases monotonically to 0,  
-> i.e. $b_{n+1} \le b_n$ and $\lim b_n = 0$,  
-> then $\sum (-1)^{n-1} b_n$ **converges**.
+P
 
 > [!Definition] 💡  
 > - **Absolutely convergent:** $\sum |a_n|$ converges.  
