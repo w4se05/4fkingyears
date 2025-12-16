@@ -1,115 +1,159 @@
-## I. Algebra & Trigonometry
+# Number Theory & Applications in Cryptography
 
-### 1. Bảy Hằng Đẳng Thức (Algebraic Identities)
-$$
-\begin{aligned}
-1. & \quad (A + B)^2 = A^2 + 2AB + B^2 \\
-2. & \quad (A - B)^2 = A^2 - 2AB + B^2 \\
-3. & \quad A^2 - B^2 = (A - B)(A + B) \\
-4. & \quad (A + B)^3 = A^3 + 3A^2B + 3AB^2 + B^3 \\
-5. & \quad (A - B)^3 = A^3 - 3A^2B + 3AB^2 - B^3 \\
-6. & \quad A^3 + B^3 = (A + B)(A^2 - AB + B^2) \\
-7. & \quad A^3 - B^3 = (A - B)(A^2 + AB + B^2)
-\end{aligned}
-$$
+## I. Conceptual Section (Teach Mode)
 
-### 2. Trigonometry Definitions & Identities
-* **Definitions:**
-  $$\tan x = \frac{\sin x}{\cos x}, \quad \cot x = \frac{\cos x}{\sin x}$$
-  $$\sec x = \frac{1}{\cos x}, \quad \csc x = \frac{1}{\sin x}$$
-* **Pythagorean Identities:**
-  1. $\sin^2 x + \cos^2 x = 1$
-  2. $1 + \tan^2 x = \sec^2 x$
-  3. $1 + \cot^2 x = \csc^2 x$
-  4. $\arctan n+ arc\cot n=\frac{\pi}{2}$
-* **Double Angle:**
-  * $\sin(2x) = 2\sin x \cos x$
-  * $\cos(2x) = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1 - 2\sin^2 x$
+### 1. Basic Notions & Divisibility
+Number theory primarily deals with the integers, denoted by $\mathbb{Z}$.
 
-  ---
+> [!Definition] Divisibility
+> Let $a, b$ be integers with $a \neq 0$. We say **$a$ divides $b$** (denoted $a \mid b$) if there exists an integer $m$ such that:
+> $$b = a \cdot m$$
+> * $b$ is a **multiple** of $a$.
+> * $a$ is a **factor** of $b$.
 
-## II. Sequences (Dãy số)
+> [!Theorem] The Division Algorithm
+> Given two arbitrary integers $m$ and $n$ (where $n > 0$), there exist unique integers $q$ (quotient) and $r$ (remainder) such that:
+> $$m = n \cdot q + r, \quad 0 \leq r < n$$
+> * **Notation:** $q = m \div n$ and $r = m \mod n$.
 
-* **Limit Definition:** $\lim_{n\to\infty} a_n = L$ (Unique if exists).
-* **Standard Limits ($n \to \infty$):**
-  * $\lim \frac{1}{n^p} = 0 \quad (p > 0)$
-  * $\lim r^n = \begin{cases} 0 & |r| < 1 \\ \infty & r > 1 \end{cases}$
-  * $\lim \left(1 + \frac{1}{n}\right)^n = e$
-  * $\lim \sqrt[n]{n} = 1$
-* **Theorems:**
-  * **Weierstrass:** Bounded + Monotone $\Rightarrow$ Convergent.
-  * **Squeeze Theorem:** $a_n \le b_n \le c_n$, if $\lim a_n = \lim c_n = L \Rightarrow \lim b_n = L$.
-  * **Subsequences:** If $a_n \to L$, then $a_{2k} \to L$ and $a_{2k-1} \to L$. If differ $\to$ Divergent.
+### 2. Primes and GCD
 
----
+> [!Definition] Prime & Composite
+> A positive integer $p > 1$ is **prime** if it is divisible only by $1$ and itself. An integer greater than $1$ that is not prime is called a **composite number**.
 
-## III. Infinite Series (Chuỗi số)
+> [!Theorem] Fundamental Theorem of Arithmetic
+> Any integer greater than $1$ can be written **uniquely** as a product of powers of distinct primes.
 
-> [!WARNING] Divergence Test
-> If $\lim_{n\to\infty} a_n \neq 0 \implies \sum a_n$ **Diverges**.
+> [!Definition] GCD and LCM
+> * **Greatest Common Divisor (GCD):** $\gcd(a, b)$ is the greatest integer $d$ that is a divisor of both $a$ and $b$.
+> * **Least Common Multiple (LCM):** $\text{lcm}(a, b)$ is the smallest positive integer that is divisible by both $a$ and $b$.
+> * **Theorem:** $a \cdot b = \gcd(a, b) \cdot \text{lcm}(a, b)$.
 
-### 1. Common Series Types
-| Type          | Form                 | Convergence Condition                                            |
-| :------------ | :------------------- | :--------------------------------------------------------------- |
-| **Geometric** | $\sum ar^n$          | **Conv:** $r < 1 \quad (S = \frac{a}{1-r})$<br>**Div:** $r\ge 1$ |
-| **p-Series**  | $\sum \frac{1}{n^p}$ | **Conv:** $p > 1$<br>**Div:** $p \le 1$                          |
-| **Harmonic**  | $\sum \frac{1}{n}$   | **Always Diverges** ($p=1$)                                      |
+### 3. Euclidean Algorithms
 
-### 2. Convergence Tests
-* **Comparison:** $0 \le a_n \le b_n$. If $\sum b_n$ Conv $\Rightarrow \sum a_n$ Conv.
-* **Limit Comparison:** $\lim \frac{a_n}{b_n} = c > 0 \implies$ same behavior.
-* **Alternating Series (Leibniz):** $\sum (-1)^{n-1}b_n$ Conv if:
-  1. $b_{n+1} \le b_n$ (Decreasing) **AND**
-  2. $\lim b_n = 0$.
-* **Ratio Test:** $L = \lim |\frac{a_{n+1}}{a_n}|$. $L < 1$ (Conv), $L > 1$ (Div).
-* **Root Test:** $L = \lim \sqrt[n]{|a_n|}$. Same rules as Ratio.
+> [!Algorithm] Euclidean Algorithm (EA)
+> To find $\gcd(a, b)$ where $a \ge b$:
+> 1.  Let $r_0 = a$ and $r_1 = b$.
+> 2.  Apply successive division: $r_{i-2} = q_{i-1} r_{i-1} + r_i$ with $0 \le r_i < r_{i-1}$.
+> 3.  The procedure stops when $r_{\ell+1} = 0$. The GCD is the last non-zero remainder $r_{\ell}$.
 
-### 3. Power Series
-* **Radius $R$:** Use Ratio Test ($|x-a| < R$).
-* **Interval:** $(a-R, a+R)$. **Check endpoints manually!**
+> [!Theorem] Bezout's Theorem
+> If $a$ and $b$ are positive integers, then there exist integers $x$ and $y$ such that:
+> $$\gcd(a, b) = a \cdot s + b \cdot t$$
+
+> [!ABSTRACT] Algorithm: Extended Euclidean Algorithm (EEA)
+> 
+> To find the coefficients $s$ and $t$ such that $\gcd(r_0, r_1) = s \cdot r_0 + t \cdot r_1$, we use recursive formula.
+> 
+> We set initial values:
+> 
+> - $s_0 = 1, s_1 = 0$
+> - $t_0 = 0, t_1 = 1$
+> 
+> For each step $i \geq 2$, using the quotient $q_{i-1}$ from the division $r_{i-2} = q_{i-1} r_{i-1} + r_i$, we update:
+> 
+> $$s_i = s_{i-2} - q_{i-1} \cdot s_{i-1}$$
+> 
+> $$t_i = t_{i-2} - q_{i-1} \cdot t_{i-1}$$
+> 
+> At the end, the GCD is expressed as a linear combination of the original numbers.
 
 ---
 
-## IV. Functions & Limits ($x \to c$)
+### Modular Arithmetic
 
-* **Special Trigonometric Limits ($u \to 0$):**
-  1. $\lim_{u \to 0} \frac{\sin u}{u} = 1$
-  2. $\lim_{u \to 0} \frac{1 - \cos u}{u} = 0$
-  3. $\lim_{u \to 0} \frac{\tan u}{u} = 1$
-* **Continuity:** $f$ is continuous at $a$ if $\lim_{x\to a}f(x) = f(a)$.
-* **Intermediate Value Theorem (IVT):** If $f$ is continuous on $[a,b]$ and $f(a) \cdot f(b) < 0$, then $\exists c \in (a,b)$ s.t. $f(c) = 0$.
-* **Inverse Functions:** Exists if 1-to-1. Symmetric over $y=x$.
+
+> [!Theorem] Euler's Theorem
+
+>
+> * **Fermat's Little Theorem:** If $p$ is prime, $a^{p-1} \equiv 1 \pmod p$.
 
 ---
 
-## V. Differentiation Formulas (Bảng Đạo Hàm)
+## 2. 📘 Examples & Applications
 
-| Basic ($x$)   | Derivative ($f'$)         | Chain Rule ($u$)           |
-| :------------ | :------------------------ | :------------------------- |
-| $k$           | $0$                       | —                          |
-| $x^n$         | $n x^{n-1}$               | $n u^{n-1} \cdot u'$       |
-| $\frac{1}{x}$ | $-\frac{1}{x^2}$          | $-\frac{u'}{u^2}$          |
-| $\sqrt{x}$    | $\frac{1}{2\sqrt{x}}$     | $\frac{u'}{2\sqrt{u}}$     |
-| $\sin x$      | $\cos x$                  | $\cos u \cdot u'$          |
-| $\cos x$      | $-\sin x$                 | $-\sin u \cdot u'$         |
-| $\tan x$      | $\sec^2 x$                | $(1+\tan^2 u) u'$          |
-| $\cot x$      | $-\csc^2 x$               | $-(1+\cot^2 u) u'$         |
-| $e^x$         | $e^x$                     | $e^u \cdot u'$             |
-| $a^x$         | $a^x \ln a$               | $a^u \ln a \cdot u'$       |
-| $\ln x$       | $\frac{1}{x}$             | $\frac{u'}{u}$             |
-| $\log_a x$    | $\frac{1}{x \ln a}$       | $\frac{u'}{u \ln a}$       |
-| $\arctan x$   | $\frac{1}{1+x^2}$         | $\frac{u'}{1+u^2}$         |
-| $\arcsin x$   | $\frac{1}{\sqrt{1-x^2}}$  | $\frac{u'}{\sqrt{1-u^2}}$  |
-| $\arccos x$   | $-\frac{1}{\sqrt{1-x^2}}$ | $-\frac{u'}{\sqrt{1-u^2}}$ |
+### Example 1: Extended Euclidean Algorithm
+
+**Problem:** Find $\gcd(973, 301)$ and express it as a linear combination.
+
+**Solution:**
+
+**Step 1: Euclidean Division**
+$$973 = 3 \cdot 301 + 70$$
+$$301 = 4 \cdot 70 + 21$$
+$$70 = 3 \cdot 21 + 7$$
+$$21 = 3 \cdot 7 + 0$$
+$\implies \gcd(973, 301) = 7$.
+
+**Step 2: Linear Combination (Back-Substitution)**
+$$7 = 70 - 3(21)$$
+Substitute $21 = 301 - 4(70)$:
+$$7 = 70 - 3(301 - 4 \cdot 70) = 13 \cdot 70 - 3 \cdot 301$$
+Substitute $70 = 973 - 3 \cdot 301$:
+$$7 = 13(973 - 3 \cdot 301) - 3 \cdot 301$$
+$$7 = 13 \cdot 973 - 42 \cdot 301$$
+
+Result: $\gcd(973, 301) = 13 \cdot 973 + (-42) \cdot 301$.
 
 ---
 
-## VI. Derivative Rules
+### Example 2: Finding Multiplicative Inverse
 
-1.  **Product:** $(uv)' = u'v + uv'$
-2.  **Quotient:** $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$
-3.  **Chain:** $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$
-4.  **Implicit:** Differentiate w.r.t $x$. Add $y'$ to $y$ terms.
-5.  **Inverse Func:** $(f^{-1})'(y_0) = \frac{1}{f'(x_0)}$ where $y_0 = f(x_0)$.
-6.  **Linear Approx:** $L(x) = f(a) + f'(a)(x-a)$.
-7.  **Log Diff:** $\ln y = \dots \implies \frac{y'}{y} = [\dots]'$.
+**Problem:** Find the multiplicative inverse of $16$ in $Z_{103}$.
+
+**Solution:**
+We need to solve $16x \equiv 1 \pmod{103}$. This is equivalent to finding $s, t$ such that $16s + 103t = \gcd(16, 103) = 1$.
+Using EEA:
+$$103 = 6 \cdot 16 + 7$$
+$$16 = 2 \cdot 7 + 2$$
+$$7 = 3 \cdot 2 + 1$$
+
+Back substitute:
+$$1 = 7 - 3(2) = 7 - 3(16 - 2 \cdot 7) = 7 \cdot 7 - 3 \cdot 16$$
+Substitute $7 = 103 - 6 \cdot 16$:
+$$1 = 7(103 - 6 \cdot 16) - 3 \cdot 16 = 7 \cdot 103 - 45 \cdot 16$$
+
+Thus, $-45 \cdot 16 \equiv 1 \pmod{103}$.
+$-45 \equiv 58 \pmod{103}$.
+The inverse is **58**.
+
+---
+
+### Example 3: RSA Cryptography
+
+> [!INFO] RSA System
+> 1. **Key Generation:**
+>    * Pick large primes $p, q$. Compute $n = p \cdot q$.
+>    * Compute $\phi(n) = (p-1)(q-1)$.
+>    * Choose public exponent $e$ such that $\gcd(e, \phi(n)) = 1$.
+>    * Find private key $d$ such that $d = e^{-1} \pmod{\phi(n)}$.
+>    * **Public Key:** $k_{pub} = (n, e)$. **Private Key:** $k_{pri} = d$.
+> 2. **Encryption:** $y = x^e \pmod n$.
+> 3. **Decryption:** $x = y^d \pmod n$.
+
+**Problem:** Let $p=7, q=11$. Public key $e=7$. Encrypt plaintext $x=5$.
+
+**Solution:**
+1.  $n = 7 \cdot 11 = 77$.
+    $\phi(n) = 6 \cdot 10 = 60$.
+2.  Find $d$: Solve $7d \equiv 1 \pmod{60}$.
+    Using EEA, we find $d = 43$.
+3.  Encrypt $x=5$:
+    $y = 5^7 \pmod{77}$.
+    Using **Fast Exponentiation (Binary Method)**:
+    $5^1 \equiv 5$
+    $5^2 \equiv 25$
+    $5^4 \equiv 625 \equiv 9 \pmod{77}$.
+    $5^7 = 5^4 \cdot 5^2 \cdot 5^1 \equiv 9 \cdot 25 \cdot 5 \equiv 47 \pmod{77}$.
+    
+    Ciphertext $y = 47$.
+
+---
+
+## III. Summary
+
+* **Division:** $m = nq + r$.
+* **Bezout:** $\gcd(a, b) = ax + by$.
+* **Modular Group:** $Z_n^\times$ contains elements relatively prime to $n$.
+* **RSA:** Secure because factoring $n$ (to find $\phi(n)$ and thus $d$) is NP-hard.
+* **Check Digits:** ISBN-10 uses condition $\sum_{i=1}^{10} i x_i \equiv 0 \pmod{11}$.

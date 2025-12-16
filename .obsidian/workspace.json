@@ -81,46 +81,84 @@
             "id": "4e4d657f39aed58c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/General Algebra/Untitled.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "New tab"
             }
           },
           {
-            "id": "1c86dfc5eab491ea",
+            "id": "1ac02fa5b2fffe51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Algebra/General Algebra/LOGIC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "LOGIC"
             }
           },
           {
-            "id": "5ce225cec1acf1c1",
+            "id": "bf5ce5f346e43b8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/General Algebra/Untitled 2.md",
+                "file": "Algebra/General Algebra/RELATION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 2"
+              "title": "RELATION"
+            }
+          },
+          {
+            "id": "c030211a63bab443",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calculus/Applications of Differentiation.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Applications of Differentiation"
+            }
+          },
+          {
+            "id": "6f7f7eda62ab4d1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algebra/General Algebra/NUMBER THEORY.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NUMBER THEORY"
+            }
+          },
+          {
+            "id": "f776c0279ee601ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algebra/General Algebra/TONG HOP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TONG HOP"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -279,38 +317,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5ce225cec1acf1c1",
+  "active": "f776c0279ee601ee",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Algebra/General Algebra/Untitled 2.md",
-    "Algebra/General Algebra/Untitled 1.md",
-    "Algebra/General Algebra/Untitled.md",
-    "Calculus/Functions and Transformations.md",
-    "Calculus/Limits and Continuity.md",
+    "Algebra/General Algebra/NUMBER THEORY.md",
+    "Algebra/General Algebra/TONG HOP.md",
     "Untitled 1.md",
     "ULTIMATE OBSIDIAN PROMPT.md",
-    "Algebra/General Algebra/Logic and Propositional Algebra.md",
-    "Data Processing Code of Conduct for Special Categories of Personal Data.md",
+    "Untitled.md",
+    "Calculus/Applications of Differentiation.md",
+    "Calculus/Functions and Transformations.md",
     "Calculus/Series.md",
     "Calculus/Sequences.md",
+    "Calculus/Images/Screenshot 2025-12-10 134548.png",
+    "Calculus/Limits and Continuity.md",
     "Calculus/Differentiation.md",
+    "Algebra/Linear Algebra/TONG HOP.md",
+    "Algebra/Linear Algebra/EXAM PREPARATION.md",
+    "Algebra/Linear Algebra/Vector Space ( 21.10).md",
+    "Algebra/Linear Algebra/Inverse Matrix (7.10).md",
+    "Algebra/Linear Algebra/Vector (16.9).md",
+    "Algebra/General Algebra/TIPS AND TRICKS.md",
+    "Algebra/Linear Algebra/LES (23.9).md",
+    "Algebra/Linear Algebra/Operations on Matrices (30.9).md",
+    "Untitled 2.md",
+    "Data Processing Code of Conduct for Special Categories of Personal Data.md",
     "Cẩm nang sử dụng AI cho mẹ.md",
     "Calculus/Images/Screenshot 2025-09-25 095429.png",
-    "Algebra/Linear Algebra/LES (23.9).md",
-    "Algebra/Linear Algebra/Vector Space ( 21.10).md",
-    "Algebra/Linear Algebra/Vector (16.9).md",
-    "Algebra/Linear Algebra/EXAM PREPARATION.md",
-    "Algebra/Linear Algebra/Inverse Matrix (7.10).md",
-    "Algebra/Linear Algebra/Determinant (14.10).md",
-    "Algebra/Linear Algebra/Operations on Matrices (30.9).md",
+    "Algebra/General Algebra/RELATION.md",
+    "Algebra/General Algebra/LOGIC.md",
+    "Algebra/General Algebra/Logic and Propositional Algebra.md",
     "Algebra/Linear Algebra/Unit_circle_angles.svg.png",
-    "Hong Nguyen Phuc 104240581.md",
-    "CA/Computer Abstractions and Technology (22.9).md",
-    "CA/Assembla Kedavara .md",
-    "CA/Arithmetic for Computers.md",
     "Algebra/Linear Algebra",
     "Algebra/General Algebra",
-    "CA/Language of the Computer.md",
     "Untitled",
     "Cross Product (for $",
     "E.png",
@@ -325,7 +363,6 @@
     "FY_Applied Math/Images/Screenshot 2025-01-10 225527.png",
     "FY_Applied Math/Images/Screenshot 2024-12-19 002129.png",
     "FY_Applied Math/Images/Screenshot 2025-01-09 214350.png",
-    "FY_Applied Math/Images/Screenshot 2025-01-02 211130.png",
-    "FY_Applied Math/Images/Screenshot 2025-01-02 204904.png"
+    "FY_Applied Math/Images/Screenshot 2025-01-02 211130.png"
   ]
 }
