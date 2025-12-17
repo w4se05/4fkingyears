@@ -1,4 +1,4 @@
-### **Case 1: LUFTHANSA GROUP (GERMANY)**
+## **Case 1: LUFTHANSA GROUP (GERMANY)**
 
 |**No.**|**GDPR Violation**|**Supported facts**|**Violation analysis**|
 |---|---|---|---|

@@ -149,12 +149,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/General Algebra/NUMBER THEORY.md",
+                "file": "Calculus/Applications of Differentiation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NUMBER THEORY"
+              "title": "Applications of Differentiation"
             }
           }
         ],
@@ -319,20 +319,21 @@
   },
   "active": "f776c0279ee601ee",
   "lastOpenFiles": [
-    "Algebra/General Algebra/TONG HOP.md",
-    "Algebra/General Algebra/NUMBER THEORY.md",
+    "Calculus/Functions and Transformations.md",
+    "Algebra/Linear Algebra/Unit_circle_angles.svg.png",
+    "Algebra/Linear Algebra/EXAM PREPARATION.md",
+    "Calculus/Applications of Differentiation.md",
+    "Calculus/Differentiation.md",
+    "Calculus/Sequences.md",
+    "Untitled.md",
+    "Calculus/Limits and Continuity.md",
     "Untitled 1.md",
     "ULTIMATE OBSIDIAN PROMPT.md",
-    "Untitled.md",
-    "Calculus/Applications of Differentiation.md",
-    "Calculus/Functions and Transformations.md",
+    "Algebra/General Algebra/NUMBER THEORY.md",
+    "Algebra/General Algebra/TONG HOP.md",
     "Calculus/Series.md",
-    "Calculus/Sequences.md",
     "Calculus/Images/Screenshot 2025-12-10 134548.png",
-    "Calculus/Limits and Continuity.md",
-    "Calculus/Differentiation.md",
     "Algebra/Linear Algebra/TONG HOP.md",
-    "Algebra/Linear Algebra/EXAM PREPARATION.md",
     "Algebra/Linear Algebra/Vector Space ( 21.10).md",
     "Algebra/Linear Algebra/Inverse Matrix (7.10).md",
     "Algebra/Linear Algebra/Vector (16.9).md",
@@ -346,7 +347,6 @@
     "Algebra/General Algebra/RELATION.md",
     "Algebra/General Algebra/LOGIC.md",
     "Algebra/General Algebra/Logic and Propositional Algebra.md",
-    "Algebra/Linear Algebra/Unit_circle_angles.svg.png",
     "Algebra/Linear Algebra",
     "Algebra/General Algebra",
     "Untitled",
