@@ -149,12 +149,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/General Algebra/TONG HOP.md",
+                "file": "Algebra/General Algebra/NUMBER THEORY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TONG HOP"
+              "title": "NUMBER THEORY"
             }
           }
         ],
@@ -319,8 +319,8 @@
   },
   "active": "f776c0279ee601ee",
   "lastOpenFiles": [
-    "Algebra/General Algebra/NUMBER THEORY.md",
     "Algebra/General Algebra/TONG HOP.md",
+    "Algebra/General Algebra/NUMBER THEORY.md",
     "Untitled 1.md",
     "ULTIMATE OBSIDIAN PROMPT.md",
     "Untitled.md",
