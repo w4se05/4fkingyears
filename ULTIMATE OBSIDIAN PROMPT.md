@@ -18,10 +18,11 @@ Follow this exact structure and style:
 1. **Conceptual Section (Teach Mode)**
     
     - Definitions, formulas, theorems, and properties written concisely.
+    - Keep the math notations consistent
         
     - Logical progression: Definition → Concept → Property → Implication.
 	    
-    - If there are any new terminologies or abbreviations that you haven't mentioned please clarify right away.
+    - If there are any new terminologies, abbreviations or notations that you haven't mentioned please clarify right away.
         
     - Short notes using callouts like “> [!Note]” or “> [!Property]”.
         
