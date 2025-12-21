@@ -1,12 +1,54 @@
-| No.    | Scenarios                                                                                                                                                                                                                                                                                    | Who is liable? (Controller, Processor)                                                                                                                                  | Where to complain?                                                  | What court can the complaints be lodged in? | What can compensate? (Material and Non-material damage?)                                                                                      |
-| :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ | :------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1**  | **BuyDirect.nl (NL) & SecurePay GmbH (DE):** Dutch e-commerce platform (500k users) had a breach affecting 100k customers. German processor SecurePay failed to implement encryption despite contract. Credit details exposed. [cite_start]€50,000 in fraudulent charges reported. [cite: 3] | **Controller:** BuyDirect.nl (NL)<br>**Processor:** SecurePay GmbH (DE)<br>*(Processor liable for breaching contract/security clauses)*                                 | **Netherlands** (Autoriteit Persoonsgegevens) OR **Germany** (BfDI) | Dutch Courts OR German Courts               | **Material:** €50,000 (Fraudulent charges)<br>**Non-material:** Anxiety, credit monitoring costs                                              |
-| **2**  | **Entre Hospitalier Lyon (FR) & TechSanté SARL (FR):** Hospital exposed HIV/cancer records of 100k patients due to IT provider misconfiguration. Provider ignored protocols and used unauthorized procedures. [cite_start]5 patients lost job offers. [cite: 3]                              | **Controller:** Entre Hospitalier Lyon (FR)<br>**Processor:** TechSanté SARL (FR)<br>*(Processor liable for ignoring specific protocols)*                               | **France** (CNIL)                                                   | French Courts                               | **Material:** Lost wages, value of lost job offers<br>**Non-material:** Discrimination, severe distress over sensitive health data            |
-| **3**  | **TechStart Dublin Ltd. (IE) & TalentHunt Barcelona S.L. (ES):** HR accidentally shared data of 500 employees with unauthorized agency. Competitors poached 30 key employees. [cite_start]Employees reported reduced career advancement. [cite: 4]                                           | **Controller:** TechStart Dublin (IE)<br>**Recipient:** TalentHunt Barcelona (ES)<br>*(Controller primarily liable for the unauthorized disclosure)*                    | **Ireland** (DPC) OR **Spain** (AEPD)                               | Irish Courts OR Spanish Courts              | **Material:** Financial loss from career stagnation/poaching<br>**Non-material:** Reputational damage to professional standing                |
-| **4**  | **TeenConnect AB (SE) & DataInsight A/S (DK):** Swedish social platform failed age verification. Danish partner processed data despite expired consent. Messages of 50,000 minors exposed to adults. [cite_start]20 cases of inappropriate contact. [cite: 4]                                | **Controller:** TeenConnect AB (SE)<br>**Processor:** DataInsight A/S (DK)<br>*(Joint liability likely due to lack of valid consent basis)*                             | **Sweden** (IMY) OR **Denmark** (Datatilsynet)                      | Swedish Courts OR Danish Courts             | **Material:** Cost of counseling/therapy<br>**Non-material:** Emotional trauma, distress from inappropriate contact                           |
-| **5**  | **InvestBank Luxembourg S.A. (LU) & CloudSecure GmbH (DE):** Bank leak via German cloud provider who misconfigured access. 10k high-net-worth portfolios exposed. €2 million in market manipulation losses. [cite_start]Provider ignored security requirements. [cite: 4, 5]                 | **Controller:** InvestBank (LU)<br>**Processor:** CloudSecure GmbH (DE)<br>*(Processor liable for ignoring specific security instructions)*                             | **Luxembourg** (CNPD) OR **Germany** (BfDI)                         | Luxembourg Courts OR German Courts          | **Material:** €2 million (Financial losses)<br>**Non-material:** Loss of financial privacy/confidentiality                                    |
-| **6**  | **Health Track Belgium SA (BE) & DataMetrics SARL (FR):** Fitness app secretly sold health data to insurers. French partner enhanced data with unauthorized risk assessments. [cite_start]1,000 users denied insurance. [cite: 5]                                                            | **Controller:** Health Track Belgium (BE)<br>**Processor:** DataMetrics SARL (FR)<br>*(Both liable; Processor acted outside instructions by enhancing data)*            | **Belgium** (APD) OR **France** (CNIL)                              | Belgian Courts OR French Courts             | **Material:** Increased insurance premiums, denied coverage costs<br>**Non-material:** Violation of privacy regarding lifestyle/health habits |
-| **7**  | **EduPoland SP (PL) & SecureEdu GmbH (AT):** Ransomware attack on student records. Austrian contractor failed to update patches despite warnings. [cite_start]Learning disabilities exposed leading to bullying. [cite: 5]                                                                   | **Controller:** EduPoland SP (PL)<br>**Processor:** SecureEdu GmbH (AT)<br>*(Processor liable for negligence regarding security patches)*                               | **Poland** (UODO) OR **Austria** (DSB)                              | Polish Courts OR Austrian Courts            | **Material:** Costs of school transfers/tutoring<br>**Non-material:** Psychological harm from bullying, distress                              |
-| **8**  | **MegaShop Italia SpA (IT) & ProfilTech Portugal Lda (PT):** AI profiling without consent. Health conditions exposed to family via ads. Portuguese partner added unauthorized social media data. [cite_start]Family conflicts ensued. [cite: 6]                                              | **Controller:** MegaShop Italia (IT)<br>**Processor:** ProfilTech Portugal (PT)<br>*(Processor liable for processing data (social media) not authorized by Controller)* | **Italy** (GPDP) OR **Portugal** (CNPD)                             | Italian Courts OR Portuguese Courts         | **Material:** Damages from workplace discrimination<br>**Non-material:** Damage to family life/relationships, distress                        |
-| **9**  | **SmartLiving Denmark A/S (DK) & DataStore SRL (RO):** Smart devices recorded audio. Romanian processor retained data too long and used it to train AI. [cite_start]Business discussions leaked. [cite: 6]                                                                                   | **Controller:** SmartLiving Denmark (DK)<br>**Processor:** DataStore SRL (RO)<br>*(Processor liable for repurposing data for their own AI training)*                    | **Denmark** (Datatilsynet) OR **Romania** (ANSPDCP)                 | Danish Courts OR Romanian Courts            | **Material:** Business losses from leaked secrets<br>**Non-material:** Invasion of privacy (private home moments)                             |
-| **10** | **SunTravel Greece SA (GR) & ITServ Czech sro (CZ):** Unencrypted drives lost with passport/credit data. Czech provider failed to encrypt despite contract. [cite_start]€300,000 fraud losses. [cite: 6, 7]                                                                                  | **Controller:** SunTravel Greece (GR)<br>**Processor:** ITServ Czech sro (CZ)<br>*(Processor liable for failure to implement security measures)*                        | **Greece** (HDPA) OR **Czech Republic** (UOOU)                      | Greek Courts OR Czech Courts                | **Material:** €300,000 (Identity theft losses)<br>**Non-material:** Reputational damage (public figures)                                      |
+I want you to create a comprehensive, Obsidian-ready `.md` file for my course on **[Subject or Topic Name]**.
+
+Follow this exact structure and style:
+
+**Formatting Requirements:**
+
+- Write in clean Markdown (`.md`) with full LaTeX math support `$$..$$` or `$...$`, not `\(...\)`
+    
+- Use Obsidian callouts (`> [!Definition]`, `> [!Theorem]`, `> [!Example]`, etc.) with emojis for visual separation.
+    
+- Organize content with clear headers (`#`, `##`, `###`) and consistent spacing.
+    
+- All symbols or variables must be explained **inline** the first time they appear.
+    
+
+**Structural Requirements:**
+
+1. **Conceptual Section (Teach Mode)**
+    
+    - Definitions, formulas, theorems, and properties written concisely.
+    - Keep the math notations consistent
+        
+    - Logical progression: Definition → Concept → Property → Implication.
+	    
+    - If there are any new terminologies, abbreviations or notations that you haven't mentioned please clarify right away.
+        
+    - Short notes using callouts like “> [!Note]” or “> [!Property]”.
+        
+2. **Application Section (Exam Mode)**
+    
+    - Group all examples at the end under “📘 Examples & Applications”.
+        
+    - Each example begins with a tag showing what knowledge it uses _(Using: …)_.
+        
+    - Full, step-by-step worked solutions in LaTeX math form.
+        
+3. **Summary Section**
+    
+    - Concise recap of the key results and facts for exam revision.
+        
+
+**Pedagogical Tone:**
+
+- Write it as a clear, exam-oriented manual — no fluff or filler.
+    
+- Every section should be self-contained and logically connected.
+    
+- Integrate at least 2–4 examples reflecting the complexity of actual exam problems.
+	
+- Skip all the historical background if exists.
+-
+Finally, make it **comprehensive** — all essential definitions, theorems, and methods from the topic must be included
+
+If I upload my course notes, use them as the base to ensure full coverage of my syllabus.
