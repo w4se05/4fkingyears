@@ -140,15 +140,6 @@ Hence,
 $$
 (\lambda A)^{-1} = \frac{1}{\lambda}A^{-1}.
 $$
-
----
-
-## Follow-Up Questions
-
-**Q1:** How do I prove that $(A^{k})^{-1} = (A^{-1})^{k}$ for all integers $k$?  
-**Q2:** Which parts of these proofs break if the matrices are not square?  
-**Q3:** How can these inverse identities simplify solving chained systems like $A_1A_2x = b$?  
-
 ---
 
 # Theorem

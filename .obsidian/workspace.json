@@ -8,171 +8,77 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0eca4d211818d317",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/Linear Algebra/EXAM PREPARATION.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EXAM PREPARATION"
-            }
-          },
-          {
-            "id": "613ccfeec5f37eee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/Linear Algebra/EXAM PREPARATION.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EXAM PREPARATION"
-            }
-          },
-          {
-            "id": "45935bb1627ee467",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calculus/Differentiation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Differentiation"
-            }
-          },
-          {
-            "id": "b8f3c7a8254eda9b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calculus/Limits and Continuity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Limits and Continuity"
-            }
-          },
-          {
-            "id": "fbc33c75f6ea2c27",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Processing Code of Conduct for Special Categories of Personal Data.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Processing Code of Conduct for Special Categories of Personal Data"
-            }
-          },
-          {
-            "id": "4e4d657f39aed58c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "1ac02fa5b2fffe51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/General Algebra/LOGIC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LOGIC"
-            }
-          },
-          {
-            "id": "bf5ce5f346e43b8d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/General Algebra/RELATION.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RELATION"
-            }
-          },
-          {
-            "id": "c030211a63bab443",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calculus/Applications of Differentiation.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Applications of Differentiation"
-            }
-          },
-          {
-            "id": "6f7f7eda62ab4d1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/General Algebra/NUMBER THEORY.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NUMBER THEORY"
-            }
-          },
-          {
             "id": "f776c0279ee601ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/General Algebra/TIPS AND TRICKS.md",
+                "file": "Law and Data Protection/Chapter 7_ Data Protection Impact Assessment (DPIA).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TIPS AND TRICKS"
+              "title": "Chapter 7_ Data Protection Impact Assessment (DPIA)"
             }
           },
           {
-            "id": "888938cb0907aa7e",
+            "id": "f130eb4cd8467ddf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/General Algebra/NUMBER THEORY.md",
+                "file": "Programming 1/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NUMBER THEORY"
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "503de0d7cfd8ec87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming 1/Untitled 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 2"
+            }
+          },
+          {
+            "id": "7d55cea77618a56e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming 1/Untitled 3.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 3"
+            }
+          },
+          {
+            "id": "37ebd881f4460048",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming 1/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -317,7 +223,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -331,40 +237,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "888938cb0907aa7e",
+  "active": "37ebd881f4460048",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Algebra/General Algebra/TIPS AND TRICKS.md",
-    "Algebra/General Algebra/NUMBER THEORY.md",
-    "Algebra/General Algebra/TONG HOP.md",
-    "Algebra/General Algebra/Untitled.md",
-    "Calculus/Applications of Differentiation.md",
-    "Calculus/Functions and Transformations.md",
+    "Programming 1/1-Introduction to C and Algorithms.md",
+    "Programming 1/Untitled 1.md",
+    "Calculus/Chapter 4_ Applications of Differentiation.md",
+    "Calculus/Chap 1_Sequences and Series.md",
+    "CA/Language of the Computer.md",
+    "CA/Computer Abstractions and Technology (22.9).md",
+    "CA/Assembla Kedavara .md",
+    "Programming 1/Untitled 3.md",
+    "Programming 1/Untitled 4.md",
+    "Programming 1/Untitled 2.md",
+    "Untitled",
+    "CA/Arithmetic for Computers.md",
+    "Programming 1/Untitled.md",
+    "Obsidian Prompt.md",
+    "Programming 1",
+    "Law and Data Protection/Chapter 1_Introduction & Legal Framework.md",
+    "Law and Data Protection/Vietnam Number 1.md",
+    "Law and Data Protection/Chapter 8_International Data Transfers.md",
+    "Law and Data Protection/Chapter 7_ Data Protection Impact Assessment (DPIA).md",
+    "Law and Data Protection/Chapter 6_ Remedies, Liability, Penalties & Compensation.md",
+    "Law and Data Protection/Chapter 5_Special Categories of Personal Data.md",
+    "Law and Data Protection/Chapter 4_Data Subjects' Rights.md",
+    "Law and Data Protection/Chapter 3_GDPR Principles.md",
+    "Law and Data Protection/Chapter 2_Basics of the GDPR.md",
+    "Law and Data Protection",
+    "Calculus/Chapter 5_Integrals.md",
+    "Calculus/Chapter 6_Techniques of Integration.md",
+    "Calculus/Chap 2_ Limits and Derivatives.md",
+    "Calculus/Chapter 3_Differentiation Rules.md",
+    "Algebra.zip",
     "Algebra/Linear Algebra/Unit_circle_angles.svg.png",
-    "Algebra/Linear Algebra/EXAM PREPARATION.md",
-    "Calculus/Differentiation.md",
-    "Calculus/Sequences.md",
-    "Calculus/Limits and Continuity.md",
-    "Untitled 1.md",
-    "ULTIMATE OBSIDIAN PROMPT.md",
-    "Calculus/Series.md",
     "Calculus/Images/Screenshot 2025-12-10 134548.png",
-    "Algebra/Linear Algebra/TONG HOP.md",
-    "Algebra/Linear Algebra/Vector Space ( 21.10).md",
-    "Algebra/Linear Algebra/Inverse Matrix (7.10).md",
-    "Algebra/Linear Algebra/Vector (16.9).md",
-    "Algebra/Linear Algebra/LES (23.9).md",
-    "Algebra/Linear Algebra/Operations on Matrices (30.9).md",
-    "Untitled 2.md",
-    "Data Processing Code of Conduct for Special Categories of Personal Data.md",
-    "Cẩm nang sử dụng AI cho mẹ.md",
     "Calculus/Images/Screenshot 2025-09-25 095429.png",
-    "Algebra/General Algebra/RELATION.md",
-    "Algebra/General Algebra/LOGIC.md",
-    "Algebra/General Algebra/Logic and Propositional Algebra.md",
     "Algebra/Linear Algebra",
     "Algebra/General Algebra",
-    "Untitled",
     "Cross Product (for $",
     "E.png",
     "D.png",
@@ -372,9 +281,6 @@
     "Assignment.zip",
     "FY_Applied Math/PDF source/Lecture 9.pdf",
     "FY_Applied Math/PDF source/Lecture 8.pdf",
-    "FY_Applied Math/PDF source/Lecture 14.pdf",
-    "FY_Applied Math/PDF source/Lecture 7.pdf",
-    "FY_Applied Math/PDF source/Lecture 6.pdf",
     "FY_Applied Math/Images/Screenshot 2025-01-10 225527.png",
     "FY_Applied Math/Images/Screenshot 2024-12-19 002129.png",
     "FY_Applied Math/Images/Screenshot 2025-01-09 214350.png",

@@ -17,6 +17,7 @@
 > * Union $\to$ Bitwise OR
 > * Intersection $\to$ Bitwise AND
 
+A function is invertible if it is **injective** (one-to-one). That is, if $f(a) = f(b)$, then $a$ must equal $b$.
 ### 2. Binary Relations
 > [!Definition] Relation
 > A binary relation $R$ from set $X$ to $Y$ is a subset of the Cartesian product $X \times Y$.
@@ -33,12 +34,12 @@ If $X = \{x_1, \dots, x_m\}$ and $Y = \{y_1, \dots, y_n\}$, $M_R$ is an $m \time
 ### 3. Properties of Relations (on Set X)
 Let $R$ be a relation on $X$ ($R \subseteq X \times X$).
 
-| Property | Definition | Matrix Characteristic |
-| :--- | :--- | :--- |
-| **Reflexive** | $\forall x, (x,x) \in R$ | Main diagonal is all 1s. |
-| **Symmetric** | $(x,y) \in R \implies (y,x) \in R$ | $M_R = (M_R)^T$ (Symmetric matrix). |
-| **Anti-Symmetric** | $(x,y) \in R \wedge (y,x) \in R \implies x=y$ | $a_{ij}=1 \wedge i \neq j \implies a_{ji}=0$. |
-| **Transitive** | $(x,y) \in R \wedge (y,z) \in R \implies (x,z) \in R$ | $M_{R^2} \le M_R$ (Boolean). |
+| Property           | Definition                                            | Matrix Characteristic                         |
+| :----------------- | :---------------------------------------------------- | :-------------------------------------------- |
+| **Reflexive**      | $\forall x, (x,x) \in R$                              | Main diagonal is all 1s.                      |
+| **Symmetric**      | $(x,y) \in R \implies (y,x) \in R$                    | $M_R = (M_R)^T$ (Symmetric matrix).           |
+| **Anti-Symmetric** | $(x,y) \in R \wedge (y,x) \in R \implies x=y$         | $a_{ij}=1 \wedge i \neq j \implies a_{ji}=0$. |
+| **Transitive**     | $(x,y) \in R \wedge (y,z) \in R \implies (x,z) \in R$ | $M_{R^2} \le M_R$ (Boolean).                  |
 
 ### 4. Closures
 If a relation $R$ lacks a property (e.g., transitivity), we can add the minimum edges necessary to satisfy it.
@@ -46,7 +47,8 @@ If a relation $R$ lacks a property (e.g., transitivity), we can add the minimum 
 * **Reflexive Closure:** $R \cup \{(x,x) \mid \forall x\}$.
 * **Symmetric Closure:** $R \cup R^{-1}$.
 * **Transitive Closure ($R^*$):** $R \cup R^2 \cup R^3 \dots \cup R^n$.
-    * Computed efficiently using **Warshall's Algorithm**.
+    * Computed efficiently using **Warshall's Algorithm**: $$M_{k}=M_{k-1}\cup (k^{th}\; row \; of\ M_{k-1}\odot k^{th}\; column \; of\; M_{k-1})$$ with K = size of R i.g 3x3 => 3 step, $M_{R^*}=M_{3}$
+	    and $M_{0}=M_{R}$
 
 ### 5. Equivalence Relations & Partial Orders
 

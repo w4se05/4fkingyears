@@ -1,6 +1,7 @@
 {
   "interfaceFontFamily": "Times New Roman",
   "textFontFamily": "Times New Roman",
-  "baseFontSize": 20,
-  "cssTheme": "Obsidian Nord"
+  "baseFontSize": 11,
+  "cssTheme": "Obsidian Nord",
+  "baseFontSizeAction": true
 }

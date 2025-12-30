@@ -31,7 +31,7 @@ To find the **absolute** max and min values of a continuous function $f$ on a cl
 
 ## 2. The Mean Value Theorem (Conceptual)
 
-> [!Theorem] Rolle's Theorem
+> [!Theorem] Rolle's Theorem (EVT - Extreme Value Theorem)
 > Let $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$.
 > If **$f(a) = f(b)$**, then there exists a number $c$ in $(a, b)$ such that **$f'(c) = 0$**.
 
@@ -157,9 +157,9 @@ Start with an initial guess $x_1$ and iterate.
 >
 > **Step 3:** Evaluate.
 > $$= 0$$
-> .
 
 ### Example 4: Optimization (Cylindrical Can)
+
 > [!Example] Problem
 > Minimize the cost of metal to make a cylindrical can that holds $1$ L ($1000 \text{ cm}^3$).
 > **Using:** Optimization Algorithm.

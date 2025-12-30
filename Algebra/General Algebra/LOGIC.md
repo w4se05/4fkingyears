@@ -40,6 +40,7 @@ Let $p$ and $q$ be propositions.
 >     * $\neg(p \vee q) \equiv \neg p \wedge \neg q$
 > * **Implication:** $p \rightarrow q \equiv \neg p \vee q$
 > * **Contrapositive:** $p \rightarrow q \equiv \neg q \rightarrow \neg p$
+> *  **Distributive Law:** $p \wedge (\neg q \vee \neg r) = (p \wedge \neg q) \vee (p \wedge \neg r)$
 
 > [!Definition] Normal Forms
 > * **Literal:** A variable ($p$) or its negation ($\neg p$).
@@ -64,7 +65,37 @@ Used when statements depend on variables (e.g., $P(x)$).
 
 > [!Definition] Inference Rules
 > Mechanisms to derive new true statements from premises.
-> * **Modus Ponens:** $((p \rightarrow q) \wedge p) \rightarrow q$.
+## Tautologies (Valid Logical Forms)
+
+These are statements that are true under all possible interpretations, proving valid arguments.
+
+### 1. Law of Excluded Middle
+
+Formula:$$P \lor \neg P$$
+> Meaning: "It's raining or not raining."
+> A proposition is either true or false; there is no middle ground.
+
+### 2. Modus Ponens (Affirming the Antecedent)
+
+Formula:
+$$[(P \to Q) \land P] \to Q$$
+
+> **Meaning:** If $P$ implies $Q$, and $P$ is true, then $Q$ is true.
+
+### 3. Modus Tollens (Denying the Consequent)
+Formula:
+$$[(P \to Q) \land \neg Q] \to \neg P$$
+> **Meaning:** If $P$ implies $Q$, and $Q$ is false, then $P$ is false.
+### 4. Disjunctive Syllogism
+Formula:
+$$[(P \lor Q) \land \neg P] \to Q$$
+> **Meaning:** If $P$ or $Q$ is true, and $P$ is false, then $Q$ must be true.
+
+### 5. Law of Syllogism (Transitivity)
+Formula:
+$$[(P \to Q) \land (Q \to R)] \to (P \to R)$$
+
+> **Meaning:** Transitivity of implication. If $P$ leads to $Q$, and $Q$ leads to $R$, then $P$ leads to $R$.
 
 > [!Definition] Proof Methods
 > 1.  **Direct Proof:** Assume $p$, show $q$.
