@@ -1,4 +1,3 @@
-# Law and Data Protection:
 ## 1. Conceptual Section (Teach Mode)
 
 ### 1.1 Rights to Remedies

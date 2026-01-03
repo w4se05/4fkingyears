@@ -1,4 +1,4 @@
-8## [[Inverse Matrix]] 🧮
+## [[Inverse Matrix]] 🧮
 Given a **square matrix** $A \in M_{n\times n}$, we say $A$ is **invertible** if there exists $B \in M_{n\times n}$ such that:
 $$AB = BA = I_{n}$$  
 We call $B$ the **inverse matrix** of $A$ and denote it by $A^{-1}$.

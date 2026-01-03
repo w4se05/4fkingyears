@@ -1,332 +1,243 @@
+# Answer Key: VGU Final Exam - Algebra (WS25/26)
 
-## 1. Binary Choice Questions
-*Evaluate as True (t) or False (f).* 
-\[cite:.*?\]
-1.  **Statement:** Transpose of an invertible matrix is invertible. 
-    * **Answer: True**
-    * **Reasoning:** If $A$ is invertible, then $(A^T)^{-1} = (A^{-1})^T$. The determinant $\det(A^T) = \det(A) \neq 0$, so the transpose is also invertible.
-
-2.  **Statement:** Given a square matrix $A$ such that $\det A=0$. Then the system $Ax=0$ is inconsistent. 
-    * **Answer: False**
-    * **Reasoning:** A homogeneous system ($Ax=0$) is **always** consistent because the trivial solution ($x=0$) always exists. If $\det A = 0$, there are infinitely many solutions, not zero solutions (inconsistent).
-
-3.  **Statement:** Let $S$ be a spanning set for a finite dimensional vector space $V$. Then, the dimension of $V$ is equal to $|S|$. 
-    * **Answer: False**
-    * **Reasoning:** The size of a spanning set $|S|$ is greater than or equal to the dimension of $V$. Only if $S$ is a *basis* (linearly independent spanning set) is the size equal to the dimension.
-
-4.  **Statement:** $-2020 \mod 7 = 4$ 
-    * **Answer: False**
-    * **Reasoning:**
-        * Perform division: $2020 \div 7$. $2020 = 7 \times 288 + 4$.
-        * So, $2020 \equiv 4 \pmod 7$.
-        * Therefore, $-2020 \equiv -4 \pmod 7$.
-        * To find the positive residue: $-4 + 7 = 3$.
-        * $3 \neq 4$.
-
-5.  **Statement:** Let $n$ denote an RSA modulus and $e$ an RSA public exponent. Then $e$ must satisfy $\gcd(e,\phi(n))=1$. 
-    * **Answer: True**
-    * **Reasoning:** This is the requirement for the modular multiplicative inverse $d$ (the private key) to exist.
+**Note to Students:** This key provides the correct answers along with step-by-step explanations. In the actual exam, ensure you show your work clearly to receive full credit.
 
 ---
 
-## 2. Short Answer Questions
-*Insert answers in the blanks.* 
+### 1. Binary Choice & Short Calculations (5 pts)
 
-**(a) Matrix Operations**
-Given $B = \begin{bmatrix}1&3\\2&-4\\3&5\end{bmatrix}$ and $C = \begin{bmatrix}-1&2&-4\\5&3&-1\end{bmatrix}$. Find $2B - C^T$. 
+**A. True or False**
 
-* **Step 1:** Calculate $2B$:
-    $$2 \begin{bmatrix}1&3\\2&-4\\3&5\end{bmatrix} = \begin{bmatrix}2&6\\4&-8\\6&10\end{bmatrix}$$
-* **Step 2:** Calculate $C^T$ (Transpose):
-    $$\begin{bmatrix}-1&2&-4\\5&3&-1\end{bmatrix}^T = \begin{bmatrix}-1&5\\2&3\\-4&-1\end{bmatrix}$$
-* **Step 3:** Subtract:
-    $$\begin{bmatrix}2&6\\4&-8\\6&10\end{bmatrix} - \begin{bmatrix}-1&5\\2&3\\-4&-1\end{bmatrix} = \begin{bmatrix}2-(-1)&6-5\\4-2&-8-3\\6-(-4)&10-(-1)\end{bmatrix} = \begin{bmatrix}3&1\\2&-11\\10&11\end{bmatrix}$$
+1.  **False**
+    * **Reasoning:** To form a basis for $\mathbb{R}^3$, three vectors must be linearly independent.
+    * Let's check independence: $c_1(1,0,1) + c_2(0,1,0) + c_3(1,1,1) = (0,0,0)$.
+    * From the second component: $c_2 + c_3 = 0$.
+    * From the first component: $c_1 + c_3 = 0$.
+    * From the third component: $c_1 + c_3 = 0$.
+    * If we set $c_3 = 1$, then $c_1 = -1$ and $c_2 = -1$.
+    * Since non-zero scalars exist (e.g., $(-1, -1, 1)$), the vectors are linearly dependent. Thus, they cannot be a basis.
 
-**Answer:** $\begin{bmatrix}3&1\\2&-11\\10&11\end{bmatrix}$
+2.  **False**
+    * **Reasoning:** Determinants are multiplicative, not additive. The property is $\det(AB) = \det(A)\det(B)$.
+    * **Counterexample:** Let $A = I$ and $B = I$. $\det(A)=1, \det(B)=1$. $A+B = 2I$. $\det(2I) = 2^n \neq 1+1$.
 
-**(b) Vector Area**
-Given $u=(2,3)$ and $v=(4,1)$ in $\mathbb{R}^2$. Area of parallelogram? 
+3.  **False**
+    * **Reasoning:** An equivalence relation must be Reflexive, Symmetric, and Transitive.
+    * Let's check **Symmetry**: If $(1, 2) \in R$ (because $1 \le 2$), is $(2, 1) \in R$? No, because $2 \not\le 1$. Therefore, it is not symmetric.
 
-* **Reasoning:** Area is the absolute value of the determinant of the matrix formed by vectors $u$ and $v$.
-    $$\text{Area} = |\det(u, v)| = |(2)(1) - (3)(4)| = |2 - 12| = |-10| = 10$$
+4.  **True**
+    * **Reasoning:** The definition of modular congruence $a \equiv b \pmod n$ is $n | (a-b)$, which implies $a$ and $b$ have the same remainder when divided by $n$.
 
-**Answer:** $10$
+5.  **True**
+    * **Reasoning:** For RSA, the public exponent $e$ must be coprime to $\phi(n)$.
+    * $n = 55 = 5 \times 11$.
+    * $\phi(55) = (5-1)(11-1) = 4 \times 10 = 40$.
+    * Check $\gcd(e, \phi(n)) = \gcd(7, 40)$. Since 7 is prime and does not divide 40, $\gcd(7, 40) = 1$. Thus, it is valid.
 
-**(c) Subsets**
-Set $A = \{1, 2, ..., n\}$. Total subsets containing both 1 and $n$. 
+**B. Short Calculations**
 
-* **Reasoning:** We must include 1 and $n$. For the remaining $n-2$ elements, each can either be in the subset or not (2 choices each).
-    $$\text{Total} = 2^{n-2}$$
+1.  **Inner Product:**
+    * $\vec{u} = (1, -2, 3)$, $\vec{v} = (2, 0, -1)$
+    * $\vec{u} \cdot \vec{v} = (1)(2) + (-2)(0) + (3)(-1) = 2 + 0 - 3 = -1$.
+    * **Answer:** $-1$.
 
-**Answer:** $2^{n-2}$
+2.  **Matrix Calculation:**
+    * $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \Rightarrow A^T = \begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}$.
+    * $2I_2 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}$.
+    * $A^T - 2I_2 = \begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix} - \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} -1 & 3 \\ 2 & 2 \end{pmatrix}$.
+    * **Answer:** $\begin{pmatrix} -1 & 3 \\ 2 & 2 \end{pmatrix}$.
 
-**(d) Relations**
-Given matrix representation $M_R = \begin{pmatrix}1&0&1\\0&1&1\end{pmatrix}$ for sets {mouse, case} to {black, white, orange}. 
+---
 
-* **Mapping:**
-    * Rows: $r_1=$ mouse, $r_2=$ case.
-    * Cols: $c_1=$ black, $c_2=$ white, $c_3=$ orange.
-* **Entries with 1:**
-    * (1,1) $\to$ (mouse, black)
-    * (1,3) $\to$ (mouse, orange)
-    * (2,2) $\to$ (case, white)
-    * (2,3) $\to$ (case, orange)
+### 2. Linear Systems (5 pts)
 
-**Answer:** $R = \{(\text{mouse, black}), (\text{mouse, orange}), (\text{case, white}), (\text{case, orange})\}$ 
+**(a) Matrices**
+* **Coefficient Matrix A:**
+    $$A = \begin{pmatrix} 1 & 1 & 1 \\ 1 & \lambda & 2 \\ 1 & 1 & \lambda \end{pmatrix}$$
+* **Augmented Matrix:**
+    $$\begin{pmatrix} 1 & 1 & 1 & | & 1 \\ 1 & \lambda & 2 & | & 2 \\ 1 & 1 & \lambda & | & 3 \end{pmatrix}$$.
 
+**(b) Determinant & Uniqueness**
+* **Calculate $\det(A)$:**
+    Using cofactor expansion along the first row:
+    $$\det(A) = 1(\lambda^2 - 2) - 1(\lambda - 2) + 1(1 - \lambda)$$
+    $$= \lambda^2 - 2 - \lambda + 2 + 1 - \lambda$$
+    $$= \lambda^2 - 2\lambda + 1$$
+    $$= (\lambda - 1)^2$$
+* **Condition for Unique Solution:**
+    A system has a unique solution if and only if $\det(A) \neq 0$.
+    $(\lambda - 1)^2 \neq 0 \Rightarrow \lambda \neq 1$.
+    **Answer:** The system has a unique solution for all $\lambda \in \mathbb{R} \setminus \{1\}$.
 
-## 3. Homogeneous Linear System
-Consider the system: 
-$$
-\begin{cases}
-x+2y-z+2t=0 \\
-2x+4y+z-2t=0 \\
-3x+6y+2z-6t=0
-\end{cases}
-$$
+**(c) Cramer's Rule ($\lambda = 2$)**
+* **Step 1: Calculate Determinant of A ($\det(A)$)**
+    Since $\det(A) = (\lambda - 1)^2$ and $\lambda = 2$:
+    $\det(A) = (2 - 1)^2 = 1$.
+* **Step 2: Calculate Determinant of $A_y$ ($\det(A_y)$)**
+    Replace the second column (y-column) with the results vector $b = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}$.
+    $$A_y = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 3 & 2 \end{pmatrix}$$
+    (Note: $\lambda=2$ is substituted into the matrix entries).
+    $$\det(A_y) = 1(4 - 6) - 1(2 - 2) + 1(3 - 2)$$
+    $$= 1(-2) - 0 + 1(1) = -2 + 1 = -1$$
+* **Step 3: Solve for y**
+    $$y = \frac{\det(A_y)}{\det(A)} = \frac{-1}{1} = -1$$
+    **Answer:** $y = -1$.
 
-**(a) Coefficient Matrix** 
-**Answer:**
-$$A = \begin{bmatrix} 1 & 2 & -1 & 2 \\ 2 & 4 & 1 & -2 \\ 3 & 6 & 2 & -6 \end{bmatrix}$$
+---
 
-**(b) Prove W is a subspace** 
-**Proof:** $W$ is the set of solutions to a homogeneous linear system $Ax=0$. This is the Null Space (Kernel) of matrix $A$. 
-The Kernel of a linear map is always a subspace because:
-1.  $A(0) = 0$, so $0 \in W$.
-2.  If $u, v \in W$, then $A(u+v) = Au + Av = 0+0=0$, so $u+v \in W$.
-3.  If $c \in \mathbb{R}, u \in W$, then $A(cu) = c(Au) = c(0) = 0$, so $cu \in W$.
+### 3. Matrix Operations & Subspaces (4 pts)
 
-**(c) Basis and Dimension** 
-Use Gaussian Elimination on $A$:
+**Matrix A:**
+$$A = \begin{pmatrix} 1 & 2 & 0 & 1 \\ 2 & 4 & 1 & 4 \\ -1 & -2 & 0 & -1 \end{pmatrix}$$
+
+**(a) Row Echelon Form**
 1.  $R_2 \leftarrow R_2 - 2R_1$:
-    $$\begin{bmatrix} 1 & 2 & -1 & 2 \\ 0 & 0 & 3 & -6 \\ 3 & 6 & 2 & -6 \end{bmatrix}$$
-2.  $R_3 \leftarrow R_3 - 3R_1$:
-    $$\begin{bmatrix} 1 & 2 & -1 & 2 \\ 0 & 0 & 3 & -6 \\ 0 & 0 & 5 & -12 \end{bmatrix}$$
-3.  From Row 2: $3z - 6t = 0 \implies z = 2t$.
-4.  Substitute into Row 3: $5(2t) - 12t = 0 \implies 10t - 12t = -2t = 0 \implies t=0$.
-5.  If $t=0$, then $z = 2(0) = 0$.
-6.  Substitute into Row 1: $x + 2y - 0 + 0 = 0 \implies x = -2y$.
-7.  $y$ is a free variable.
+    $$\begin{pmatrix} 1 & 2 & 0 & 1 \\ 0 & 0 & 1 & 2 \\ -1 & -2 & 0 & -1 \end{pmatrix}$$
+2.  $R_3 \leftarrow R_3 + R_1$:
+    $$\begin{pmatrix} 1 & 2 & 0 & 1 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 0 \end{pmatrix}$$
+    **Answer:** The matrix is now in Row Echelon Form.
 
-Solution vector: $v = (x, y, z, t) = (-2y, y, 0, 0) = y(-2, 1, 0, 0)$.
+**(b) Rank**
+* **Pivot Columns:** Columns 1 and 3 (the columns with leading entries).
+* **Rank:** The number of pivots is 2.
+    **Answer:** Rank = 2.
 
-**Basis:** $\{(-2, 1, 0, 0)\}$
-**Dimension:** 1
-
----
-
-## 4. Matrix Inversion
-Given $A = \begin{pmatrix}2&1&2\\0&3&-1\\4&1&1\end{pmatrix}$. 
-
-**(a) Prove A is invertible** 
-Calculate determinant $\det(A)$:
-Expand along the first column (or row 1):
-$$\det(A) = 2 \begin{vmatrix} 3 & -1 \\ 1 & 1 \end{vmatrix} - 0 + 4 \begin{vmatrix} 1 & 2 \\ 3 & -1 \end{vmatrix}$$
-$$= 2(3 - (-1)) + 4(-1 - 6)$$
-$$= 2(4) + 4(-7)$$
-$$= 8 - 28 = -20$$
-Since $\det(A) = -20 \neq 0$, $A$ is invertible.
-
-**(b) Find the inverse of A** 
-Using the cofactor matrix method $C_{ij}$:
-* $C_{11} = (3)(1) - (-1)(1) = 4$
-* $C_{12} = -(0 - (-4)) = -4$
-* $C_{13} = 0 - 12 = -12$
-* $C_{21} = -(1 - 2) = 1$
-* $C_{22} = 2 - 8 = -6$
-* $C_{23} = -(2 - 4) = 2$
-* $C_{31} = -1 - 6 = -7$
-* $C_{32} = -(-2 - 0) = 2$
-* $C_{33} = 6 - 0 = 6$
-
-Matrix of Cofactors $C = \begin{pmatrix} 4 & -4 & -12 \\ 1 & -6 & 2 \\ -7 & 2 & 6 \end{pmatrix}$.
-Adjugate is $C^T = \begin{pmatrix} 4 & 1 & -7 \\ -4 & -6 & 2 \\ -12 & 2 & 6 \end{pmatrix}$.
-$$A^{-1} = \frac{1}{-20} \begin{pmatrix} 4 & 1 & -7 \\ -4 & -6 & 2 \\ -12 & 2 & 6 \end{pmatrix}$$
-
-**(c) Solve $Ax = b$ where $b=(1, 2, 1)$** 
-$$x = A^{-1}b = -\frac{1}{20} \begin{pmatrix} 4 & 1 & -7 \\ -4 & -6 & 2 \\ -12 & 2 & 6 \end{pmatrix} \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix}$$
-Multiply rows by $b$:
-1.  $4(1) + 1(2) - 7(1) = 4 + 2 - 7 = -1$
-2.  $-4(1) - 6(2) + 2(1) = -4 - 12 + 2 = -14$
-3.  $-12(1) + 2(2) + 6(1) = -12 + 4 + 6 = -2$
-
-$$x = -\frac{1}{20} \begin{pmatrix} -1 \\ -14 \\ -2 \end{pmatrix} = \begin{pmatrix} 1/20 \\ 7/10 \\ 1/10 \end{pmatrix}$$
+**(c) Null Space Basis**
+* We solve $Ax = 0$ using the reduced form:
+    1.  $x_1 + 2x_2 + x_4 = 0$
+    2.  $x_3 + 2x_4 = 0$
+* **Free Variables:** $x_2$ and $x_4$ (columns without pivots).
+* Express pivot variables in terms of free variables:
+    * $x_3 = -2x_4$
+    * $x_1 = -2x_2 - x_4$
+* **Vector form:**
+    $$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix} = x_2 \begin{pmatrix} -2 \\ 1 \\ 0 \\ 0 \end{pmatrix} + x_4 \begin{pmatrix} -1 \\ 0 \\ -2 \\ 1 \end{pmatrix}$$
+    **Answer:** Basis = $\left\{ \begin{pmatrix} -2 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} -1 \\ 0 \\ -2 \\ 1 \end{pmatrix} \right\}$.
 
 ---
 
-## 5. Linear Maps
-$T$ is rotation counterclockwise by $\pi/4$. 
+### 4. Linear Transformations (4 pts)
 
-**(a) Find $T(e_1)$ and $T(e_2)$** 
-Rotation matrix structure for angle $\theta$:
-Col 1 ($e_1$): $(\cos \theta, \sin \theta)$
-Col 2 ($e_2$): $(-\sin \theta, \cos \theta)$
+**Map:** $T(x,y) = (x+y, x-y)$
 
-For $\theta = \pi/4$:
-$$T(e_1) = (\cos \frac{\pi}{4}, \sin \frac{\pi}{4}) = \left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$$
-$$T(e_2) = (-\sin \frac{\pi}{4}, \cos \frac{\pi}{4}) = \left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$$
+**(a) Images of Basis Vectors**
+* $T(1,0) = (1+0, 1-0) = (1, 1)$
+* $T(0,1) = (0+1, 0-1) = (1, -1)$
+    **Answer:** $T(e_1) = (1,1), T(e_2) = (1, -1)$.
 
-**(b) Matrix Representation** 
-$$[T] = \begin{bmatrix} \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \end{bmatrix} = \frac{\sqrt{2}}{2} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}$$
+**(b) Matrix Representation**
+* The matrix columns are the images of the basis vectors.
+    **Answer:** $M = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$.
 
-**(c) Find $T^2(3e_1 - 2e_2)$** 
-$T$ rotates by $45^\circ$. $T^2$ is the composition of $T$ with itself, meaning a rotation by $45^\circ + 45^\circ = 90^\circ$ ($\pi/2$).
-Rotation by $90^\circ$ maps $(x, y) \to (-y, x)$.
-Input vector: $v = 3e_1 - 2e_2 = (3, -2)$.
-$$T^2(3, -2) = (-(-2), 3) = (2, 3)$$
-
----
-
-## 6. Propositional Logic I
-
-**(a) Equivalence** 
-Show $p \to q \equiv \neg p \vee q$.
-This is the standard definition of implication.
-* If $p$ is T, $q$ must be T for expression to be T. ($\neg T \vee T = T$).
-* If $p$ is F, expression is T regardless of $q$. ($\neg F \vee q = T \vee q = T$).
-* Matches truth table of $p \to q$.
-
-**(b) Negation (without conditional)** 
-i. "I have no special talent ($p$) AND I am only passionately curious ($q$)."
-   * Original: $\neg S \wedge C$
-   * Negation: $\neg(\neg S \wedge C) \equiv S \vee \neg C$
-   * **Answer:** "I have special talent OR I am not only passionately curious."
-
-ii. $(p \vee q) \to r$
-   * Use equivalence from 6a: $\neg(p \vee q) \vee r$
-   * Negate this: $\neg(\neg(p \vee q) \vee r) \equiv (p \vee q) \wedge \neg r$
-   * **Answer:** $(p \vee q) \wedge \neg r$
-
-**(c) Validity** 
-Premise 1: Exam Easy $\to$ Pass ($E \to P$)
-Premise 2: Pass ($P$)
-Conclusion: Exam Easy ($E$)
-**Validity:** **Invalid**. This is the fallacy of affirming the consequent. You could pass for other reasons (e.g., you studied hard).
+**(c) Pre-image Calculation**
+* We need to solve $M\vec{v} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$.
+    $$\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$$
+* System:
+    1.  $x + y = 4$
+    2.  $x - y = 2$
+* Add equations: $2x = 6 \Rightarrow x = 3$.
+* Subtract equations: $2y = 2 \Rightarrow y = 1$.
+    **Answer:** $\vec{v} = (3, 1)$.
 
 ---
 
-## 7. Propositional Logic II
+### 5. Propositional Logic (4 pts)
 
-**(a) De Morgan Law** 
-Verify $\neg(p \vee q) = \neg p \wedge \neg q$ via Truth Table.
+**(a) Truth Table**
+Formula: $\neg p \wedge (p \Rightarrow q)$
 
-| p | q | p $\vee$ q | $\neg(p \vee q)$ | $\neg p$ | $\neg q$ | $\neg p \wedge \neg q$ |
-|---|---|---|---|---|---|---|
-| T | T | T | **F** | F | F | **F** |
-| T | F | T | **F** | F | T | **F** |
-| F | T | T | **F** | T | F | **F** |
-| F | F | F | **T** | T | T | **T** |
+| p | q | $\neg p$ | $p \Rightarrow q$ | $\neg p \wedge (p \Rightarrow q)$ |
+| :---: | :---: | :---: | :---: | :---: |
+| T | T | F | T | **F** |
+| T | F | F | F | **F** |
+| F | T | T | T | **T** |
+| F | F | T | T | **T** |
 
-Columns match. Verified.
 
-**(b) Negation** 
-"If a machine is expected to be infallible ($p$), it cannot also be intelligent ($q$)." ($p \to q$)
-* Negation of $p \to q$ is $p \wedge \neg q$.
-* **Answer:** "A machine is expected to be infallible AND it is intelligent."
+**(b) Logical Equivalence**
+Expression: $\neg(p \vee q) \vee (\neg p \wedge q)$
+1.  **De Morgan's Law:** $\neg(p \vee q) \equiv \neg p \wedge \neg q$.
+2.  Substitute back: $(\neg p \wedge \neg q) \vee (\neg p \wedge q)$.
+3.  **Distributive Law:** Pull out $\neg p$:
+    $\neg p \wedge (\neg q \vee q)$.
+4.  **Inverse Law:** $(\neg q \vee q)$ is always True (T).
+5.  **Identity Law:** $\neg p \wedge T \equiv \neg p$.
+    **Proof Complete**.
 
-**(c) Satisfiability** 
-Formula: $(p \to q) \wedge (p \to \neg q)$.
-We need to find truth values for $p, q$ that make this true.
-* If $p = \text{False}$:
-    * $F \to q$ is True.
-    * $F \to \neg q$ is True.
-    * $T \wedge T = T$.
-* **Answer:** Satisfiable when $p$ is False (q can be T or F).
-
-**(d) Validity of Inference** 
-1. $J \vee \neg S$ (Jasmine skis OR Not Snowing)
-2. $S \vee B$ (Snowing OR Bart plays hockey)
-3. Therefore: $J \vee B$.
-* **Reasoning:** This is the **Resolution Rule**. If it is snowing ($S$), Bart plays hockey ($B$). If it is not snowing ($\neg S$), Jasmine Skis ($J$). In either case (snow or no snow), one of the outcomes ($J$ or $B$) must occur.
-* **Answer:** Valid.
+**(c) Negation**
+* **Original:** "If it rains today, I will not go to the park." ($P \Rightarrow Q$)
+* **Structure:** $P \Rightarrow Q \equiv \neg P \vee Q$.
+* **Negation:** $\neg (\neg P \vee Q) \equiv P \wedge \neg Q$.
+* **English:** "It rains today **and** I will go to the park."
+    **Answer:** It rains today and I will go to the park.
 
 ---
 
-## 8. Relations
-$A_n$ are bit strings. $R_n$ relates strings with same number of 1s. 
+### 6. Relations (4 pts)
 
-**(a) List elements of $R_2$** 
-$A_2 = \{00, 01, 10, 11\}$.
-* 0 ones: $\{00\}$. Pair: $(00, 00)$.
-* 1 one: $\{01, 10\}$. Pairs: $(01, 01), (01, 10), (10, 01), (10, 10)$.
-* 2 ones: $\{11\}$. Pair: $(11, 11)$.
+**Set:** $A = \{1, 2, 3, 4\}$
+**Relation:** $R = \{(1,1), (1,2), (2,1), (2,2), (3,3), (4,4)\}$
 
-**(b) Matrix Representation** 
-Ordering: $00, 01, 10, 11$.
-$$M_{R_2} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+**(a) Matrix Representation**
+Rows/Cols correspond to 1, 2, 3, 4.
+$$M_R = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+.
 
-**(c) Properties** 
-This is an **Equivalence Relation**.
-* **Reflexive:** Yes (string has same 1s as itself).
-* **Symmetric:** Yes (if $a$ has same 1s as $b$, $b$ has same as $a$).
-* **Transitive:** Yes.
-* **Answer:** Circle (i), (ii), (iv), (vi).
+**(b) Properties**
+* **Reflexive:** **Yes**.
+    * *Reason:* Every diagonal element $(1,1), (2,2), (3,3), (4,4)$ is present.
+* **Symmetric:** **Yes**.
+    * *Reason:* The matrix is symmetric ($M_R^T = M_R$). Specifically, $(1,2)$ is in R and $(2,1)$ is in R.
+* **Transitive:** **Yes**.
+    * *Justification:* The only non-trivial transitions are between 1 and 2.
+    * $(1,2)$ and $(2,1)$ are in R $\Rightarrow (1,1)$ must be in R (It is).
+    * $(2,1)$ and $(1,2)$ are in R $\Rightarrow (2,2)$ must be in R (It is).
+    * All other elements interact only with themselves.
 
-**(d) Partition** 
-Since it's an equivalence relation (vi), show partition of $A_3$ ($A_3 = \{000, 001, 010, 100, 011, 101, 110, 111\}$).
-* $C_0$ (0 ones): $\{000\}$
-* $C_1$ (1 one): $\{001, 010, 100\}$
-* $C_2$ (2 ones): $\{011, 101, 110\}$
-* $C_3$ (3 ones): $\{111\}$
-
----
-
-## 9. Checksum
-*Requires Matriculation Number ($x_1...x_k$).* 
-
-**Method to solve (Example ID: 12345):**
-1.  **Formula:** $\sum_{i=1}^{k} i \cdot x_i \pmod{11}$.
-    For 12345: $1(1) + 2(2) + 3(3) + 4(4) + 5(5) = 1 + 4 + 9 + 16 + 25 = 55$.
-    $55 \pmod{11} = 0$.
-2.  **Check digit ($x_{k+1}$):** 
-    We need $\sum_{i=1}^{k+1} i \cdot x_i \equiv 0 \pmod{11}$.
-    Let $S$ be the sum from part (a). We need $S + (k+1)x_{k+1} \equiv 0 \pmod{11}$.
-    Solve for $x_{k+1}$.
+**(c) Equivalence & Partition**
+* **Is it an equivalence relation?** Yes (since it satisfies all 3 properties above).
+* **Partition:** We group elements that are related to each other.
+    * 1 is related to 1 and 2.
+    * 2 is related to 1 and 2.
+    * 3 is only related to 3.
+    * 4 is only related to 4.
+    **Answer:** Partition = $\{\{1, 2\}, \{3\}, \{4\}\}$.
 
 ---
 
-## 10. RSA Cryptography
-$n = 91$. 
-$91 = 7 \times 13$. ($p=7, q=13$).
+### 7. RSA Encryption (4 pts)
 
-**(a) Euler's Totient $\phi(n)$** 
-$$\phi(91) = (7-1)(13-1) = 6 \times 12 = 72$$
+**Parameters:** $n = 33$ ($p=3, q=11$)
 
-**(b) Find public exponent $e$** 
-Criteria: $\gcd(e, 72) = 1$. Prompt asks for "non-trivial second smallest valid exponent".
-* Candidates (integers $>1$):
-    * 2: $\gcd(2, 72) \neq 1$
-    * 3: $\gcd(3, 72) = 3 \neq 1$
-    * 4: $\gcd(4, 72) \neq 1$
-    * **5:** $\gcd(5, 72) = 1$. (Smallest)
-    * 6: $\gcd(6, 72) \neq 1$
-    * **7:** $\gcd(7, 72) = 1$. (Second Smallest)
+**(a) Euler's Totient $\phi(n)$**
+* Formula: $\phi(n) = (p-1)(q-1)$.
+* Calculation: $(3-1)(11-1) = 2 \times 10 = 20$.
+    **Answer:** $\phi(n) = 20$.
 
-**Answer:** $e = 7$.
+**(b) Validity of $e=3$**
+* Requirement: $\gcd(e, \phi(n)) = 1$.
+* Check: $\gcd(3, 20) = 1$.
+* **Answer:** Yes, it is valid because 3 and 20 are coprime.
 
-**(c) Encrypt $x=87$** 
-Using $e=7$.
-Cipher $C = 87^7 \pmod{91}$.
-Note that $87 \equiv -4 \pmod{91}$.
-$C \equiv (-4)^7 = -16384 \pmod{91}$.
-$16384 \div 91$: $16384 = 180 \times 91 + 4$.
-So $16384 \equiv 4 \pmod{91}$.
-Thus $-16384 \equiv -4 \equiv 87 \pmod{91}$.
-**Answer:** 87.
+**(c) Finding Private Key $d$ (for $e=7$)**
+* Equation: $d \cdot e \equiv 1 \pmod{\phi(n)} \Rightarrow 7d \equiv 1 \pmod{20}$.
+* **Extended Euclidean Algorithm:**
+    * $20 = 2(7) + 6$
+    * $7 = 1(6) + 1$
+* **Back Substitution:**
+    * $1 = 7 - 1(6)$
+    * $1 = 7 - 1(20 - 2(7))$
+    * $1 = 7 - 1(20) + 2(7)$
+    * $1 = 3(7) - 1(20)$
+* Thus, $3(7) \equiv 1 \pmod{20}$.
+* $d = 3$.
+    **Answer:** $d = 3$.
 
-**(d) Find private exponent $d$** 
-Solve $de \equiv 1 \pmod{72}$ using $e=7$.
-Extended Euclidean Algorithm on 72 and 7:
-1.  $72 = 10(7) + 2$
-2.  $7 = 3(2) + 1$
-3.  Back substitute:
-    $1 = 7 - 3(2)$
-    $1 = 7 - 3(72 - 10(7))$
-    $1 = 7 - 3(72) + 30(7)$
-    $1 = 31(7) - 3(72)$
-Thus, $31 \times 7 \equiv 1 \pmod{72}$.
-**Answer:** $d = 31$.
-
-**(e) RSA Risk** 
-* **Risk:** If the plaintext $x$ is not relatively prime with $n$ ($\gcd(x, n) \neq 1$), then $x$ shares a factor with $n$ (either $p$ or $q$).
-* **Attack:** The attacker can compute $\gcd(x_{\text{intercepted}}, n)$. This calculation (Euclidean algorithm) is very fast and will yield one of the prime factors of $n$ (e.g., 7 or 13). Once a factor is known, the attacker can compute $\phi(n)$ and the private key $d$.
+**(d) Encryption**
+* Message $m = 2$, Public Key $(33, 7)$.
+* Formula: $c = m^e \pmod n$.
+* Calculation: $c = 2^7 \pmod{33}$.
+    * $2^5 = 32 \equiv -1 \pmod{33}$.
+    * $2^7 = 2^5 \times 2^2 = (-1) \times 4 = -4$.
+    * $-4 \equiv 29 \pmod{33}$.
+    **Answer:** $c = 29$.

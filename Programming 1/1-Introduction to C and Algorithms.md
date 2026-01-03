@@ -3,7 +3,7 @@
 ### 1.1 Computer Programming and Algorithms
 
 > [!Definition] ⚙️ Computer Program
-> [cite_start]A **computer program** is a sequence of instructions written using a **Computer Programming Language** to perform a specified task by the computer.
+> A **computer program** is a sequence of instructions written using a **Computer Programming Language** to perform a specified task by the computer.
 
 To solve a problem using a computer, one must define an **algorithm**.
 
@@ -15,19 +15,19 @@ To solve a problem using a computer, one must define an **algorithm**.
 > 2.  **Output:** At least one quantity is produced.
 > 3.  **Definiteness:** Each instruction is clear and unambiguous.
 > 4.  **Finiteness:** The algorithm terminates after a finite number of steps.
-> [cite_start]5.  **Effectiveness:** Every instruction must be basic enough to be carried out strictly.
+> 5.  **Effectiveness:** Every instruction must be basic enough to be carried out strictly.
 
 #### Algorithm Representation
 
 Algorithms are typically represented in two ways:
-1.  [cite_start]**Pseudo-code:** English-like representation of the logic.
-2.  [cite_start]**Flowchart:** A graphical representation using standard symbols.
+1.  **Pseudo-code:** English-like representation of the logic.
+2.  **Flowchart:** A graphical representation using standard symbols.
 
 > [!Note] 📊 Standard Flowchart Symbols
-> [cite_start]* **Oval (Rounded Rectangle):** Start / End (Terminal).
-> [cite_start]* **Parallelogram:** Input / Output operations.
-> [cite_start]* **Rectangle:** Process / Calculation / Assignment.
-> [cite_start]* **Diamond:** Decision / Conditional check (Yes/No branching).
+> * **Oval (Rounded Rectangle):** Start / End (Terminal).
+> * **Parallelogram:** Input / Output operations.
+> * **Rectangle:** Process / Calculation / Assignment.
+> * **Diamond:** Decision / Conditional check (Yes/No branching).
 > * **Arrows:** Flow of control.
 
 
@@ -58,11 +58,11 @@ A C program is constructed from functions and directives. The execution always b
 > }
 > ```
 
-* **Preprocessor Directives:** Lines beginning with `#` (e.g., `#include`). They are processed before compilation. [cite_start]`<stdio.h>` stands for **Standard Input Output** header file, required for functions like `printf` and `scanf`.
-* **`main()` Function:** The entry point of every C program. `int` indicates it returns an integer to the OS; [cite_start]`void` indicates it takes no arguments.
+* **Preprocessor Directives:** Lines beginning with `#` (e.g., `#include`). They are processed before compilation. `<stdio.h>` stands for **Standard Input Output** header file, required for functions like `printf` and `scanf`.
+* **`main()` Function:** The entry point of every C program. `int` indicates it returns an integer to the OS; `void` indicates it takes no arguments.
 * **Comments:** Ignored by the compiler, used for documentation.
     * Single line: `// comment`
-    * [cite_start]Multi-line: `/* comment */`.
+    * Multi-line: `/* comment */`.
 
 ---
 
@@ -71,7 +71,7 @@ A C program is constructed from functions and directives. The execution always b
 > [!Definition] 🏷️ Identifier
 > A name given to entities such as variables, functions, and arrays.
 
-[cite_start]**Rules for Identifiers:** 
+**Rules for Identifiers:** 
 1.  Must consist of letters ($A-Z, a-z$), digits ($0-9$), or underscores ($\_$).
 2.  **Must** start with a letter or an underscore.
 3.  **Cannot** start with a digit.
@@ -83,7 +83,7 @@ A C program is constructed from functions and directives. The execution always b
 ### 1.4 Variables and Data Types
 
 > [!Definition] 📦 Variable
-> [cite_start]A named location in memory used to store a value that can be modified during program execution.
+> A named location in memory used to store a value that can be modified during program execution.
 
 #### Variable Declaration and Initialization
 Variables must be declared before use.
@@ -98,7 +98,7 @@ Variables must be declared before use.
 > ```
 
 #### Fundamental Data Types
-[cite_start]C provides several basic types to store different kinds of data:
+C provides several basic types to store different kinds of data:
 
 | Type | Description | Format Specifier | Example |
 | :--- | :--- | :--- | :--- |
@@ -109,7 +109,7 @@ Variables must be declared before use.
 | **`_Bool`** | Boolean (0 or 1) | `%d` (as int) | `0`, `1` |
 | **`void`** | Valueless (used for functions) | N/A | `void func()` |
 
-[cite_start]**Qualifiers:** `short`, `long`, `signed`, `unsigned` can modify these types (e.g., `unsigned int`, `long double`).
+**Qualifiers:** `short`, `long`, `signed`, `unsigned` can modify these types (e.g., `unsigned int`, `long double`).
 
 ---
 
@@ -128,7 +128,7 @@ Variables must be declared before use.
     ```c
     #define MAX_SIZE 100
     ```
-    [cite_start]*Note: `#define` does not use a semicolon*.
+    *Note: `#define` does not use a semicolon*.
 
 ---
 
@@ -144,11 +144,11 @@ C uses standard library functions for I/O operations.
 > **Escape Sequences:**
 > * `\n`: Newline
 > * `\t`: Tab
-> [cite_start]* `\"`: Double quote.
+> * `\"`: Double quote.
 
 > [!Function] 📥 `scanf()` (Input)
 > Reads formatted input from the standard input (keyboard).
 >
 > **Syntax:** `scanf("format string", &variable_name);`
 >
-> [cite_start]**Important:** The `&` (address-of operator) is required for standard variables (int, float, char) to tell `scanf` *where* in memory to store the input.
+> **Important:** The `&` (address-of operator) is required for standard variables (int, float, char) to tell `scanf` *where* in memory to store the input.

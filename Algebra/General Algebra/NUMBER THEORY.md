@@ -292,8 +292,6 @@ $$15 = 6(2) + 3$$
 
 $$6 = 3(2) + 0 \implies d = 3$$
 
-Check if $d \mid b$: Does $3 \mid 12$? Yes.
-
 Therefore, there are $d=3$ distinct solutions modulo 21.
 
 2. Reduce the Equation:

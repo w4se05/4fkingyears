@@ -1,113 +1,148 @@
+### 1. Binary Choice & Short Calculations (5 pts)
 
-## 1. Binary Choice Questions (Conceptual)
-*Evaluate the following assertions. Circle **t** (True) or **f** (False).*
-*Correct = +1, Incorrect = -1, No Answer = 0.*
+**A. True or False** Evaluate the following assertions. Circle **t** (true) or **f** (false).  
 
-1.  **t / f**: If $A$ and $B$ are $n \times n$ matrices such that $AB = 0$, then either $A = 0$ or $B = 0$.
-2.  **t / f**: Let $T: \mathbb{R}^n \to \mathbb{R}^n$ be a linear operator. If $\ker(T) = \{0\}$, then $T$ is surjective (onto).
-3.  **t / f**: The relation $R = \{(a,b) \in \mathbb{Z}^2 : a \equiv b \pmod n\}$ is a partial ordering on $\mathbb{Z}$.
-4.  **t / f**: In RSA, if the public exponent $e$ shares a factor with $\phi(n)$ (i.e., $\gcd(e, \phi(n)) > 1$), then the decryption key $d$ does not exist uniquely.
-5.  **t / f**: If $S = \{v_1, v_2, v_3\}$ is a linearly dependent set in vector space $V$, then $v_3$ must be a linear combination of $v_1$ and $v_2$.
+1.  **[ t / f ]** The set of vectors $\{(1,0,1), (0,1,0), (1,1,1)\}$ forms a basis for $\mathbb{R}^3$.
+2.  **[ t / f ]** For any two square matrices $A$ and $B$, $\det(A+B) = \det(A) + \det(B)$.
+3.  **[ t / f ]** The relation $R = \{(x,y) \in \mathbb{R}^2 : x \le y\}$ is an equivalence relation.
+4.  **[ t / f ]** If $a \equiv b \pmod n$, then $a$ and $b$ leave the same remainder when divided by $n$. 
+5.  **[ t / f ]** In an RSA cryptosystem with modulus $n=55$, $e=7$ is a valid public exponent.
 
----
+**B. Short Calculations**
 
-## 2. Short Answer Questions (Calculations & Logic)
-*Insert your answers in the blanks.*
+1.  Given vectors $\vec{u} = (1, -2, 3)$ and $\vec{v} = (2, 0, -1)$.  
+    Compute the dot product $\vec{u} \cdot \vec{v}$:  
+    __________________________________________________________________ 
 
-(a) Let $A = \begin{pmatrix} 1 & k & 2 \\ 0 & 1 & k \\ 3 & 1 & 1 \end{pmatrix}$. Find all values of $k \in \mathbb{R}$ for which the matrix $A$ is **not** invertible.
-    $k =$ ________________________________________
-
-(b) Find the **transitive closure** matrix $M_{R^*}$ for the relation $R$ defined by matrix $M_R = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix}$.
-    $M_{R^*} =$ ________________________________________
-
-(c) Given vectors $u, v \in \mathbb{R}^n$ such that $||u||=3, ||v||=4$, and the angle between them is $\frac{\pi}{3}$. Calculate $||2u - v||^2$.
-    Result: ________________________________________
-
-(d) Determine the truth value (True/False) of the proposition $\forall x \in \mathbb{R}, \exists y \in \mathbb{R} : x^2 + y = 5$.
-    Answer: ________________________________________
-
-(e) In an RSA system with $n=143$ ($11 \times 13$) and $e=113$, find the private key $d$.
-    $d =$ ________________________________________
+2.  Given matrix $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$.  
+    Compute $A^T - 2I_2$:  
+    __________________________________________________________________ 
 
 ---
 
-## 3. Parametric Linear Systems & Subspaces
-Consider the linear system dependent on a parameter $\lambda \in \mathbb{R}$:
+### 2. Linear Systems (5 pts)
+
+Consider the system of equations with parameter $\lambda \in \mathbb{R}$: 
+
 $$
 \begin{cases}
-x + y - z = 1 \\
-2x + 3y + \lambda z = 3 \\
-x + \lambda y + 3z = 2
+x + y + z = 1 \\
+x + \lambda y + 2z = 2 \\
+x + y + \lambda z = 3
 \end{cases}
 $$
 
-(a) For which value(s) of $\lambda$ does the system have: **(1.5 P.)**
-   i. A unique solution?
-   ii. No solution?
-   iii. Infinitely many solutions?
+**(a)** Write down the coefficient matrix $A$ and the augmented matrix for the system.
 
-(b) Set $\lambda = 2$ and consider the associated **homogeneous** system ($Ax = 0$). Let $W$ be the solution space. Find a basis for the orthogonal complement $W^\perp$ (or simply find a basis for the row space of $A$). **(1.5 P.)**
-(c) Prove that for any $\lambda$, the column space of the coefficient matrix is a subspace of $\mathbb{R}^3$. **(1 P.)**                                                                                                        
+<br><br><br>
 
-## 4. Abstract Linear Transformations
-Let $V = \mathbb{R}^3$. Let $T: \mathbb{R}^3 \to \mathbb{R}^3$ be a linear transformation defined by:
-$$T(x, y, z) = (x - 2y + z, \, 2x + y - z, \, -x - 3y + 2z)$$
+**(b)** Calculate $\det(A)$. For which values of $\lambda$ does the system have a **unique solution**? 
 
-(a) Determine the **Kernel** (Null Space) of $T$ and find its dimension. Is $T$ injective (one-to-one)? **(1.5 P.)**
+<br><br><br>
 
-(b) Determine the **Image** (Range) of $T$. Find a condition on $a, b, c$ such that vector $w = (a, b, c)$ belongs to $\text{Im}(T)$. **(1.5 P.)**
+**(c)** Let $\lambda = 2$. Solve for $y$ using **Cramer's Rule**.  
+*(Note: You must use Cramer's rule to receive points)*. 
 
-(c) Let $S$ be the transformation $S(v) = 2v$. Find the matrix representation of the composition $S \circ T$ in the standard basis. **(1 P.)**
+<br><br><br>
 
 ---
 
-## 5. Advanced Propositional Logic
-(a) **Proof by Contradiction:**
-    Use the laws of logic (or a truth table if you must, but logical derivation is preferred) to prove that the following compound proposition is a **tautology**:
-    $$[ (p \to q) \wedge (q \to r) \wedge \neg r ] \to \neg p$$
+### 3. Matrix Operations & Subspaces (4 pts)
 
-(b) **Normal Forms:**
-    Convert the following proposition into **Disjunctive Normal Form (DNF)** (a sum of products):
-    $$\phi = \neg(p \to (q \wedge r))$$
+Given the matrix $A$: 
 
----
+$$A = \begin{pmatrix} 1 & 2 & 0 & 1 \\ 2 & 4 & 1 & 4 \\ -1 & -2 & 0 & -1 \end{pmatrix}$$
 
-## 6. Relations and Partitions
-Let $A = \{1, 2, 3, 4, 5, 6\}$. Define a relation $R$ on $A$ such that:
-$$(x, y) \in R \iff x + y \text{ is even}$$
+**(a)** Use elementary row operations to reduce $A$ to its **Row Echelon Form**. 
 
-(a) Prove that $R$ is an **equivalence relation**. **(1.5 P.)**
+<br><br><br>
 
-(b) Find the **equivalence classes** $[1]$ and $[2]$ generated by $R$. **(1 P.)**
+**(b)** Identify the pivot columns and determine the **rank** of matrix $A$.
 
-(c) What is the partition of $A$ induced by $R$? **(0.5 P.)**
+<br><br>
+
+**(c)** Find a basis for the **Null Space** of $A$. 
+
+<br><br><br>
 
 ---
 
-## 7. Modular Arithmetic & RSA Attack
-(a) Solve the system of congruences (using substitution or Chinese Remainder Theorem logic): **(1.5 P.)**
-    $$
-    \begin{cases}
-    x \equiv 2 \pmod 3 \\
-    x \equiv 3 \pmod 5 \\
-    x \equiv 2 \pmod 7
-    \end{cases}
-    $$
-    *Find the smallest positive integer $x$.*
+### 4. Linear Transformations (4 pts)
 
-(b) **RSA Analysis:**
-    Bob uses RSA with modulus $n$. He mistakenly chooses a prime $p$ and sets $q = p$ (so $n = p^2$).    Explain why this system is insecure. Specifically, how can an attacker efficiently find $d$ knowing only $n$ and $e$? **(1.5 P.)****
+Let $T: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ be a linear transformation defined by $T(x,y) = (x+y, x-y)$. 
+
+**(a)** Find the images of the standard basis vectors $\vec{e}_1 = (1,0)$ and $\vec{e}_2 = (0,1)$. 
+
+<br><br>
+
+**(b)** Find the matrix representation $M$ of $T$ with respect to the standard basis. 
+
+<br><br>
+
+**(c)** Find the vector $\vec{v}$ such that $T(\vec{v}) = (4, 2)$.
+
+<br><br>
+
+---
+
+### 5. Propositional Logic (4 pts)
+
+**(a)** Construct a truth table for the formula $\neg p \wedge (p \Rightarrow q)$. 
+
+<br><br><br>
+
+**(b)** Prove the logical equivalence without using a truth table (use logical laws): 
+$$\neg(p \vee q) \vee (\neg p \wedge q) \equiv \neg p$$
+
+<br><br><br>
+
+**(c)** Negate the following statement in English. Do **not** use the word "if" or "then" in your answer: 
+*"If it rains today, I will not go to the park."*
+
+<br><br>
 
 ---
 
-## 8. Vector Geometry & Proofs
-Let $u, v \in \mathbb{R}^n$ be non-zero vectors.
+### 6. Relations (4 pts)
 
-(a) Prove the **Cauchy-Schwarz Inequality** implies that for any two vectors $u, v$:
-    $$||u + v||^2 \le (||u|| + ||v||)^2$$
-    *(Hint: Expand the inner product $\langle u+v, u+v \rangle$).* **(1.5 P.)**
+Let $A = \{1, 2, 3, 4\}$. Consider the relation $R$ on $A$ defined by:
+$$R = \{(1,1), (1,2), (2,1), (2,2), (3,3), (4,4)\}$$
 
-(b) If $u$ and $v$ are orthogonal, prove that the set $\{u, v, u+v\}$ is linearly dependent, but the set $\{u, v\}$ is linearly independent. **(1.5 P.)**
+**(a)** Draw the directed graph (digraph) OR write the matrix representation $M_R$ for this relation. 
+
+<br><br>
+
+**(b)** Check the following properties for $R$. Circle **Yes** or **No** and justify your answer for "Transitive". 
+* **Reflexive:** Yes / No
+* **Symmetric:** Yes / No
+* **Transitive:** Yes / No  
+    *Justification:* _____________________________________________________
+
+**(c)** Is $R$ an equivalence relation? If yes, find the partition of $A$ induced by $R$. 
+
+<br><br>
 
 ---
-**End of Exam**
+
+### 7. RSA Encryption (4 pts)
+
+Bob sets up a small RSA system with modulus $n = 33$.  
+*(Hint: $33 = 3 \times 11$)* 
+
+**(a)** Find Euler's totient function $\phi(n)$. 
+
+<br><br>
+
+**(b)** Check if $e = 3$ is a valid public exponent. Explain why or why not. 
+
+<br><br>
+
+**(c)** Assume Bob chooses the public exponent $e = 7$. Use the Extended Euclidean Algorithm to find the private key $d$.  
+*(Condition: $d \cdot e \equiv 1 \pmod{\phi(n)}$)*. 
+
+<br><br><br>
+
+**(d)** Encrypt the message $m = 2$ using the public key $(n, e) = (33, 7)$.  
+*(Calculate $c = m^e \pmod n$)*. 
+
+<br><br>

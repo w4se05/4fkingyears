@@ -28,8 +28,7 @@ If $X = \{x_1, \dots, x_m\}$ and $Y = \{y_1, \dots, y_n\}$, $M_R$ is an $m \time
 
 **Operations:**
 * **Inverse ($R^{-1}$):** $\{(y,x) \mid (x,y) \in R\}$. Matrix: $M_{R^{-1}} = (M_R)^T$.
-* **Composition ($S \circ R$):** Relation from $X$ to $Z$ via $Y$. $(x, z) \in S \circ R$ if $\exists y$ such that $(x,y) \in R$ and $(y,z) \in S$.
-    * Matrix: Boolean product $M_R \odot M_S$.
+* **Composition ($S \circ R$):** Relation from $X$ to $Z$ via $Y$. $(x, z) \in S \circ R$ if $\exists y$ such that $(x,y) \in R$ and $(y,z) \in S$.  Matrix: Boolean product $M_R \odot M_S$.
 
 ### 3. Properties of Relations (on Set X)
 Let $R$ be a relation on $X$ ($R \subseteq X \times X$).
@@ -47,7 +46,7 @@ If a relation $R$ lacks a property (e.g., transitivity), we can add the minimum 
 * **Reflexive Closure:** $R \cup \{(x,x) \mid \forall x\}$.
 * **Symmetric Closure:** $R \cup R^{-1}$.
 * **Transitive Closure ($R^*$):** $R \cup R^2 \cup R^3 \dots \cup R^n$.
-    * Computed efficiently using **Warshall's Algorithm**: $$M_{k}=M_{k-1}\cup (k^{th}\; row \; of\ M_{k-1}\odot k^{th}\; column \; of\; M_{k-1})$$ with K = size of R i.g 3x3 => 3 step, $M_{R^*}=M_{3}$
+    * Computed efficiently using **Warshall's Algorithm**: $$M_{k} = M_{k-1} \lor (C_{k-1} \odot R_{k-1})$$ with K = size of R i.g 3x3 => 3 step, $M_{R^*}=M_{3}$
 	    and $M_{0}=M_{R}$
 
 ### 5. Equivalence Relations & Partial Orders

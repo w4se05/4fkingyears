@@ -51,4 +51,12 @@ Follow this exact structure and style: \[cite:.*?\]
 -
 Finally, make it **comprehensive** — all essential definitions, theorems, and methods from the topic must be included
 
-If I upload my course notes,
+
+Chapter 2: Array-related exercises
+
+Chapter 3: Single and double precision. See example in Chapter 3 - the teacher just changed the numbers.
+- Exercise 1: Multiplication and division
+- Exercise 2: Representation of float negative and positive numbers (single and double)
+- Note: When doing the exercises, you must create a table and frame it as in the book.
+
+Chapter 4: Focus on the exercise file, only modified a lil bit when it comes to the test, but the diagram is the same
