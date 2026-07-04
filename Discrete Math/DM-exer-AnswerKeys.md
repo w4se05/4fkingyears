@@ -210,5 +210,3 @@
 26. *(proof)*
 27. *(proof via Matrix-Tree Theorem)*
 28. *(proof via Matrix-Tree Theorem)*
-
-> **Note:** The Trees section of the source answer key ends here (matching content through item 28 of Chapter 4); later exercises in the exercise sheet (e.g., prefix/postfix notation, BFS/DFS, backtracking) did not have corresponding answers in the provided answer key PDF.

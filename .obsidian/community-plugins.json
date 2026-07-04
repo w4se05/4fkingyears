@@ -5,5 +5,7 @@
   "better-export-pdf",
   "obsidian-regex-replace",
   "mermaid-tools",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "obsidian-graphviz",
+  "obsidian-spaced-repetition"
 ]

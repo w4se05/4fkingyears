@@ -260,31 +260,31 @@
 12. How many weighings of a balance scale are needed to find a counterfeit coin among four coins if the counterfeit coin may be either heavier or lighter than the others?
 13. Using a decision tree for classifying the IDs below given their properties:
 
-    | ID | time | gender | area  | risk |
-    |----|------|--------|-------|------|
-    | 1  | 1-2  | male   | urban | low  |
-    | 2  | 2-7  | male   | rural | high |
-    | 3  | >7   | female | rural | low  |
-    | 4  | 1-2  | female | rural | high |
-    | 5  | >7   | male   | rural | high |
-    | 6  | 1-2  | male   | rural | high |
-    | 7  | 2-7  | female | urban | low  |
-    | 8  | 2-7  | male   | urban | low  |
+| ID  | time | gender | area  | risk |
+| --- | ---- | ------ | ----- | ---- |
+| 1   | 1-2  | male   | urban | low  |
+| 2   | 2-7  | male   | rural | high |
+| 3   | >7   | female | rural | low  |
+| 4   | 1-2  | female | rural | high |
+| 5   | >7   | male   | rural | high |
+| 6   | 1-2  | male   | rural | high |
+| 7   | 2-7  | female | urban | low  |
+| 8   | 2-7  | male   | urban | low  |
 
 14. At the beginning of an exam, you try to predict whether each problem is easy or difficult ($D = +$ if it is difficult and $-$ if it is easy). Assume you use two observable problem attributes: the text length $L$ (1 if long, 0 otherwise) and the amount of math $M$ (1 if a lot of math, 0 otherwise). For training data, assume you have examined 12 previous problems and collected the following data:
 
-    | L | M | D | Question |
-    |---|---|---|----------|
-    | 0 | 0 | − | 1        |
-    | 0 | 0 | + | 2        |
-    | 0 | 1 | − | 3        |
-    | 0 | 1 | + | 4        |
-    | 1 | 0 | − | 5        |
-    | 1 | 0 | + | 6        |
-    | 1 | 1 | − | 7        |
-    | 1 | 1 | + | 8        |
+| L   | M   | D   | Question |
+| --- | --- | --- | -------- |
+| 0   | 0   | −   | 1        |
+| 0   | 0   | +   | 2        |
+| 0   | 1   | −   | 3        |
+| 0   | 1   | +   | 4        |
+| 1   | 0   | −   | 5        |
+| 1   | 0   | +   | 6        |
+| 1   | 1   | −   | 7        |
+| 1   | 1   | +   | 8        |
+Draw a decision tree for classifying questions. How many decisions do you need to make to classify question 6?
 
-    Draw a decision tree for classifying questions. How many decisions do you need to make to classify question 6?
 15. Find the least number of comparisons needed to sort four elements and devise an algorithm that sorts these elements using this number of comparisons.
 16. How many comparisons does the tournament sort use to find the second largest, the third largest, and so on, up to the $(n-1)$st largest (or second smallest) element?
 17. Draw the tree whose Prüfer sequence is $(1,1,1,1,6,5)$.
