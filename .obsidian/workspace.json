@@ -8,27 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a987533551d38091",
+            "id": "6d3eb0c965b83ac9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IOT-Material/Multiple Choice/IoT_Flashcards.md",
+                "file": "Discrete Math/Final_Cheatsheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IoT_Flashcards"
-            }
-          },
-          {
-            "id": "6d3eb0c965b83ac9",
-            "type": "leaf",
-            "state": {
-              "type": "spaced-repetition-tab-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Spaced Repetition"
+              "title": "Final_Cheatsheet"
             }
           }
         ]
@@ -88,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345,
-    "collapsed": true
+    "width": 345
   },
   "right": {
     "id": "963ded235dc6ed14",
@@ -214,14 +203,32 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "bases:Create new base": false
     }
   },
-  "active": "a987533551d38091",
+  "active": "6d3eb0c965b83ac9",
   "lastOpenFiles": [
-    "IOT-Material/Multiple Choice/IoT_Quizzes.md",
+    "AI_Exam_Cheatsheet.md",
+    "AI.md",
+    "Discrete Math/Final_Cheatsheet.md",
+    "Discrete Math/Cheatsheet.md",
+    "Discrete Math/Final_Cheatsheet.txt",
+    "Discrete Math/New Text Document.txt",
+    "Discrete Math/DM-exer-AnswerKeys.md",
+    "Discrete Math/DM-exer.md",
+    "Discrete Math/DM-Exercises.md",
+    "Discrete Math/DM_Counting_Cheatsheet.md",
+    "Discrete Math/DM-Counting-Solutions-Detailed.md",
+    "Discrete Math/DM-Exam-Procedures.md",
+    "Discrete Math/linear-recurrence.md",
+    "Discrete Math/DM-Ultimate-Cheatsheet.md",
+    "CODE-RED.md",
+    "Obsidian Prompt.md",
+    "IOT-Material/Study Sheet/Module 6_consumer-study-sheet.md",
+    "IOT-Material/Study Sheet/Module 5_Study-sheet.md",
+    "IOT-Material/Study Sheet/MASTER_STUDY_DOCUMENT.md",
     "IOT-Material/Multiple Choice/IoT_Flashcards.md",
+    "IOT-Material/Multiple Choice/IoT_Quizzes.md",
     "graph_lecture_video.py",
     "IOT-Material/06-consumer/06-consumer-study-sheet.md",
     "IOT-Material/05-retail/STUDY-SHEET-MODULE-05.md",
@@ -232,28 +239,10 @@
     "IOT-Material/Study Sheet/Module 1_Getting Started (IoT).md",
     "IOT-Material/Multiple Choice",
     "IOT-Material/New folder",
-    "IOT-Material/Study Sheet/MASTER_STUDY_DOCUMENT.md",
-    "IOT-Material/Study Sheet/MASTER_PART3.md",
-    "IOT-Material/Study Sheet/MASTER_PART2.md",
-    "IOT-Material/Study Sheet/MASTER_PART1.md",
-    "IOT-Material/Study Sheet/Module 5_Study-sheet.md",
-    "IOT-Material/Study Sheet/Module 6_consumer-study-sheet.md",
-    "IOT-Material/Study Sheet/Module 4_study-sheet.md",
     "IOT-Material/Study Sheet",
-    "IOT-Material/Module 03_Transport.md",
-    "IOT-Material/Module 3_Transport.md",
-    "IOT-Material/Module 1_Getting Started (IoT).md",
-    "IOT-Material/06-consumer-study-sheet.md",
-    "IOT-Material/STUDY-SHEET-MODULE-05.md",
-    "IOT-Material/module-04-study-sheet.md",
-    "IOT-Material/Module_2_study-sheet.md",
-    "IOT-Material/02-farm/Module_2_study-sheet.md",
-    "IOT-Material/Module 1 - Getting Started (IoT).md",
     "IOT-Material/structure.txt",
     "Programming 2_Cheatsheet_Generator",
     "Programming 2/Exercises/test_tmp/check.exe",
-    "Programming 2/Exercises/test_tmp/check.cpp",
-    "Programming 2/Exercises/test_tmp",
-    "Programming 2/Lecture/Vietnamese"
+    "Programming 2/Exercises/test_tmp/check.cpp"
   ]
 }

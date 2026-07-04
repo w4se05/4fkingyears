@@ -1,4 +1,4 @@
-﻿# MASTER IoT STUDY DOCUMENT -- Closed-Book Exam Preparation
+# MASTER IoT STUDY DOCUMENT -- Closed-Book Exam Preparation
 
 > **How to use this document:** Start with Section 1 (Big Picture) to build the mental model. Study Section 2 (Recurring Core Concepts) thoroughly -- these are the highest-probability exam topics. Use Section 3 as a quick module-by-module refresher. Drill Section 4 (Glossary) for multiple-choice questions. Review Section 5 (Comparison Tables) for writing questions. Test yourself with Section 6 (Predicted Exam Questions). Section 7 flags anything the source material did not explain well.
 
@@ -89,17 +89,17 @@ This is arguably the single most important architectural decision in any IoT sys
 
 #### Complete Tradeoff Table
 
-| Aspect | Edge Processing | Cloud Processing |
-|--------|-----------------|------------------|
-| **What it is** | Processing on a local device or nearby hub, close to where data is created | Processing on remote servers in a data center |
-| **Speed / Latency** | Instant -- no network round-trip | Depends on Internet speed; transatlantic latency is ~28ms+ |
-| **Offline capability** | Works without Internet | Fails without Internet |
-| **Privacy** | Data stays on local network | Data leaves your control |
-| **Computing power** | Limited by local hardware | Massive -- data centers with GPUs, AI/ML clusters |
-| **Cost per operation** | Hardware purchase + maintenance | Pay-per-use (often fractions of a cent) |
-| **Scalability** | Limited -- must buy more hardware | Auto-scales instantly |
-| **Software updates** | Must update each device | Update once in the cloud |
-| **Best for** | Real-time decisions, privacy-critical data, remote/offline locations, high-bandwidth data like video | Complex analytics, AI model training, cross-device coordination, long-term storage |
+| Aspect                 | Edge Processing                                                                                      | Cloud Processing                                                                   |
+| ---------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **What it is**         | Processing on a local device or nearby hub, close to where data is created                           | Processing on remote servers in a data center                                      |
+| **Speed / Latency**    | Instant -- no network round-trip                                                                     | Depends on Internet speed; transatlantic latency is ~28ms+                         |
+| **Offline capability** | Works without Internet                                                                               | Fails without Internet                                                             |
+| **Privacy**            | Data stays on local network                                                                          | Data leaves your control                                                           |
+| **Computing power**    | Limited by local hardware                                                                            | Massive -- data centers with GPUs, AI/ML clusters                                  |
+| **Cost per operation** | Hardware purchase + maintenance                                                                      | Pay-per-use (often fractions of a cent)                                            |
+| **Scalability**        | Limited -- must buy more hardware                                                                    | Auto-scales instantly                                                              |
+| **Software updates**   | Must update each device                                                                              | Update once in the cloud                                                           |
+| **Best for**           | Real-time decisions, privacy-critical data, remote/offline locations, high-bandwidth data like video | Complex analytics, AI model training, cross-device coordination, long-term storage |
 
 #### The Exam Answer: When to Choose Edge
 
