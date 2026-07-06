@@ -7,18 +7,33 @@ tags: [ai, exam, numpy, pandas, ml, dl, cnn, rnn, lstm, pytorch, ctc, mcq]
 > 50 MCQ · Open Book · Merged from code/architecture notes + conceptual trap matrices.
 > Every subsection = code/math + its exact MCQ trap, together. Skim the **1-Second Look-up Table** at the top of each module first; drill into subsections only if you need the "why."
 
-## 🗺️ Module Index
+## 📑 Table of Contents — O(1) Knowledge Retrieval
 
-| # | Module | Core Topics |
+| Hot-key | Module | Jump-to |
 |---|---|---|
-| 1 | NumPy & Pandas Foundations | shape/axis, reshape, fancy indexing, `loc`/`iloc`, sorting, matmul |
-| 2 | ML Paradigms & Data Splits | supervised/unsupervised, tabular vs unstructured, train/val/test rules |
-| 3 | DL Core & Activations | neuron math, backprop, activation + loss matrices |
-| 4 | PyTorch Workflow & Training | training loop, autograd modes, optimizers, hyperparameters |
-| 5 | CNNs | conv output size, parameter counting, pooling |
-| 6 | RNN & Sequential Modeling | BPTT, vanishing gradient, BiLSTM, encoder-decoder |
-| 7 | CTC & Projects | alignment, blank token, WER, CROHME pipeline |
-| 8 | Master FALSE Index | top 25 rapid-fire traps + glossary |
+| **shape/axis/reshape** | M1 | [Shape & Axis](#11-shape-ndim-size--axis-direction) · [Reshape/Flatten](#12-reshape--flatten--ravel) |
+| **`loc` vs `iloc`** | M1 | [Pandas loc/iloc](#110-pandas-loc-vs-iloc-dataframe-basics-concat) |
+| **broadcasting** | M1 | [Broadcasting](#14-element-wise-ops--broadcasting) |
+| **masking (`==`, `<`, `>`, `arr[mask]`)** | M1 | [Boolean Masking](#15-indexing-basic-fancy-npwhere) |
+| **`argsort` vs `sort`** | M1 | [Sorting](#17-sorting-sort-vs-argsort) |
+| **matmul** | M1 | [MatMul Rule](#19-matmul-dot-product-rule) |
+| **train/val/test roles** | M2 | [Dataset Splits](#24-dataset-splits-roles--rules) |
+| **overfit/underfit** | M2 | [Overfitting](#25-overfitting--underfitting--early-stopping) |
+| **Precision & Recall / F1** | M2 | [Classification Metrics](#26-classification-metrics) |
+| **activations (Sigmoid/ReLU/Tanh/…)** | M3 | [Activation Matrix](#1-second-look-up-table-activation-matrix) |
+| **loss functions** | M3 | [Loss Matrix](#34-loss-functions-matrix) |
+| **BatchNorm / Dropout** | M3 | [Normalization & Regularization](#35-normalization--regularization) |
+| **training loop** | M4 | [Training Loop Order](#43-the-training-loop--exact-order) |
+| **`model.eval()` vs `no_grad()`** | M4 | [Eval Modes](#44-evaluation-modes-compared) |
+| **Conv2d params / output size** | M5 | [Conv2d Params](#51-conv2d-parameter-counting) · [Output Size](#52-spatial-output-size) |
+| **pooling backprop** | M5 | [Max vs Avg Pooling](#54-pooling-max-vs-average) |
+| **BiLSTM hidden size** | M6 | [BiLSTM Bidirectional](#64-bidirectional-rnn--bilstm) |
+| **BPTT / vanishing gradient** | M6 | [BPTT](#62-backpropagation-through-time-bptt--vanishingexploding-gradients) |
+| **LSTM gates** | M6 | [LSTM](#63-lstm--gated-memory) |
+| **CTC blank / decode rule** | M7 | [Blank & Collapse](#72-blank-token--collapsing-rule) |
+| **`CTCLoss` permute trap** | M7 | [CTCLoss Usage](#73-pytorch-ctcloss-usage) |
+| **WER** | M7 | [WER](#75-word-error-rate-wer) |
+| **Top FALSE traps** | M8 | [Master FALSE Index](#-module-8--master-which-of-the-following-is-false-index) |
 
 ---
 
@@ -157,10 +172,29 @@ a = np.array([1, -2, 3, -4, 5])
 np.where(a > 0)         # (array([0, 2, 4]),) — TUPLE of index arrays
 np.where(a > 0)[0]      # [0, 2, 4]
 np.where(a > 0, a, 0)   # ternary: [1, 0, 3, 0, 5]
+
+# Boolean masking — the ARRAY is the mask itself
+arr = np.array([10, 20, 30, 40, 50])
+mask = arr > 25                  # [False, False, True, True, True]
+arr[mask]                        # [30, 40, 50] — select elements where mask is True
+arr[arr <= 30]                   # [10, 20, 30]
+
+arr2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
+arr2d[arr2d > 5]                 # [6, 7, 8, 9] — returns 1D result (scattered)
+arr2d[arr2d == 5]                # [5]
+arr2d[arr2d != 5]                # [1,2,3,4,6,7,8,9]
+arr2d[(arr2d > 3) & (arr2d < 7)] # [4, 5, 6] — combine mask with & (element-wise AND)
+arr2d[(arr2d < 3) | (arr2d > 7)] # [1, 2, 8, 9] — combine with | (element-wise OR)
+
+# Boolean mask for row filtering in Pandas
+df[df['A'] > 15]                 # rows where col A > 15
+df[(df['A'] > 15) & (df['B'] < 55)]  # chained AND — use &, NOT 'and'
 ```
 
 > ⚠ **TRAP:** Fancy indexing `mat[rows, cols]` zips element-wise (NOT a cross-product) — `mat[[0,2],[1,3]]` returns **2** values, not 4.
 > ⚠ **TRAP:** `np.where(condition)` alone returns a **tuple of arrays** (one per dimension), not a flat array of indices.
+> ⚠ **TRAP:** Boolean masking on a 2D+ array returns a **flattened 1D** result — it collects scattered elements, preserving no spatial structure. To get a 2D result of the same shape, use `np.where(mask, val_if_true, val_if_false)`.
+> ⚠ **TRAP:** Use `&` / `|` for element-wise boolean operations on NumPy/Pandas masks; Python's `and` / `or` do **not** work on arrays and will raise an error.
 
 ---
 
@@ -287,6 +321,7 @@ pd.concat([df1, df3], axis=1)               # side-by-side columns
 |---|---|---|
 | Supervised | needs labels `(X, y)` | |
 | Unsupervised | no labels, finds structure | |
+| Reinforcement Learning | learns via **reward/punishment** signals from actions in an environment | NOT the same as supervised — no explicit right/wrong labels; agent discovers optimal policy through trial & error |
 | Train set | model **weights** update here | |
 | Validation set | tune hyperparams + early stopping | model DOES "see" this data (for eval, not weight updates) — "never seen during training" is FALSE |
 | Test set | final unbiased eval, used **once** | using it to pick a checkpoint = contamination |
@@ -297,12 +332,12 @@ pd.concat([df1, df3], axis=1)               # side-by-side columns
 
 ### 2.1 Supervised vs Unsupervised
 
-| | Supervised | Unsupervised |
-|---|---|---|
-| Training data | labeled `(X, y)` | unlabeled (X only) |
-| Goal | learn X → y mapping | find patterns / structure |
-| Examples | Classification, Regression | Clustering, PCA |
-| Evaluation | Accuracy, MSE, WER | Silhouette score, reconstruction error |
+| | Supervised | Unsupervised | Reinforcement Learning |
+|---|---|---|---|---|
+| Training data | labeled `(X, y)` | unlabeled (X only) | environment states, actions, rewards |
+| Goal | learn X → y mapping | find patterns / structure | learn optimal policy $\pi(a \mid s)$ |
+| Examples | Classification, Regression | Clustering, PCA | Game playing (AlphaGo), robotics |
+| Evaluation | Accuracy, MSE, WER | Silhouette score, reconstruction error | Cumulative reward, win rate |
 
 | Type | Goal | Output | Example |
 |---|---|---|---|
@@ -391,7 +426,17 @@ for epoch in range(num_epochs):
 
 ---
 
-### 2.6 Classification Metrics Quick Note
+### 2.6 Classification Metrics
+
+$$Precision = \frac{TP}{TP + FP} \qquad Recall = \frac{TP}{TP + FN}$$
+
+- **Precision** — of all samples the model predicted as positive, how many were actually positive? (Accuracy of positive predictions — low FP.)
+- **Recall** — of all actually positive samples, how many did the model find? (Coverage of positives — low FN.)
+
+| Metric | Translates to | Good when you want to… |
+|---|---|---|
+| High Precision, Low Recall | "When it says yes, it's right — but misses a lot" | avoid false alarms (spam filter) |
+| High Recall, Low Precision | "Finds nearly everything — but also flags a lot of noise" | never miss a case (disease screening) |
 
 $$F1 = \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
 
@@ -946,6 +991,16 @@ Path:   [a, a, ε, b, ε, ε, a]
 Step 1: [a, ε, b, ε, a]      (collapse repeats)
 Step 2: [a, b, a]            (remove blanks)
 → Output: "aba"
+
+Path:   [H, H, ε, E, ε, L, ε, L, O]    (no blank between the two L's)
+Step 1: [H, ε, E, ε, L, ε, O]          (collapse consecutive repeats)
+Step 2: [H, E, L, O]                    (remove blanks)
+→ Output: "HELO"   ← ⚠ NOT "HELLO" — the double-L collapsed because no blank separated them!
+
+Path:   [H, H, ε, E, ε, L, ε, ε, L, O]   (blank exists between the two L's)
+Step 1: [H, ε, E, ε, L, ε, L, O]         (the two L's NOT collapsed — ε in between)
+Step 2: [H, E, L, L, O]                   (remove blanks)
+→ Output: "HELLO"  ← ✅ blank keeps the two L's distinct
 ```
 
 ```

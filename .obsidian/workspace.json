@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Discrete Math/linear-recurrence.md",
+                "file": "AI/Master_Exam_Cheatsheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "linear-recurrence"
+              "title": "Master_Exam_Cheatsheet"
             }
           },
           {
@@ -252,10 +252,10 @@
   },
   "active": "dc18c393cdeb5b5b",
   "lastOpenFiles": [
-    "Discrete Math/DM-Ultimate-Cheatsheet.md",
-    "Discrete Math/linear-recurrence.md",
-    "AI/Master_Exam_Cheatsheet.md",
     "AI/MCQ_CheatSheet.md",
+    "Discrete Math/linear-recurrence.md",
+    "Discrete Math/DM-Ultimate-Cheatsheet.md",
+    "AI/Master_Exam_Cheatsheet.md",
     "AI/AI_Exam_Cheatsheet.md",
     "Discrete Math/DM-Graphs-Part1.md",
     "AI.md",
