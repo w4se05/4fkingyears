@@ -144,7 +144,7 @@ updated: 2026-07-04
 > | Function type | Count | Condition |
 > |---|---|---|
 > | All functions | $n^m$ | always |
-> | Injective (1-1) | $P(n,m)=\dfrac{n!}{(n-m)!}$ | $0$ if $m>n$ |
+> | Injective (one-to-one) | $P(n,m)=\dfrac{n!}{(n-m)!}$ | $0$ if $m>n$ |
 > | Bijective | $n!$ | only if $m=n$ |
 > | Surjective (onto) | $n!\cdot S(m,n)$ **or** $\displaystyle\sum_{j=0}^n(-1)^j\binom{n}{j}(n-j)^m$ | needs $m\ge n$; use Stirling table for small $n$, PIE formula otherwise |
 
@@ -200,6 +200,13 @@ updated: 2026-07-04
 > 2. **Each $x_i\ge a_i$:** substitute $x_i' = x_i-a_i\ge0$; solve the shifted equation for $x_i'$.
 > 3. **Inequality** $x_1+\cdots+x_n\le k$: add a **slack variable** $x_{n+1}\ge0$, turning it into an equation with $n+1$ variables: $C(k+n,k)$.
 > 4. **Upper bound $x_i\le b_i$:** solve unrestricted, then subtract (via PIE) the solutions where some $x_i\ge b_i+1$ (see Part 2 §PIE).
+
+> [!Note] 💡 Equivalent Formulations
+> The following all count the same thing $$= C(n+k-1,k)=C(n+k-1,n-1)$$
+> **1.** Non-negative integer solutions to $x_1 + x_2 + \cdots + x_n = k$.
+> **2.** $k$-combinations with repetition from $n$ elements.
+> **3.** Ways to distribute $k$ identical objects to $n$ people.
+> **4.** Ways to place $k$ identical books onto $n$ shelves.
 
 > [!example] 📘 Worked — Ex. 50–55
 > **Q50.** $x_1+\cdots+x_n=k$, $x_i\ge0$: $C(n+k-1,k)$.
@@ -535,14 +542,14 @@ updated: 2026-07-04
 
 ### 🧭 Decision Guide — existence questions
 
-| Question type | What to check, in order |
-|---|---|
-| Does an **Eulerian circuit** exist? | All vertices even degree? → yes |
-| Does an **Eulerian path** (no circuit) exist? | Exactly 2 odd-degree vertices? → yes, path runs between them |
-| Does a **Hamiltonian circuit/path** exist? | No iff test exists — try Dirac/Ore (sufficient only); if they fail, try to **construct one directly**; if you suspect "no," look for a structural obstruction (e.g. bipartite with unequal parts, or a required vertex of too-low degree) |
-| Is the graph **planar**? | First check edge bound $e\le3v-6$ (or $e\le2v-4$ if triangle-free) — if **violated**, non-planar, done. If **not** violated, try to draw it, or find a $K_5/K_{3,3}$ subdivision. |
-| Is the graph **bipartite**? | 2-color via BFS/DFS, or check: no odd cycles |
-| Are two graphs **isomorphic**? | Compare invariants first (&#124;$V$&#124;,&#124;$E$&#124;, degree sequence, # of triangles) — if any differ, **not isomorphic**, done. If all match, **construct an explicit bijection** and verify every edge. |
+| Question type                                 | What to check, in order                                                                                                                                                                                                                   |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Does an **Eulerian circuit** exist?           | All vertices even degree? → yes                                                                                                                                                                                                           |
+| Does an **Eulerian path** (no circuit) exist? | Exactly 2 odd-degree vertices? → yes, path runs between them                                                                                                                                                                              |
+| Does a **Hamiltonian circuit/path** exist?    | No iff test exists — try Dirac/Ore (sufficient only); if they fail, try to **construct one directly**; if you suspect "no," look for a structural obstruction (e.g. bipartite with unequal parts, or a required vertex of too-low degree) |
+| Is the graph **planar**?                      | First check edge bound $e\le3v-6$ (or $e\le2v-4$ if triangle-free) — if **violated**, non-planar, done. If **not** violated, try to draw it, or find a $K_5/K_{3,3}$ subdivision.                                                         |
+| Is the graph **bipartite**?                   | 2-color via BFS/DFS, or check: no odd cycles                                                                                                                                                                                              |
+| Are two graphs **isomorphic**?                | Compare invariants first (&#124;$V$&#124;,&#124;$E$&#124;, degree sequence, # of triangles) — if any differ, **not isomorphic**, done. If all match, **construct an explicit bijection** and verify every edge.                           |
 
 ---
 
@@ -606,7 +613,7 @@ updated: 2026-07-04
 > 4. To **prove non-existence**, look for a structural obstruction, e.g.:
 >    - Bipartite graph with unequal part sizes → no Hamilton circuit (must alternate sides).
 >    - Removing a vertex disconnects the graph into $\ge2$ pieces → no Hamilton circuit through that cut vertex configuration.
-
+	
 > [!formula] 🗂️ Special graphs — Hamilton table
 > | Graph | Hamilton circuit? | Hamilton path? |
 > |---|---|---|

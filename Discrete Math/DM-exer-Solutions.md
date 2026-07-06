@@ -1,11 +1,3 @@
-﻿# Discrete Mathematics — Complete Exam Solutions
-*VGU-CS Study Program*
-
-Solutions prepared according to the official exam methodology guide (Final_Cheatsheet.md).
-All problems from DM-exer.md solved with full, step-by-step reasoning.
-
----
-
 # Sect.1 Basic Counting Rules — Full Solutions — Full Solutions
 
 ---
@@ -1415,7 +1407,7 @@ $$\boxed{\text{True for 7; false for 6 (counterexample: }\{1,2,3,4,5,10\})}$$
 
 ---
 
-**90.** Show that if you pick seven numbers from the set of consecutive integers from 2 to 13, then you can always find two of them whose sum is exactly 15.
+**90.** Show that if you pick seven numbers from the set of consecutive integers from 2 to 13, then you can always find two of them whose sum is exactly 15.  
 
 **Solution.**
 **(Pigeonhole Principle)**
@@ -2720,7 +2712,7 @@ $$\boxed{\begin{aligned}C_n &: \text{Euler circuit: } \textbf{always} &&\text{Eu
 
 **$W_n$ (Wheel on $n+1$ vertices, $n\ge3$).**
 
-Step 1. $v=n+1$, $e=2n$. Structure: one hub vertex $h$ connected to all $n$ rim vertices $r_1,\dots,r_n$, and the rim forms an $n$-cycle $r_1\mdash r_2\mdash\cdots\mdash r_n\mdash r_1$.
+Step 1. $v=n+1$, $e=2n$. Structure: one hub vertex $h$ connected to all $n$ rim vertices $r_1,\dots,r_n$, and the rim forms an $n$-cycle $r_1— r_2—\cdots— r_n— r_1$.
 
 Step 2. Degrees: $\deg(h)=n$, $\deg(r_i)=3$ for all $i$ (connected to two rim neighbors and the hub).
 
@@ -2775,7 +2767,7 @@ Summary for Eulerian:
 
 Step 3. **Hamiltonian:**
 - $K_{m,n}$ is bipartite. A Hamiltonian circuit must alternate between the two partite sets, so necessarily $|A|=|B|$, i.e. $m=n$.
-  - If $m=n\ge2$, a Hamiltonian circuit exists: label vertices $a_1,\dots,a_n$ and $b_1,\dots,b_n$, trace $a_1\mdash b_1\mdash a_2\mdash b_2\mdash\cdots\mdash a_n\mdash b_n\mdash a_1$.
+  - If $m=n\ge2$, a Hamiltonian circuit exists: label vertices $a_1,\dots,a_n$ and $b_1,\dots,b_n$, trace $a_1— b_1— a_2— b_2—\cdots— a_n— b_n— a_1$.
   - If $m=n=1$, $K_{1,1}\cong K_2$: a Hamiltonian path exists but no circuit (simple graph requires at least $3$ vertices for a cycle).
 - Hamiltonian path: must alternate, so the part sizes can differ by at most $1$. Thus $|m-n|\le 1$ is necessary and sufficient.
   - If $|m-n|\le 1$, a Hamiltonian path exists.
