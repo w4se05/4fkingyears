@@ -532,19 +532,16 @@ $$\boxed{\text{Each "bin" or "type" contributes one factor. Multiply all factors
 | Description / Sequence                                                             | Generating Function (OGF)          | Series Expansion / General Formula              |
 | :--------------------------------------------------------------------------------- | :--------------------------------- | :---------------------------------------------- |
 | **Combinatorial Conditions**                                                       |                                    | *(Building blocks for a single variable $x_i$)* |
-| $x_i \geq 0$ (no restriction)                                                      | $\frac{1}{1 - x}$                  | $1 + x + x^2 + x^3 + \dots$                     |
 | $x_i \geq a$                                                                       | $\frac{x^a}{1 - x}$                | $x^a + x^{a+1} + x^{a+2} + \dots$               |
 | $x_i = a$ (exactly $a$)                                                            | $x^a$                              | $x^a$                                           |
-| $0 \leq x_i \leq b$                                                                | $\frac{1 - x^{b+1}}{1 - x}$        | $1 + x + x^2 + \dots + x^b$                     |
 | $a \leq x_i \leq b$                                                                | $\frac{x^a(1 - x^{b-a+1})}{1 - x}$ | $x^a + x^{a+1} + \dots + x^b$                   |
 | $x_i$ even                                                                         | $\frac{1}{1 - x^2}$                | $1 + x^2 + x^4 + \dots$                         |
 | $x_i$ odd                                                                          | $\frac{x}{1 - x^2}$                | $x + x^3 + x^5 + \dots$                         |
 | $x_i$ multiple of $m$                                                              | $\frac{1}{1 - x^m}$                | $1 + x^m + x^{2m} + \dots$                      |
-| $x_i \in \{1, 2\}$                                                                 | $x + x^2$                          | $x + x^2$                                       |
 | $x_i \geq a$, at least 2 turns                                                     | $\frac{x^{2a}}{(1 - x^a)^2} \dots$ | $(x^a + x^{a+1} + \dots)^2$                     |
 | **Standard Sequences**                                                             |                                    | *(Closed-form OGFs for common sequences)*       |
 | Constant 1s: $(1, 1, 1, \dots)$                                                    | $\frac{1}{1 - x}$                  | $\sum_{k=0}^{\infty} x^k$                       |
-| Geometric: $(1, r, r^2, \dots)$                                                    | $\frac{1}{1 - rx}$                 | $\sum_{k=0}^{\infty} r^k x^k$                   |
+| Geometric: $(1, r, r^2,r^3 \dots)$                                                 | $\frac{1}{1 - rx}$                 | $\sum_{k=0}^{\infty} r^k x^k$                   |
 | Alternating: $(1, 0, 1, 0, \dots)$                                                 | $\frac{1}{1 - x^2}$                | $\sum_{k=0}^{\infty} x^{2k}$                    |
 | Binomial Theorem: <br> $\binom{n}{0}, \binom{n}{1}, \dots, \binom{n}{n}, 0, \dots$ | $(1 + x)^n$                        | $\sum_{k=0}^{n} \binom{n}{k} x^k$               |
 | Multichoose / Combinations with repetition: $\binom{n+k-1}{k}$                     | $\frac{1}{(1 - x)^n}$              | $\sum_{k=0}^{\infty} \binom{n+k-1}{k} x^k$      |
@@ -552,9 +549,8 @@ $$\boxed{\text{Each "bin" or "type" contributes one factor. Multiply all factors
 | Whole Numbers: $(0, 1, 2, 3, \dots)$                                               | $\frac{x}{(1 - x)^2}$              | $\sum_{k=0}^{\infty} k x^k$                     |
 | Squares: $(1, 4, 9, 16, \dots)$                                                    | $\frac{1 + x}{(1 - x)^3}$          | $\sum_{k=0}^{\infty} (k+1)^2 x^k$               |
 
-### 11.2 Key Standard GFs to Memorize
 
-$$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n \qquad \frac{1}{(1-x)^r} = \sum_{n=0}^{\infty}\binom{n+r-1}{r-1}x^n$$
+### 11.2 Key Standard GFs to Memorize
 
 $$\frac{x}{1-x-x^2} = \sum_{n=0}^{\infty} f_n x^n \quad \text{(Fibonacci)}$$
 

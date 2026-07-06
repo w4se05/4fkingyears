@@ -1037,7 +1037,7 @@ def edit_distance(pred, ref):          # Levenshtein DP
 ### 7.6 CROHME Project: Full Pipeline & Model
 
 ```mermaid
-graph LR
+graph TD
     A["InkML (.inkml)"] --> B["Parser: getTraces()"]
     B --> C["feature_extraction (T,4) float32"]
     C --> D["InkmlDataset __getitem__"]
