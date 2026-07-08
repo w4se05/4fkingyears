@@ -2,7 +2,7 @@
   "cssTheme": "Primary",
   "interfaceFontFamily": "Times New Roman",
   "textFontFamily": "Times New Roman",
-  "baseFontSize": 21,
+  "baseFontSize": 23,
   "baseFontSizeAction": true,
   "theme": "obsidian"
 }

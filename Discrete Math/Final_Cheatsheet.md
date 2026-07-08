@@ -733,7 +733,7 @@ updated: 2026-07-04
 > - **Ancestors of $v$:** every vertex on the root→$v$ path, excluding $v$.
 > - **Descendants of $v$:** every vertex that has $v$ as an ancestor.
 > - **Balanced ($m$-ary, height $h$):** every leaf is at level $h$ or $h-1$.
-
+	
 > [!example] 📘 Worked — Ex. 1 (rooted tree with root $d$)
 > Given: root $d$; children of $d$: $a,c,o,i$; children of $c$: $b,k,g$; children of $b$: $h,l$; children of $i$: $f$; children of $f$: $e,m,n$; children of $h$: $p,q$.
 > - **(a) Root:** $d$.

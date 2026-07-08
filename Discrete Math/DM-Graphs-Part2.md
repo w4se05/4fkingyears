@@ -100,13 +100,12 @@ course: "DISCRETE MATHEMATICS"
 >
 > (Both visit all edges; the circuit returns to its starting vertex, the path does not.)
 
-> 	[!Theorem] 📌 Existence of Eulerian Circuits and Paths
-> 	Let $G$ be a **connected multigraph**. Then:
->	
-> 	**1.** $G$ has an **Eulerian circuit** $\iff$ every vertex has **even degree**.
->	
-> 	**2.** $G$ has an **Eulerian path** (but no Eulerian circuit) $\iff$ $G$ has **exactly two vertices of odd degree**.
-> 	(The path starts at one odd-degree vertex and ends at the other.)
+> [!Theorem] 📌 Existence of Eulerian Circuits and Paths
+>Let $G$ be a **connected multigraph**. Then:
+>
+> **1.** $G$ has an **Eulerian circuit** $\iff$ every vertex has **even degree**.>	
+> **2.** $G$ has an **Eulerian path** (but no Eulerian circuit) $\iff$ $G$ has **exactly two vertices of odd degree**.
+> (The path starts at one odd-degree vertex and ends at the other.)
 
 > [!Warning] ⚠️ Directed Graph Conditions
 > For a **connected digraph**, Eulerian circuit exists iff $\deg^+(v) = \deg^-(v)$ for every vertex $v$. Eulerian path exists iff exactly one vertex has $\deg^+(v) - \deg^-(v) = 1$ (start) and exactly one has $\deg^-(v) - \deg^+(v) = 1$ (end), with all others balanced.

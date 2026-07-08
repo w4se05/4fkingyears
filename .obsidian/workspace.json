@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Discrete Math/Untitled.md",
+                "file": "Discrete Math/DM-Trees.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "DM-Trees"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Discrete Math/Final_Cheatsheet.md",
+                "file": "Discrete Math/Discrete-Maths-Full-Solution-Manual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Final_Cheatsheet"
+              "title": "Discrete-Maths-Full-Solution-Manual"
             }
           },
           {
@@ -70,7 +70,7 @@
               "type": "markdown",
               "state": {
                 "file": "Discrete Math/DM-Graphs-Part1.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -278,19 +278,21 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "dc18c393cdeb5b5b",
+  "active": "d45db94f46919bff",
   "lastOpenFiles": [
-    "Discrete Math/DM-exer-reorganized.md",
-    "Discrete Math/DM-Graphs-Part1.md",
-    "Discrete Math/DM-Graphs-Part2.md",
-    "AI/Master_Exam_Cheatsheet.md",
     "Discrete Math/1- DM-Basic-Counting-Rules.md",
+    "Discrete Math/Discrete-Maths-Full-Solution-Manual.md",
     "Discrete Math/Final_Cheatsheet.md",
+    "Discrete Math/DM-Trees.md",
+    "Discrete Math/Untitled.md",
+    "Discrete Math/DM-Graphs-Part2.md",
+    "Discrete Math/DM-Graphs-Part1.md",
+    "Discrete Math/DM-exer-reorganized.md",
+    "AI/Master_Exam_Cheatsheet.md",
     "AI/final_exam.md",
     "Discrete Math/DM_Counting_Cheatsheet.md",
     "Discrete Math/DM-exer-Solutions.md",
     "Discrete Math/DM-Ultimate-Cheatsheet.md",
-    "Discrete Math/Untitled.md",
     "Discrete Math/linear-recurrence.md",
     "Discrete Math/2- DM-Advanced-Counting.md",
     "AI/final_exam_answer_key.md",
@@ -304,10 +306,8 @@
     "AI/AI.md",
     "AI",
     "AI_Exam_Cheatsheet.md",
-    "Discrete Math/DM-Trees.md",
     "Discrete Math/DM-Ultimate-Cheatsheet-2Page.md",
     "Discrete Math/DM-Counting-Solutions-Detailed.md",
-    "Discrete Math/DM-Exam-Procedures.md",
     "Discrete Math/Final_Cheatsheet.txt",
     "Discrete Math/New Text Document.txt",
     "graph_lecture_video.py",
